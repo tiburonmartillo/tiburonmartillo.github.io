@@ -12,13 +12,28 @@ const siteUrl = "https://tiburonmartillo.github.io";
 function updateMetadata(route: RouteInfo) {
   document.title = route.title;
   const canonical = `${siteUrl}${route.path}`;
+  const socialImage = `${siteUrl}/social/portafolio-sergio-villanueva.png`;
+  const pageType = route.path.startsWith("/proyectos/")
+    && route.path !== "/proyectos/"
+    ? "article"
+    : "website";
   const values: Array<[string, string, boolean?]> = [
     ["description", route.description],
     ["og:title", route.title, true],
     ["og:description", route.description, true],
     ["og:url", canonical, true],
+    ["og:type", pageType, true],
+    ["og:locale", "es_ES", true],
+    ["og:image", socialImage, true],
+    ["og:image:width", "1200", true],
+    ["og:image:height", "630", true],
+    ["og:image:alt", "Portafolio de Sergio Villanueva", true],
     ["twitter:title", route.title],
     ["twitter:description", route.description],
+    ["twitter:image", socialImage],
+    ["twitter:card", "summary_large_image"],
+    ["twitter:site", "@tiburonmartillo"],
+    ["twitter:creator", "@tiburonmartillo"],
   ];
   values.forEach(([name, content, property]) => {
     const selector = property ? `meta[property="${name}"]` : `meta[name="${name}"]`;

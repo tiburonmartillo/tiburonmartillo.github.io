@@ -201,6 +201,11 @@ function figmaSiteConfiguration(config: FigmaSiteConfiguration): Plugin {
           },
           {
             tag: "meta",
+            attrs: { property: "og:locale", content: "es_ES" },
+            injectTo: "head",
+          },
+          {
+            tag: "meta",
             attrs: { property: "og:site_name", content: "Sergio Villanueva" },
             injectTo: "head",
           },
@@ -248,6 +253,16 @@ function figmaSiteConfiguration(config: FigmaSiteConfiguration): Plugin {
             {
               tag: "meta",
               attrs: { name: "twitter:image", content: socialImage },
+              injectTo: "head",
+            },
+            {
+              tag: "meta",
+              attrs: { name: "twitter:site", content: "@tiburonmartillo" },
+              injectTo: "head",
+            },
+            {
+              tag: "meta",
+              attrs: { name: "twitter:creator", content: "@tiburonmartillo" },
               injectTo: "head",
             },
           );
