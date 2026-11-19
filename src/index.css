@@ -519,11 +519,19 @@
     line-height: 1.35;
   }
 
-  .text-card > p:last-child {
+  .text-card > p:not(.eyebrow):not(.card-methods) {
     margin-top: 0.75rem;
     font-size: 0.9375rem;
     line-height: 1.6;
     color: var(--color-ink-muted);
+  }
+
+  .card-methods {
+    margin-top: 1rem;
+    font-family: var(--font-mono-medium);
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    color: var(--color-accent);
   }
 
   .objective-grid,
@@ -1133,6 +1141,14 @@
     justify-content: space-between;
     gap: 2rem;
     margin-top: 0.75rem;
+  }
+
+  .figure-note {
+    margin-top: 0.5rem;
+    max-width: 68ch;
+    font-size: 0.8125rem;
+    line-height: 1.55;
+    color: var(--color-ink-muted);
   }
 
   .case-gallery {

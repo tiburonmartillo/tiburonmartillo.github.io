@@ -4,6 +4,7 @@ export type ContentCard = {
   title: string;
   body: string;
   eyebrow?: string;
+  methods?: string;
 };
 
 export type CaseStudy = {
@@ -20,6 +21,8 @@ export type CaseStudy = {
   thumbnail?: string;
   image?: string;
   imageAlt?: string;
+  figureCaption?: string;
+  figureNote?: string;
   gallery?: Array<{ src: string; alt: string }>;
   externalUrl?: string;
   contextTitle: string;
@@ -83,6 +86,9 @@ export const projects: CaseStudy[] = [
       ["26 h → 5 h", "TIEMPO POR PROYECTO DE INVERSIÓN"],
       ["168 h", "HORAS OPERATIVAS AHORRADAS POR MES"],
     ],
+    figureCaption: "RECREACIÓN REPRESENTATIVA · DATOS FICTICIOS",
+    figureNote:
+      "Por confidencialidad no puedo mostrar la interfaz original: esta figura reconstruye capacidades documentadas del producto, con datos ficticios.",
     contextTitle: "La decisión vivía en un flujo de 26 horas.",
     context: [
       "La información estaba distribuida entre Tririga, SAP y LAT, quince archivos de Excel y fuentes externas como INEGI y UberMedia; el equipo reconstruía el caso a mano antes de poder comparar alternativas.",
@@ -101,21 +107,25 @@ export const projects: CaseStudy[] = [
         eyebrow: "01",
         title: "Descubrimiento",
         body: "16 entrevistas y el journey del proyecto de inversión documentado de punta a punta.",
+        methods: "Entrevistas · Journey map",
       },
       {
         eyebrow: "02",
         title: "Arquitectura",
         body: "Modelo de decisión: qué se compara, con qué criterio y en qué orden.",
+        methods: "Modelo de decisión · Arquitectura de información",
       },
       {
         eyebrow: "03",
         title: "Prototipado",
         body: "Flujo, wireframes y prototipo de alta fidelidad; tres rondas de prueba.",
+        methods: "Wireframes · Prototipo en Figma · Pruebas con usuarios",
       },
       {
         eyebrow: "04",
         title: "Gobierno",
         body: "Clapp 2, evaluación heurística y criterios de contraste para escalar.",
+        methods: "Clapp 2 · Evaluación heurística",
       },
     ],
     findingsTitle: "Lo que encontramos en las entrevistas.",
@@ -250,6 +260,9 @@ export const projects: CaseStudy[] = [
       ["3,265", "TIENDAS EN EL MODELO DE DECISIÓN"],
       ["−3%", "REDUCCIÓN PROYECTADA SOBRE LA BASE DE GASTO"],
     ],
+    figureCaption: "RECREACIÓN REPRESENTATIVA · CIFRAS DE EJEMPLO",
+    figureNote:
+      "Por confidencialidad no puedo mostrar el tablero original: esta figura reconstruye capacidades documentadas del producto. Las cifras que muestra son de ejemplo; el scoring opera sobre datos reales.",
     contextTitle: "Demasiadas variables para una sola decisión de gasto.",
     context: [
       "Real Estate necesitaba decidir cada año dónde invertir el mantenimiento correctivo. Doce variables en unidades incompatibles hacían imposible comparar necesidades con un criterio consistente.",
@@ -272,21 +285,25 @@ export const projects: CaseStudy[] = [
         eyebrow: "01 · DESCUBRIR",
         title: "¿Por qué se disputa la prioridad?",
         body: "Entrevistas con Real Estate, Operaciones y Finanzas.",
+        methods: "Entrevistas con las tres áreas",
       },
       {
         eyebrow: "02 · DEFINIR",
         title: "¿Qué hace defendible una prioridad?",
         body: "Un índice con pesos visibles, umbrales y una definición compartida de riesgo.",
+        methods: "Índice con pesos visibles · Umbrales de riesgo",
       },
       {
         eyebrow: "03 · IDEAR",
         title: "¿Cómo se explica el modelo?",
         body: "Panorama, mapa, ranking y comparación con la composición visible.",
+        methods: "Panorama · Mapa · Ranking · Comparación",
       },
       {
         eyebrow: "04 · PROBAR",
         title: "¿Resiste la conversación?",
         body: "Revisión con el comité y ajuste de jerarquía y flujo de asignación.",
+        methods: "Revisión con el comité · Ajuste de jerarquía",
       },
     ],
     objectives: [
@@ -469,7 +486,7 @@ export const projects: CaseStudy[] = [
     title: "Mapeo Verde",
     subtitle: "Datos abiertos para defender el territorio",
     summary:
-      "Diseñé y construí una plataforma ciudadana que convierte +500 boletines ambientales y +380 gacetas federales en evidencia consultable: del PDF normalizado en Postgres a un monitor que defiende las áreas verdes de Aguascalientes.",
+      "Diseñé y construí una plataforma ciudadana que convierte 502 boletines ambientales y 1,347 proyectos en evidencia consultable: del PDF normalizado en Postgres a un monitor que defiende las áreas verdes de Aguascalientes.",
     product: "Plataforma ciudadana con Supabase",
     facts: [
       ["ROL", "Diseño de producto · Ingeniería de datos"],
@@ -478,10 +495,13 @@ export const projects: CaseStudy[] = [
       ["ALCANCE", "Producto · Identidad · Datos"],
     ],
     metrics: [
-      ["+500", "BOLETINES AMBIENTALES ANALIZADOS"],
-      ["+380", "GACETAS FEDERALES"],
-      ["87%", "PROYECTOS CON RESOLUTIVO"],
+      ["502", "BOLETINES AMBIENTALES ANALIZADOS"],
+      ["1,347", "PROYECTOS AMBIENTALES"],
+      ["1,175", "RESOLUTIVOS · 87%"],
     ],
+    figureCaption: "CAPTURAS DEL SITIO PÚBLICO · DATOS ABIERTOS · CC-BY-SA 4.0",
+    figureNote:
+      "Las capturas corresponden a mapeoverde.org. Los documentos originales los publica la autoridad ambiental; la conversión a una base consultable es del autor.",
     thumbnail: "/assets/portfolio/b5c96.png",
     image: "/assets/portfolio/85bc7.png",
     imageAlt: "Monitor ambiental de Mapeo Verde con tabla de boletines y mapa de Aguascalientes",
@@ -519,22 +539,26 @@ export const projects: CaseStudy[] = [
       {
         eyebrow: "01 · DESCUBRIR",
         title: "¿Qué dice el expediente?",
-        body: "Extraje y normalicé +500 boletines y +380 gacetas.",
+        body: "Extraje y normalicé 502 boletines y 1,347 proyectos.",
+        methods: "Extracción de boletines y gacetas",
       },
       {
         eyebrow: "02 · DEFINIR",
         title: "¿Qué falta para actuar?",
         body: "Definí cuatro objetivos y una ficha común.",
+        methods: "Objetivos · Ficha común",
       },
       {
         eyebrow: "03 · IDEAR",
         title: "¿Cómo se compara y verifica?",
         body: "Cuatro capas de información y una identidad editorial.",
+        methods: "Cuatro capas · Identidad editorial",
       },
       {
         eyebrow: "04 · PROBAR",
         title: "¿Aguanta el uso real?",
         body: "Construí el monitor y lo probé con expedientes reales.",
+        methods: "Monitor · Expedientes reales",
       },
     ],
     findingsTitle: "Tres hallazgos que cambiaron el producto.",
@@ -673,6 +697,7 @@ export const projects: CaseStudy[] = [
     thumbnail: "/assets/portfolio/03a8f.png",
     image: "/assets/portfolio/f1f59.png",
     imageAlt: "Interfaz de COA Crowd con tabla de solicitudes de crédito",
+    figureCaption: "CAPTURA DEL PRODUCTO · DATOS DE EJEMPLO",
     contextTitle: "La autorización podía tardar hasta una semana por expediente.",
     context: [
       "El proceso requería simplificar tareas y reducir fricción operativa sin perder claridad para los equipos responsables.",
@@ -694,14 +719,26 @@ export const projects: CaseStudy[] = [
         eyebrow: "01",
         title: "Descubrimiento",
         body: "Mapa del proceso y sus puntos de fricción.",
+        methods: "Mapa del proceso · Puntos de fricción",
       },
       {
         eyebrow: "02",
         title: "Arquitectura",
         body: "Reordenamiento del flujo de análisis y decisión.",
+        methods: "Flujo de decisión · Reglas de negocio",
       },
-      { eyebrow: "03", title: "Prototipado", body: "Experiencia diseñada y validada en Figma." },
-      { eyebrow: "04", title: "Diseño", body: "Alineación con sistemas legados y Low-Code." },
+      {
+        eyebrow: "03",
+        title: "Prototipado",
+        body: "Experiencia diseñada y validada en Figma.",
+        methods: "Prototipo en Figma · Validación",
+      },
+      {
+        eyebrow: "04",
+        title: "Diseño",
+        body: "Alineación con sistemas legados y Low-Code.",
+        methods: "Sistemas legados · Low-Code",
+      },
     ],
     findingsTitle: "Hallazgos del proceso.",
     findings: [

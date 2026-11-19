@@ -5,7 +5,7 @@ import { InternalLink } from "../components/SiteShell";
 const services = [
   {
     title: "Diseño de productos y flujos de datos",
-    body: "Defino necesidades, requerimientos y funcionalidades de productos donde los datos son la propuesta de valor. Diseño flujos que conectan personas, información, tareas y decisiones.",
+    body: "Defino necesidades, requerimientos y funcionalidades de productos donde los datos son la propuesta de valor. Diseño los flujos de usuario y los flujos operativos que conectan personas, información, tareas y decisiones.",
   },
   {
     title: "Business Intelligence y visual analytics",
@@ -13,7 +13,7 @@ const services = [
   },
   {
     title: "Arquitectura de información y datos",
-    body: "Organizo, normalizo y estructuro fuentes dispersas hasta convertirlas en información consultable: Postgres, pipelines ETL/ELT y arquitectura medallón.",
+    body: "Organizo, normalizo y estructuro fuentes dispersas hasta convertirlas en información consultable. Incluye modelado relacional en Postgres, pipelines ETL/ELT y arquitectura medallón.",
   },
 ];
 

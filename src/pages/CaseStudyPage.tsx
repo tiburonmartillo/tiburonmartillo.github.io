@@ -40,11 +40,13 @@ export function CaseStudyPage({ project }: { project: CaseStudy }) {
           <figcaption>
             {project.title} · Vista representativa
             <span>
-              {project.image
-                ? "CAPTURA DEL PRODUCTO"
-                : "RECREACIÓN REPRESENTATIVA · DATOS FICTICIOS"}
+              {project.figureCaption ??
+                (project.image
+                  ? "CAPTURA DEL PRODUCTO"
+                  : "RECREACIÓN REPRESENTATIVA · DATOS FICTICIOS")}
             </span>
           </figcaption>
+          {project.figureNote && <p className="figure-note">{project.figureNote}</p>}
         </figure>
         {project.gallery && (
           <section

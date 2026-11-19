@@ -33,6 +33,7 @@ export function CardGrid({ cards, columns = 4 }: { cards: ContentCard[]; columns
           <Eyebrow>{card.eyebrow ?? String(index + 1).padStart(2, "0")}</Eyebrow>
           <h3>{card.title}</h3>
           <p>{card.body}</p>
+          {card.methods && <p className="card-methods">{card.methods}</p>}
         </article>
       ))}
     </div>
