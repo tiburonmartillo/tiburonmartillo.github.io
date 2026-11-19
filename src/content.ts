@@ -264,7 +264,7 @@ export const projects: CaseStudy[] = [
       { title: "Variedad", body: "Doce variables relevantes, medidas en unidades incompatibles." },
       { title: "Sesgo", body: "Cada región defendía su criterio con su propio tablero." },
     ],
-    methodTitle: "Doble diamante: de la intuición al índice.",
+    methodTitle: "Doble diamante y Design Thinking: de la intuición al índice.",
     methodBody:
       "Abrí el problema con quienes decidían el gasto y lo cerré en un modelo explicable. Cada fase dejó una decisión documentada.",
     process: [
