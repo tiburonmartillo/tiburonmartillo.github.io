@@ -1,0 +1,327 @@
+status: exited
+stdout file: /tmp/figaro-8621626a629d0cee/runtime/tool-output/3771/bash/1/stdout (189294 bytes)
+stderr file: /tmp/figaro-8621626a629d0cee/runtime/tool-output/3771/bash/1/stderr (0 bytes)
+exit code: 0
+
+OUTPUT TRUNCATED: the head-and-tail previews below are INCOMPLETE; the middle is omitted. Complete output is saved at the stdout/stderr paths above. If your task depends on omitted content, you MUST use `read` on the relevant file and follow its continuation offsets through the required content before generating or changing code. Do not guess or infer omitted content from the preview. Reading with bash again can truncate again.
+
+--- stdout (head + tail; full output in file above) ---
+--- about components ---
+function ButtonSecondary({ className }: { className?: string }) {
+export default function Component02AcercaDeMi() {
+    <div className="bg-[#4f1e0c] content-stretch flex flex-col items-start relative size-full" data-node-id="44:635" data-name="02 · Acerca de mí">
+      <div className="bg-[#f4f1ec] content-stretch flex flex-col items-start overflow-clip relative shrink-0 w-[1440px]" data-node-id="95:890" data-name="Acerca de mí · Desktop 1440">
+              <p className="font-['IBM_Plex_Mono:Regular'] leading-[16px] relative shrink-0 text-[#6e6a62] text-[12px] tracking-[0.72px]" data-node-id="I95:892;4:5">
+            <div className="content-stretch flex font-['Inter:Regular'] font-normal gap-[32px] items-center overflow-clip relative shrink-0 text-[#3a3a3a] text-[15px]" data-node-id="I95:892;4:6" data-name="Links">
+              <a className="block relative shrink-0 text-[#3a3a3a]" href="mailto:sivillanueva@proton.me" data-node-id="I95:892;4:11" target="_blank">
+              <a className="block relative shrink-0 text-[#14654a]" href="https://linkedin.com/in/tiburonmartillo" data-node-id="I95:892;4:12" target="_blank">
+        <div className="bg-[#dbd5c9] h-px relative shrink-0 w-[1440px]" data-node-id="95:893" data-name="Rule" />
+              <p className="font-['IBM_Plex_Mono:Medium'] leading-[18px] relative shrink-0 text-[#14654a] text-[13px] tracking-[1.04px]" data-node-id="95:897">
+              <p className="font-['IBM_Plex_Mono:Regular'] leading-[16px] relative shrink-0 text-[#6e6a62] text-[12px] tracking-[0.72px]" data-node-id="95:898">
+            <p className="[word-break:break-word] font-['Instrument_Serif:Italic'] italic leading-[44px] relative shrink-0 text-[#3a3a3a] text-[40px] tracking-[-0.4px] w-[760px]" data-node-id="95:900">
+            <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[32px] not-italic relative shrink-0 text-[#3a3a3a] text-[20px] w-[700px]" data-node-id="95:901">
+              <p className="[word-break:break-word] font-['IBM_Plex_Mono:Medium'] leading-[18px] not-italic relative shrink-0 text-[#3a3a3a] text-[13px] tracking-[1.04px] whitespace-nowrap" data-node-id="95:904">
+          <div className="bg-[#e9e4da] border border-[#dbd5c9] border-solid h-[440px] overflow-clip relative rounded-[4px] shrink-0 w-[376px]" data-node-id="95:905" data-name="Portrait">
+            <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Instrument_Serif:Regular'] leading-[92px] left-[187px] not-italic text-[#6e6a62] text-[96px] text-center top-[139px] tracking-[-1.92px] w-[304px]" data-node-id="95:906">
+            <div className="absolute bg-[#dbd5c9] h-px left-[35px] top-[343px] w-[304px]" data-node-id="95:907" data-name="Rectangle" />
+            <p className="[word-break:break-word] absolute font-['IBM_Plex_Mono:Regular'] leading-[16px] left-[35px] not-italic text-[#6e6a62] text-[12px] top-[361px] tracking-[0.72px] w-[300px]" data-node-id="95:908">
+        <div className="bg-[#dbd5c9] h-px relative shrink-0 w-[1440px]" data-node-id="95:909" data-name="Rule" />
+          <p className="[word-break:break-word] font-['IBM_Plex_Mono:Medium'] leading-[18px] not-italic relative shrink-0 text-[#14654a] text-[13px] tracking-[1.04px] whitespace-nowrap" data-node-id="95:911">
+              <p className="font-['IBM_Plex_Mono:Regular'] leading-[16px] relative shrink-0 text-[#6e6a62] text-[12px] tracking-[0.72px] whitespace-nowrap" data-node-id="95:914">
+              <p className="font-['Inter:Medium'] font-medium leading-[28px] relative shrink-0 text-[#3a3a3a] text-[17px] w-[320px]" data-node-id="95:915">
+                <p className="leading-[24px] relative shrink-0 text-[#14654a] text-[15px] whitespace-nowrap" data-node-id="95:919">
+                <p className="leading-[28px] relative shrink-0 text-[#3a3a3a] text-[17px] w-[780px]" data-node-id="95:920">
+                <p className="leading-[24px] relative shrink-0 text-[#14654a] text-[15px] whitespace-nowrap" data-node-id="95:922">
+                <p className="leading-[28px] relative shrink-0 text-[#3a3a3a] text-[17px] w-[780px]" data-node-id="95:923">
+                <p className="leading-[24px] relative shrink-0 text-[#14654a] text-[15px] whitespace-nowrap" data-node-id="95:925">
+                <p className="leading-[28px] relative shrink-0 text-[#3a3a3a] text-[17px] w-[780px]" data-node-id="95:926">
+          <div className="bg-[#dbd5c9] h-px relative shrink-0 w-[1200px]" data-node-id="95:927" data-name="Rule" />
+              <p className="font-['IBM_Plex_Mono:Regular'] leading-[16px] relative shrink-0 text-[#6e6a62] text-[12px] tracking-[0.72px] whitespace-nowrap" data-node-id="95:930">
+              <p className="font-['Inter:Medium'] font-medium leading-[28px] relative shrink-0 text-[#3a3a3a] text-[17px] w-[320px]" data-node-id="95:931">
+                <p className="leading-[24px] relative shrink-0 text-[#14654a] text-[15px] whitespace-nowrap" data-node-id="95:935">
+                <p className="leading-[28px] relative shrink-0 text-[#3a3a3a] text-[17px] w-[780px]" data-node-id="95:936">
+                <p className="leading-[24px] relative shrink-0 text-[#14654a] text-[15px] whitespace-nowrap" data-node-id="95:938">
+                <p className="leading-[28px] relative shrink-0 text-[#3a3a3a] text-[17px] w-[780px]" data-node-id="95:939">
+                <p className="leading-[24px] relative shrink-0 text-[#14654a] text-[15px] whitespace-nowrap" data-node-id="95:941">
+                <p className="leading-[28px] relative shrink-0 text-[#3a3a3a] text-[17px] w-[780px]" data-node-id="95:942">
+          <div className="bg-[#dbd5c9] h-px relative shrink-0 w-[1200px]" data-node-id="95:943" data-name="Rule" />
+              <p className="font-['IBM_Plex_Mono:Regular'] leading-[16px] relative shrink-0 text-[#6e6a62] text-[12px] tracking-[0.72px] whitespace-nowrap" data-node-id="95:946">
+              <p className="font-['Inter:Medium'] font-medium leading-[28px] relative shrink-0 text-[#3a3a3a] text-[17px] w-[320px]" data-node-id="95:947">
+                <p className="leading-[24px] relative shrink-0 text-[#14654a] text-[15px] whitespace-nowrap" data-node-id="95:951">
+                <p className="leading-[28px] relative shrink-0 text-[#3a3a3a] text-[17px] w-[780px]" data-node-id="95:952">
+                <p className="leading-[24px] relative shrink-0 text-[#14654a] text-[15px] whitespace-nowrap" data-node-id="95:954">
+                <p className="leading-[28px] relative shrink-0 text-[#3a3a3a] text-[17px] w-[780px]" data-node-id="95:955">
+                <p className="leading-[24px] relative shrink-0 text-[#14654a] text-[15px] whitespace-nowrap" data-node-id="95:957">
+                <p className="leading-[28px] relative shrink-0 text-[#3a3a3a] text-[17px] w-[780px]" data-node-id="95:958">
+          <div className="bg-[#dbd5c9] h-px relative shrink-0 w-[1200px]" data-node-id="95:959" data-name="Rule" />
+            <p className="[word-break:break-word] font-['IBM_Plex_Mono:Medium'] leading-[18px] not-italic relative shrink-0 text-[#14654a] text-[13px] tracking-[1.04px] whitespace-nowrap" data-node-id="95:962">
+              <p className="font-['Inter:Regular'] font-normal relative shrink-0 text-[#6e6a62] text-[15px] w-[568px]" data-node-id="95:965">
+              <p className="font-['Inter:Regular'] font-normal relative shrink-0 text-[#6e6a62] text-[15px] w-[568px]" data-node-id="95:968">
+            <div className="bg-[#dbd5c9] h-px relative shrink-0 w-[568px]" data-node-id="95:969" data-name="Rule" />
+            <p className="[word-break:break-word] font-['IBM_Plex_Mono:Medium'] leading-[18px] not-italic relative shrink-0 text-[#14654a] text-[13px] tracking-[1.04px] whitespace-nowrap" data-node-id="95:970">
+              <p className="font-['Inter:Medium'] font-medium leading-[28px] relative shrink-0 text-[#3a3a3a] text-[17px] w-[420px]" data-node-id="95:972">
+              <p className="font-['IBM_Plex_Mono:Regular'] leading-[16px] relative shrink-0 text-[#6e6a62] text-[12px] tracking-[0.72px] whitespace-nowrap" data-node-id="95:973">
+              <p className="font-['Inter:Medium'] font-medium leading-[28px] relative shrink-0 text-[#3a3a3a] text-[17px] w-[420px]" data-node-id="95:975">
+              <p className="font-['IBM_Plex_Mono:Regular'] leading-[16px] relative shrink-0 text-[#6e6a62] text-[12px] tracking-[0.72px] whitespace-nowrap" data-node-id="95:976">
+              <p className="font-['Inter:Medium'] font-medium leading-[28px] relative shrink-0 text-[#3a3a3a] text-[17px] w-[420px]" data-node-id="95:978">
+              <p className="font-['IBM_Plex_Mono:Regular'] leading-[16px] relative shrink-0 text-[#6e6a62] text-[12px] tracking-[0.72px] whitespace-nowrap" data-node-id="95:979">
+            <p className="[word-break:break-word] font-['IBM_Plex_Mono:Medium'] leading-[18px] not-italic relative shrink-0 text-[#14654a] text-[13px] tracking-[1.04px] whitespace-nowrap" data-node-id="95:980">
+            <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[28px] not-italic relative shrink-0 text-[#3a3a3a] text-[17px] w-[568px]" data-node-id="95:981">
+            <p className="font-['IBM_Plex_Mono:Medium'] leading-[18px] relative shrink-0 text-[#14654a] text-[13px] tracking-[1.04px] whitespace-nowrap" data-node-id="95:983">
+              <p className="font-['Inter:Regular'] font-normal relative shrink-0 text-[#3a3a3a] text-[15px] w-[568px]" data-node-id="95:986">
+              <p className="font-['Inter:Regular'] font-normal relative shrink-0 text-[#3a3a3a] text-[15px] w-[568px]" data-node-id="95:989">
+              <p className="font-['Inter:Regular'] font-normal relative shrink-0 text-[#3a3a3a] text-[15px] w-[568px]" data-node-id="95:992">
+              <p className="font-['Inter:Regular'] font-normal relative shrink-0 text-[#3a3a3a] text-[15px] w-[568px]" data-node-id="95:995">
+          <p className="font-['IBM_Plex_Mono:Medium'] leading-[18px] relative shrink-0 text-[#8fbfa6] text-[13px] tracking-[1.04px]" data-node-id="I95:996;4:43">
+          <p className="font-['Instrument_Serif:Regular'] leading-[72px] relative shrink-0 text-[#f4f1ec] text-[72px] tracking-[-1.44px]" data-node-id="I95:996;4:44">
+            <a className="block font-['Inter:Regular'] font-normal relative shrink-0 text-[#f4f1ec] text-[20px]" href="mailto:sivillanueva@proton.me" data-node-id="I95:996;4:46" target="_blank">
+            <a className="block font-['Inter:Regular'] font-normal relative shrink-0 text-[#d9e7df] text-[20px]" href="https://linkedin.com/in/tiburonmartillo" data-node-id="I95:996;4:47" target="_blank">
+            <a className="block font-['IBM_Plex_Mono:Medium'] relative shrink-0 text-[#8fbfa6] text-[13px] tracking-[1.04px]" href="https://linkedin.com/in/tiburonmartillo" data-node-id="I95:996;4:48" target="_blank">
+          <div className="content-stretch flex font-['IBM_Plex_Mono:Regular'] items-start justify-between leading-[16px] overflow-clip relative shrink-0 text-[#7a7a7a] text-[12px] tracking-[0.72px] w-[1200px]" data-node-id="I95:996;4:49" data-name="Legal">
+--- capital components ---
+const assetPathPrefix = "./assets";
+const imgEllipse = `${assetPathPrefix}/67e7c.svg`;
+const imgSpark = `${assetPathPrefix}/a87cf.svg`;
+const imgDiamante = `${assetPathPrefix}/1b7e5.svg`;
+export default function Component05CasoCapitalAllocation() {
+    <div className="bg-[#4f1e0c] content-stretch flex flex-col items-start relative size-full" data-node-id="44:1730" data-name="05 · Caso Capital Allocation">
+      <div className="bg-[#f4f1ec] content-stretch flex flex-col items-start overflow-clip relative shrink-0 w-[1440px]" data-node-id="89:521" data-name="Caso Capital Allocation · Desktop 1440">
+              <p className="font-['IBM_Plex_Mono:Regular'] leading-[16px] relative shrink-0 text-[#6e6a62] text-[12px] tracking-[0.72px]" data-node-id="I89:523;4:5">
+            <div className="content-stretch cursor-pointer flex font-['Inter:Regular'] font-normal gap-[32px] items-center leading-[0] overflow-clip relative shrink-0 text-[#3a3a3a] text-[15px]" data-node-id="I89:523;4:6" data-name="Links">
+              <a className="block relative shrink-0 text-[#3a3a3a]" href="mailto:sivillanueva@proton.me" data-node-id="I89:523;4:11" target="_blank">
+              <a className="block relative shrink-0 text-[#14654a]" href="https://linkedin.com/in/tiburonmartillo" data-node-id="I89:523;4:12" target="_blank">
+        <div className="bg-[#dbd5c9] h-px relative shrink-0 w-[1440px]" data-node-id="89:524" data-name="Rule" />
+            <p className="font-['IBM_Plex_Mono:Medium'] leading-[18px] relative shrink-0 text-[#14654a] text-[13px] tracking-[1.04px]" data-node-id="89:527">
+            <p className="font-['IBM_Plex_Mono:Regular'] leading-[16px] relative shrink-0 text-[#6e6a62] text-[12px] tracking-[0.72px]" data-node-id="89:528">
+            <p className="font-['Instrument_Serif:Italic'] italic leading-[58px] relative shrink-0 text-[#3a3a3a] text-[56px] tracking-[-0.84px] w-[1200px]" data-node-id="89:531">
+          <p className="font-['Inter:Regular'] font-normal leading-[32px] not-italic relative shrink-0 text-[#3a3a3a] text-[20px] w-[860px]" data-node-id="89:532">
+          <p className="font-['IBM_Plex_Mono:Regular'] leading-[16px] not-italic relative shrink-0 text-[#6e6a62] text-[12px] tracking-[0.72px] whitespace-nowrap" data-node-id="89:533">
+            <p className="font-['IBM_Plex_Mono:Regular'] leading-[16px] relative shrink-0 text-[#6e6a62] text-[12px] tracking-[0.72px]" data-node-id="89:536">
+            <p className="font-['IBM_Plex_Mono:Regular'] leading-[16px] relative shrink-0 text-[#6e6a62] text-[12px] tracking-[0.72px]" data-node-id="89:539">
+            <p className="font-['IBM_Plex_Mono:Regular'] leading-[16px] relative shrink-0 text-[#6e6a62] text-[12px] tracking-[0.72px]" data-node-id="89:542">
+            <p className="font-['IBM_Plex_Mono:Regular'] leading-[16px] relative shrink-0 text-[#6e6a62] text-[12px] tracking-[0.72px]" data-node-id="89:545">
+        <div className="bg-[#dbd5c9] h-px relative shrink-0 w-[1440px]" data-node-id="89:547" data-name="Rule" />
+            <p className="font-['IBM_Plex_Mono:Regular'] leading-[16px] relative shrink-0 text-[#6e6a62] text-[12px] tracking-[0.72px]" data-node-id="89:551">
+            <p className="font-['IBM_Plex_Mono:Medium'] leading-[64px] relative shrink-0 text-[#14654a] text-[64px] tracking-[-1.28px] whitespace-nowrap" data-node-id="89:553">
+            <p className="font-['IBM_Plex_Mono:Regular'] leading-[16px] relative shrink-0 text-[#6e6a62] text-[12px] tracking-[0.72px] w-[320px]" data-node-id="89:554">
+          <div className="bg-white border border-[#bd5c09] border-solid h-[760px] overflow-clip relative rounded-[4px] shrink-0 w-[1200px]" data-node-id="89:556" data-name="Mockup">
+            <div className="absolute bg-[#0053e2] h-[64px] left-[-1px] top-[-1px] w-[1200px]" data-node-id="89:557" data-name="rect" />
+            <p className="[word-break:break-word] absolute font-['Inter:Semi_Bold'] font-semibold leading-[normal] left-[39px] not-italic text-[#001e60] text-[24px] top-[91px] tracking-[-0.24px] whitespace-nowrap" data-node-id="89:564">
+            <p className="[word-break:break-word] absolute font-['Inter:Regular'] font-normal leading-[normal] left-[39px] not-italic text-[#5a6478] text-[12.5px] top-[125px] whitespace-nowrap" data-node-id="89:565">
+            <div className="absolute bg-[#eef3fd] h-[80px] left-[39px] rounded-[10px] top-[159px] w-[244px]" data-node-id="89:566" data-name="rect" />
+            <p className="[word-break:break-word] absolute font-['Inter:Regular'] font-normal leading-[normal] left-[55px] not-italic text-[#5a6478] text-[9px] top-[175px] tracking-[0.72px] whitespace-nowrap" data-node-id="89:567">
+            <p className="[word-break:break-word] absolute font-['BBH_Bogle:Regular'] leading-[normal] left-[55px] not-italic text-[#0053e2] text-[26px] top-[191px] whitespace-nowrap" data-node-id="89:568">
+            <div className="absolute bg-[#eef3fd] h-[80px] left-[299px] rounded-[10px] top-[159px] w-[244px]" data-node-id="89:569" data-name="rect" />
+            <p className="[word-break:break-word] absolute font-['Inter:Regular'] font-normal leading-[normal] left-[315px] not-italic text-[#5a6478] text-[9px] top-[175px] tracking-[0.72px] whitespace-nowrap" data-node-id="89:570">
+            <p className="[word-break:break-word] absolute font-['BBH_Bogle:Regular'] leading-[normal] left-[315px] not-italic text-[#0053e2] text-[26px] top-[191px] whitespace-nowrap" data-node-id="89:571">
+            <div className="absolute bg-[#eef3fd] h-[80px] left-[559px] rounded-[10px] top-[159px] w-[244px]" data-node-id="89:572" data-name="rect" />
+            <p className="[word-break:break-word] absolute font-['Inter:Regular'] font-normal leading-[normal] left-[575px] not-italic text-[#5a6478] text-[9px] top-[175px] tracking-[0.72px] whitespace-nowrap" data-node-id="89:573">
+            <p className="[word-break:break-word] absolute font-['BBH_Bogle:Regular'] leading-[normal] left-[575px] not-italic text-[#0f7b4f] text-[26px] top-[191px] whitespace-nowrap" data-node-id="89:574">
+            <div className="absolute bg-[#fbfcfe] border border-[#dce3f0] border-solid h-[400px] left-[39px] rounded-[10px] top-[263px] w-[640px]" data-node-id="89:575" data-name="rect" />
+            <p className="[word-break:break-word] absolute font-['Inter:Regular'] font-normal leading-[normal] left-[59px] not-italic text-[#8a8f98] text-[9px] top-[279px] tracking-[0.72px] whitespace-nowrap" data-node-id="89:576">
+            <div className="absolute bg-[#ffc220] left-[59px] rounded-[3px] size-[14px] top-[305px]" data-node-id="89:577" data-name="rect" />
+            <div className="absolute bg-[#a9c7f5] left-[81px] rounded-[3px] size-[14px] top-[305px]" data-node-id="89:578" data-name="rect" />
+            <div className="absolute bg-[#e4eaf6] left-[103px] rounded-[3px] size-[14px] top-[305px]" data-node-id="89:579" data-name="rect" />
+            <div className="absolute bg-[#e4eaf6] left-[125px] rounded-[3px] size-[14px] top-[305px]" data-node-id="89:580" data-name="rect" />
+            <div className="absolute bg-[#0053e2] left-[147px] rounded-[3px] size-[14px] top-[305px]" data-node-id="89:581" data-name="rect" />
+            <div className="absolute bg-[#a9c7f5] left-[169px] rounded-[3px] size-[14px] top-[305px]" data-node-id="89:582" data-name="rect" />
+            <div className="absolute bg-[#e4eaf6] left-[191px] rounded-[3px] size-[14px] top-[305px]" data-node-id="89:583" data-name="rect" />
+            <div className="absolute bg-[#0053e2] left-[213px] rounded-[3px] size-[14px] top-[305px]" data-node-id="89:584" data-name="rect" />
+            <div className="absolute bg-[#a9c7f5] left-[235px] rounded-[3px] size-[14px] top-[305px]" data-node-id="89:585" data-name="rect" />
+            <div className="absolute bg-[#e4eaf6] left-[257px] rounded-[3px] size-[14px] top-[305px]" data-node-id="89:586" data-name="rect" />
+            <div className="absolute bg-[#ffc220] left-[279px] rounded-[3px] size-[14px] top-[305px]" data-node-id="89:587" data-name="rect" />
+            <div className="absolute bg-[#a9c7f5] left-[301px] rounded-[3px] size-[14px] top-[305px]" data-node-id="89:588" data-name="rect" />
+            <div className="absolute bg-[#e4eaf6] left-[323px] rounded-[3px] size-[14px] top-[305px]" data-node-id="89:589" data-name="rect" />
+            <div className="absolute bg-[#e4eaf6] left-[345px] rounded-[3px] size-[14px] top-[305px]" data-node-id="89:590" data-name="rect" />
+            <div className="absolute bg-[#a9c7f5] left-[367px] rounded-[3px] size-[14px] top-[305px]" data-node-id="89:591" data-name="rect" />
+            <div className="absolute bg-[#a9c7f5] left-[389px] rounded-[3px] size-[14px] top-[305px]" data-node-id="89:592" data-name="rect" />
+            <div className="absolute bg-[#e4eaf6] left-[411px] rounded-[3px] size-[14px] top-[305px]" data-node-id="89:593" data-name="rect" />
+            <div className="absolute bg-[#0053e2] left-[433px] rounded-[3px] size-[14px] top-[305px]" data-node-id="89:594" data-name="rect" />
+            <div className="absolute bg-[#a9c7f5] left-[455px] rounded-[3px] size-[14px] top-[305px]" data-node-id="89:595" data-name="rect" />
+            <div className="absolute bg-[#e4eaf6] left-[477px] rounded-[3px] size-[14px] top-[305px]" data-node-id="89:596" data-name="rect" />
+            <div className="absolute bg-[#0053e2] left-[499px] rounded-[3px] size-[14px] top-[305px]" data-node-id="89:597" data-name="rect" />
+            <div className="absolute bg-[#a9c7f5] left-[521px] rounded-[3px] size-[14px] top-[305px]" data-node-id="89:598" data-name="rect" />
+            <div className="absolute bg-[#e4eaf6] left-[543px] rounded-[3px] size-[14px] top-[305px]" data-node-id="89:599" data-name="rect" />
+            <div className="absolute bg-[#ffc220] left-[565px] rounded-[3px] size-[14px] top-[305px]" data-node-id="89:600" data-name="rect" />
+            <div className="absolute bg-[#a9c7f5] left-[587px] rounded-[3px] size-[14px] top-[305px]" data-node-id="89:601" data-name="rect" />
+            <div className="absolute bg-[#e4eaf6] left-[609px] rounded-[3px] size-[14px] top-[305px]" data-node-id="89:602" data-name="rect" />
+            <div className="absolute bg-[#0053e2] left-[59px] rounded-[3px] size-[14px] top-[327px]" data-node-id="89:603" data-name="rect" />
+            <div className="absolute bg-[#a9c7f5] left-[81px] rounded-[3px] size-[14px] top-[327px]" data-node-id="89:604" data-name="rect" />
+            <div className="absolute bg-[#e4eaf6] left-[103px] rounded-[3px] size-[14px] top-[327px]" data-node-id="89:605" data-name="rect" />
+            <div className="absolute bg-[#ffc220] left-[125px] rounded-[3px] size-[14px] top-[327px]" data-node-id="89:606" data-name="rect" />
+            <div className="absolute bg-[#a9c7f5] left-[147px] rounded-[3px] size-[14px] top-[327px]" data-node-id="89:607" data-name="rect" />
+            <div className="absolute bg-[#e4eaf6] left-[169px] rounded-[3px] size-[14px] top-[327px]" data-node-id="89:608" data-name="rect" />
+            <div className="absolute bg-[#e4eaf6] left-[191px] rounded-[3px] size-[14px] top-[327px]" data-node-id="89:609" data-name="rect" />
+            <div className="absolute bg-[#a9c7f5] left-[213px] rounded-[3px] size-[14px] top-[327px]" data-node-id="89:610" data-name="rect" />
+            <div className="absolute bg-[#a9c7f5] left-[235px] rounded-[3px] size-[14px] top-[327px]" data-node-id="89:611" data-name="rect" />
+            <div className="absolute bg-[#e4eaf6] left-[257px] rounded-[3px] size-[14px] top-[327px]" data-node-id="89:612" data-name="rect" />
+            <div className="absolute bg-[#0053e2] left-[279px] rounded-[3px] size-[14px] top-[327px]" data-node-id="89:613" data-name="rect" />
+            <div className="absolute bg-[#a9c7f5] left-[301px] rounded-[3px] size-[14px] top-[327px]" data-node-id="89:614" data-name="rect" />
+            <div className="absolute bg-[#e4eaf6] left-[323px] rounded-[3px] size-[14px] top-[327px]" data-node-id="89:615" data-name="rect" />
+            <div className="absolute bg-[#0053e2] left-[345px] rounded-[3px] size-[14px] top-[327px]" data-node-id="89:616" data-name="rect" />
+            <div className="absolute bg-[#a9c7f5] left-[367px] rounded-[3px] size-[14px] top-[327px]" data-node-id="89:617" data-name="rect" />
+            <div className="absolute bg-[#e4eaf6] left-[389px] rounded-[3px] size-[14px] top-[327px]" data-node-id="89:618" data-name="rect" />
+            <div className="absolute bg-[#ffc220] left-[411px] rounded-[3px] size-[14px] top-[327px]" data-node-id="89:619" data-name="rect" />
+            <div className="absolute bg-[#a9c7f5] left-[433px] rounded-[3px] size-[14px] top-[327px]" data-node-id="89:620" data-name="rect" />
+            <div className="absolute bg-[#e4eaf6] left-[455px] rounded-[3px] size-[14px] top-[327px]" data-node-id="89:621" data-name="rect" />
+            <div className="absolute bg-[#e4eaf6] left-[477px] rounded-[3px] size-[14px] top-[327px]" data-node-id="89:622" data-name="rect" />
+            <div className="absolute bg-[#0053e2] left-[499px] rounded-[3px] size-[14px] top-[327px]" data-node-id="89:623" data-name="rect" />
+            <div className="absolute bg-[#a9c7f5] left-[521px] rounded-[3px] size-[14px] top-[327px]" data-node-id="89:624" data-name="rect" />
+            <div className="absolute bg-[#e4eaf6] left-[543px] rounded-[3px] size-[14px] top-[327px]" data-node-id="89:625" data-name="rect" />
+            <div className="absolute bg-[#0053e2] left-[565px] rounded-[3px] size-[14px] top-[327px]" data-node-id="89:626" data-name="rect" />
+            <div className="absolute bg-[#a9c7f5] left-[587px] rounded-[3px] size-[14px] top-[327px]" data-node-id="89:627" data-name="rect" />
+            <div className="absolute bg-[#e4eaf6] left-[609px] rounded-[3px] size-[14px] top-[327px]" data-node-id="89:628" data-name="rect" />
+            <div className="absolute bg-[#a9c7f5] left-[59px] rounded-[3px] size-[14px] top-[349px]" data-node-id="89:629" data-name="rect" />
+            <div className="absolute bg-[#a9c7f5] left-[81px] rounded-[3px] size-[14px] top-[349px]" data-node-id="89:630" data-name="rect" />
+            <div className="absolute bg-[#e4eaf6] left-[103px] rounded-[3px] size-[14px] top-[349p
+
+[truncated: omitted lines 168-984 (138167 bytes, bytes 25564-163730)]
+
+lassName="absolute bg-[#0053e2] h-[36px] left-[999px] rounded-[18px] top-[97px] w-[168px]" data-node-id="95:1693" data-name="rect" />
+            <div className="absolute bg-white border border-[#dce3f0] border-solid h-[88px] left-[231px] rounded-[10px] top-[171px] w-[220px]" data-node-id="95:1695" data-name="rect" />
+            <p className="[word-break:break-word] absolute font-['Inter:Regular'] font-normal leading-[normal] left-[247px] not-italic text-[#8a8f98] text-[9px] top-[187px] tracking-[0.72px] whitespace-nowrap" data-node-id="95:1696">
+            <p className="[word-break:break-word] absolute font-['BBH_Bogle:Regular'] leading-[normal] left-[247px] not-italic text-[#001e60] text-[28px] top-[205px] whitespace-nowrap" data-node-id="95:1697">
+            <div className="absolute bg-white border border-[#dce3f0] border-solid h-[88px] left-[467px] rounded-[10px] top-[171px] w-[220px]" data-node-id="95:1698" data-name="rect" />
+            <p className="[word-break:break-word] absolute font-['Inter:Regular'] font-normal leading-[normal] left-[483px] not-italic text-[#8a8f98] text-[9px] top-[187px] tracking-[0.72px] whitespace-nowrap" data-node-id="95:1699">
+            <p className="[word-break:break-word] absolute font-['BBH_Bogle:Regular'] leading-[normal] left-[483px] not-italic text-[#001e60] text-[28px] top-[205px] whitespace-nowrap" data-node-id="95:1700">
+            <div className="absolute bg-white border border-[#dce3f0] border-solid h-[88px] left-[703px] rounded-[10px] top-[171px] w-[220px]" data-node-id="95:1701" data-name="rect" />
+            <p className="[word-break:break-word] absolute font-['Inter:Regular'] font-normal leading-[normal] left-[719px] not-italic text-[#8a8f98] text-[9px] top-[187px] tracking-[0.72px] whitespace-nowrap" data-node-id="95:1702">
+            <p className="[word-break:break-word] absolute font-['BBH_Bogle:Regular'] leading-[normal] left-[719px] not-italic text-[#0053e2] text-[28px] top-[205px] whitespace-nowrap" data-node-id="95:1703">
+            <div className="absolute bg-white border border-[#dce3f0] border-solid h-[88px] left-[939px] rounded-[10px] top-[171px] w-[220px]" data-node-id="95:1704" data-name="rect" />
+            <p className="[word-break:break-word] absolute font-['Inter:Regular'] font-normal leading-[normal] left-[955px] not-italic text-[#8a8f98] text-[9px] top-[187px] tracking-[0.72px] whitespace-nowrap" data-node-id="95:1705">
+            <p className="[word-break:break-word] absolute font-['BBH_Bogle:Regular'] leading-[normal] left-[955px] not-italic text-[#0053e2] text-[28px] top-[205px] whitespace-nowrap" data-node-id="95:1706">
+            <div className="absolute bg-[#f7f9fe] h-[36px] left-[231px] top-[283px] w-[936px]" data-node-id="95:1707" data-name="rect" />
+            <p className="[word-break:break-word] absolute font-['Inter:Regular'] font-normal leading-[normal] left-[247px] not-italic text-[#8a8f98] text-[9px] top-[294px] tracking-[0.72px] whitespace-nowrap" data-node-id="95:1708">
+            <p className="[word-break:break-word] absolute font-['Inter:Regular'] font-normal leading-[normal] left-[531px] not-italic text-[#8a8f98] text-[9px] top-[294px] tracking-[0.72px] whitespace-nowrap" data-node-id="95:1709">
+            <p className="[word-break:break-word] absolute font-['Inter:Regular'] font-normal leading-[normal] left-[751px] not-italic text-[#8a8f98] text-[9px] top-[294px] tracking-[0.72px] whitespace-nowrap" data-node-id="95:1710">
+            <p className="[word-break:break-word] absolute font-['Inter:Regular'] font-normal leading-[normal] left-[931px] not-italic text-[#8a8f98] text-[9px] top-[294px] tracking-[0.72px] whitespace-nowrap" data-node-id="95:1711">
+            <p className="[word-break:break-word] absolute font-['Inter:Regular'] font-normal leading-[normal] left-[1091px] not-italic text-[#8a8f98] text-[9px] top-[294px] tracking-[0.72px] whitespace-nowrap" data-node-id="95:1712">
+            <div className="absolute bg-[#dce3f0] h-px left-[231px] top-[375px] w-[936px]" data-node-id="95:1713" data-name="rect" />
+            <p className="[word-break:break-word] absolute font-['Inter:Regular'] font-normal leading-[normal] left-[247px] not-italic text-[#001e60] text-[12.5px] top-[333px] w-[270px]" data-node-id="95:1714">
+            <p className="[word-break:break-word] absolute font-['Inter:Regular'] font-normal leading-[normal] left-[531px] not-italic text-[#5a6478] text-[12px] top-[335px] whitespace-nowrap" data-node-id="95:1715">
+            <p className="[word-break:break-word] absolute font-['Inter:Medium'] font-medium leading-[normal] left-[751px] not-italic text-[#001e60] text-[12px] top-[335px] whitespace-nowrap" data-node-id="95:1716">
+            <div className="absolute bg-[#eef3fd] h-[22px] left-[931px] rounded-[11px] top-[333px] w-[78px]" data-node-id="95:1717" data-name="rect" />
+            <p className="[word-break:break-word] absolute font-['Inter:Regular'] font-normal leading-[normal] left-[943px] not-italic text-[#0053e2] text-[10px] top-[337px] whitespace-nowrap" data-node-id="95:1718">
+            <p className="[word-break:break-word] absolute font-['IBM_Plex_Mono:Medium'] leading-[normal] left-[1091px] not-italic text-[#0f7b4f] text-[12px] top-[335px] whitespace-nowrap" data-node-id="95:1719">
+            <div className="absolute bg-[#dce3f0] h-px left-[231px] top-[431px] w-[936px]" data-node-id="95:1720" data-name="rect" />
+            <p className="[word-break:break-word] absolute font-['Inter:Regular'] font-normal leading-[normal] left-[247px] not-italic text-[#001e60] text-[12.5px] top-[389px] w-[270px]" data-node-id="95:1721">
+            <p className="[word-break:break-word] absolute font-['Inter:Regular'] font-normal leading-[normal] left-[531px] not-italic text-[#5a6478] text-[12px] top-[391px] whitespace-nowrap" data-node-id="95:1722">
+            <p className="[word-break:break-word] absolute font-['Inter:Medium'] font-medium leading-[normal] left-[751px] not-italic text-[#001e60] text-[12px] top-[391px] whitespace-nowrap" data-node-id="95:1723">
+            <div className="absolute bg-[#fff6e0] h-[22px] left-[931px] rounded-[11px] top-[389px] w-[92px]" data-node-id="95:1724" data-name="rect" />
+            <p className="[word-break:break-word] absolute font-['Inter:Regular'] font-normal leading-[normal] left-[943px] not-italic text-[#8a6a12] text-[10px] top-[393px] whitespace-nowrap" data-node-id="95:1725">
+            <p className="[word-break:break-word] absolute font-['IBM_Plex_Mono:Medium'] leading-[normal] left-[1091px] not-italic text-[#0f7b4f] text-[12px] top-[391px] whitespace-nowrap" data-node-id="95:1726">
+            <div className="absolute bg-[#dce3f0] h-px left-[231px] top-[487px] w-[936px]" data-node-id="95:1727" data-name="rect" />
+            <p className="[word-break:break-word] absolute font-['Inter:Regular'] font-normal leading-[normal] left-[247px] not-italic text-[#001e60] text-[12.5px] top-[445px] w-[270px]" data-node-id="95:1728">
+            <p className="[word-break:break-word] absolute font-['Inter:Regular'] font-normal leading-[normal] left-[531px] not-italic text-[#5a6478] text-[12px] top-[447px] whitespace-nowrap" data-node-id="95:1729">
+            <p className="[word-break:break-word] absolute font-['Inter:Medium'] font-medium leading-[normal] left-[751px] not-italic text-[#001e60] text-[12px] top-[447px] whitespace-nowrap" data-node-id="95:1730">
+            <div className="absolute bg-[#eef3fd] h-[22px] left-[931px] rounded-[11px] top-[445px] w-[78px]" data-node-id="95:1731" data-name="rect" />
+            <p className="[word-break:break-word] absolute font-['Inter:Regular'] font-normal leading-[normal] left-[943px] not-italic text-[#0053e2] text-[10px] top-[449px] whitespace-nowrap" data-node-id="95:1732">
+            <p className="[word-break:break-word] absolute font-['IBM_Plex_Mono:Medium'] leading-[normal] left-[1091px] not-italic text-[#0f7b4f] text-[12px] top-[447px] whitespace-nowrap" data-node-id="95:1733">
+            <div className="absolute bg-[#dce3f0] h-px left-[231px] top-[543px] w-[936px]" data-node-id="95:1734" data-name="rect" />
+            <p className="[word-break:break-word] absolute font-['Inter:Regular'] font-normal leading-[normal] left-[247px] not-italic text-[#001e60] text-[12.5px] top-[501px] w-[270px]" data-node-id="95:1735">
+            <p className="[word-break:break-word] absolute font-['Inter:Regular'] font-normal leading-[normal] left-[531px] not-italic text-[#5a6478] text-[12px] top-[503px] whitespace-nowrap" data-node-id="95:1736">
+            <p className="[word-break:break-word] absolute font-['Inter:Medium'] font-medium leading-[normal] left-[751px] not-italic text-[#001e60] text-[12px] top-[503px] whitespace-nowrap" data-node-id="95:1737">
+            <div className="absolute bg-[#fff6e0] h-[22px] left-[931px] rounded-[11px] top-[501px] w-[92px]" data-node-id="95:1738" data-name="rect" />
+            <p className="[word-break:break-word] absolute font-['Inter:Regular'] font-normal leading-[normal] left-[943px] not-italic text-[#8a6a12] text-[10px] top-[505px] whitespace-nowrap" data-node-id="95:1739">
+            <p className="[word-break:break-word] absolute font-['IBM_Plex_Mono:Medium'] leading-[normal] left-[1091px] not-italic text-[#0f7b4f] text-[12px] top-[503px] whitespace-nowrap" data-node-id="95:1740">
+            <div className="absolute bg-[#dce3f0] h-px left-[231px] top-[599px] w-[936px]" data-node-id="95:1741" data-name="rect" />
+            <p className="[word-break:break-word] absolute font-['Inter:Regular'] font-normal leading-[normal] left-[247px] not-italic text-[#001e60] text-[12.5px] top-[557px] w-[270px]" data-node-id="95:1742">
+            <p className="[word-break:break-word] absolute font-['Inter:Regular'] font-normal leading-[normal] left-[531px] not-italic text-[#5a6478] text-[12px] top-[559px] whitespace-nowrap" data-node-id="95:1743">
+            <p className="[word-break:break-word] absolute font-['Inter:Medium'] font-medium leading-[normal] left-[751px] not-italic text-[#001e60] text-[12px] top-[559px] whitespace-nowrap" data-node-id="95:1744">
+            <div className="absolute bg-[#fff6e0] h-[22px] left-[931px] rounded-[11px] top-[557px] w-[92px]" data-node-id="95:1745" data-name="rect" />
+            <p className="[word-break:break-word] absolute font-['Inter:Regular'] font-normal leading-[normal] left-[943px] not-italic text-[#8a6a12] text-[10px] top-[561px] whitespace-nowrap" data-node-id="95:1746">
+            <p className="[word-break:break-word] absolute font-['IBM_Plex_Mono:Medium'] leading-[normal] left-[1091px] not-italic text-[#8a8f98] text-[12px] top-[559px] whitespace-nowrap" data-node-id="95:1747">
+            <div className="absolute bg-[#dce3f0] h-px left-[231px] top-[655px] w-[936px]" data-node-id="95:1748" data-name="rect" />
+            <p className="[word-break:break-word] absolute font-['Inter:Regular'] font-normal leading-[normal] left-[247px] not-italic text-[#001e60] text-[12.5px] top-[613px] w-[270px]" data-node-id="95:1749">{`Expansión Sam's Club · QRO`}</p>
+            <p className="[word-break:break-word] absolute font-['Inter:Regular'] font-normal leading-[normal] left-[531px] not-italic text-[#5a6478] text-[12px] top-[615px] whitespace-nowrap" data-node-id="95:1750">
+            <p className="[word-break:break-word] absolute font-['Inter:Medium'] font-medium leading-[normal] left-[751px] not-italic text-[#001e60] text-[12px] top-[615px] whitespace-nowrap" data-node-id="95:1751">
+            <div className="absolute bg-[#fff6e0] h-[22px] left-[931px] rounded-[11px] top-[613px] w-[92px]" data-node-id="95:1752" data-name="rect" />
+            <p className="[word-break:break-word] absolute font-['Inter:Regular'] font-normal leading-[normal] left-[943px] not-italic text-[#8a6a12] text-[10px] top-[617px] whitespace-nowrap" data-node-id="95:1753">
+            <p className="[word-break:break-word] absolute font-['IBM_Plex_Mono:Medium'] leading-[normal] left-[1091px] not-italic text-[#0f7b4f] text-[12px] top-[615px] whitespace-nowrap" data-node-id="95:1754">
+            <div className="absolute bg-[#dce3f0] h-px left-[231px] top-[711px] w-[936px]" data-node-id="95:1755" data-name="rect" />
+            <p className="[word-break:break-word] absolute font-['Inter:Regular'] font-normal leading-[normal] left-[247px] not-italic text-[#001e60] text-[12.5px] top-[669px] w-[270px]" data-node-id="95:1756">
+            <p className="[word-break:break-word] absolute font-['Inter:Regular'] font-normal leading-[normal] left-[531px] not-italic text-[#5a6478] text-[12px] top-[671px] whitespace-nowrap" data-node-id="95:1757">
+            <p className="[word-break:break-word] absolute font-['Inter:Medium'] font-medium leading-[normal] left-[751px] not-italic text-[#001e60] text-[12px] top-[671px] whitespace-nowrap" data-node-id="95:1758">
+            <div className="absolute bg-[#fff6e0] h-[22px] left-[931px] rounded-[11px] top-[669px] w-[92px]" data-node-id="95:1759" data-name="rect" />
+            <p className="[word-break:break-word] absolute font-['Inter:Regular'] font-normal leading-[normal] left-[943px] not-italic text-[#8a6a12] text-[10px] top-[673px] whitespace-nowrap" data-node-id="95:1760">
+            <p className="[word-break:break-word] absolute font-['IBM_Plex_Mono:Medium'] leading-[normal] left-[1091px] not-italic text-[#8a8f98] text-[12px] top-[671px] whitespace-nowrap" data-node-id="95:1761">
+          <div className="[word-break:break-word] content-stretch flex font-['IBM_Plex_Mono:Regular'] items-start justify-between leading-[16px] not-italic overflow-clip relative shrink-0 text-[#6e6a62] text-[12px] tracking-[0.72px] w-[1200px] whitespace-nowrap" data-node-id="95:1763" data-name="Caption">
+          <p className="[word-break:break-word] font-['IBM_Plex_Mono:Regular'] leading-[16px] not-italic relative shrink-0 text-[#6e6a62] text-[12px] tracking-[0.72px] w-[1200px]" data-node-id="164:312">
+          <p className="font-['IBM_Plex_Mono:Medium'] leading-[18px] relative shrink-0 text-[#14654a] text-[13px] tracking-[1.04px] whitespace-nowrap" data-node-id="95:1767">
+              <p className="font-['Inter:Regular'] font-normal leading-[28px] relative shrink-0 text-[#3a3a3a] text-[17px] w-[680px]" data-node-id="95:1771">
+              <p className="font-['Inter:Regular'] font-normal leading-[28px] relative shrink-0 text-[#3a3a3a] text-[17px] w-[680px]" data-node-id="95:1772">
+            <div className="bg-[#e9e4da] content-stretch flex flex-col gap-[20px] items-start overflow-clip p-[32px] relative shrink-0 w-[456px] whitespace-nowrap" data-node-id="95:1773" data-name="Facts">
+              <p className="font-['IBM_Plex_Mono:Regular'] leading-[16px] relative shrink-0 text-[#6e6a62] text-[12px] tracking-[0.72px]" data-node-id="95:1774">
+                <p className="font-['Inter:Regular'] font-normal relative shrink-0 text-[#3a3a3a] text-[15px]" data-node-id="95:1777">
+                <p className="font-['Inter:Regular'] font-normal relative shrink-0 text-[#3a3a3a] text-[15px]" data-node-id="95:1780">
+                <p className="font-['Inter:Regular'] font-normal relative shrink-0 text-[#3a3a3a] text-[15px]" data-node-id="95:1783">
+            <p className="font-['IBM_Plex_Mono:Medium'] leading-[18px] relative shrink-0 text-[#14654a] text-[13px] tracking-[1.04px] whitespace-nowrap" data-node-id="95:1786">
+            <p className="font-['Inter:Regular'] font-normal leading-[28px] relative shrink-0 text-[#6e6a62] text-[17px] w-[760px]" data-node-id="95:1788">
+          <div className="bg-[#dbd5c9] h-px relative shrink-0 w-[1200px]" data-node-id="95:1789" data-name="Rule" />
+              <p className="font-['IBM_Plex_Mono:Medium'] leading-[18px] relative shrink-0 text-[#14654a] text-[13px] tracking-[1.04px] whitespace-nowrap" data-node-id="95:1792">
+              <p className="font-['Inter:Regular'] font-normal leading-[24px] relative shrink-0 text-[#6e6a62] text-[15px] w-[282px]" data-node-id="95:1794">
+              <p className="font-['IBM_Plex_Mono:Medium'] leading-[18px] relative shrink-0 text-[#14654a] text-[13px] tracking-[1.04px] whitespace-nowrap" data-node-id="95:1796">
+              <p className="font-['Inter:Regular'] font-normal leading-[24px] relative shrink-0 text-[#6e6a62] text-[15px] w-[282px]" data-node-id="95:1798">
+              <p className="font-['IBM_Plex_Mono:Medium'] leading-[18px] relative shrink-0 text-[#14654a] text-[13px] tracking-[1.04px] whitespace-nowrap" data-node-id="95:1800">
+              <p className="font-['Inter:Regular'] font-normal leading-[24px] relative shrink-0 text-[#6e6a62] text-[15px] w-[282px]" data-node-id="95:1802">
+              <p className="font-['IBM_Plex_Mono:Medium'] leading-[18px] relative shrink-0 text-[#14654a] text-[13px] tracking-[1.04px] whitespace-nowrap" data-node-id="95:1804">
+              <p className="font-['Inter:Regular'] font-normal leading-[24px] relative shrink-0 text-[#6e6a62] text-[15px] w-[282px]" data-node-id="95:1806">
+            <p className="font-['IBM_Plex_Mono:Medium'] leading-[18px] relative shrink-0 text-[#14654a] text-[13px] tracking-[1.04px] whitespace-nowrap" data-node-id="95:1809">
+            <p className="font-['Inter:Regular'] font-normal leading-[28px] relative shrink-0 text-[#6e6a62] text-[17px] w-[760px]" data-node-id="95:1811">
+          <div className="bg-[#dbd5c9] h-px relative shrink-0 w-[1200px]" data-node-id="95:1812" data-name="Rule" />
+                <p className="font-['IBM_Plex_Mono:Medium'] leading-[18px] relative shrink-0 text-[#14654a] text-[13px] tracking-[1.04px] w-[264px]" data-node-id="I95:1814;4:26">
+                <p className="font-['Inter:Regular'] font-normal leading-[24px] relative shrink-0 text-[#6e6a62] text-[15px] w-[264px]" data-node-id="I95:1814;4:28">
+              <p className="font-['IBM_Plex_Mono:Medium'] leading-[1.5] relative shrink-0 text-[#14654a] text-[13px] w-full" data-node-id="164:315">
+                <p className="font-['IBM_Plex_Mono:Medium'] leading-[18px] relative shrink-0 text-[#14654a] text-[13px] tracking-[1.04px] w-[264px]" data-node-id="I95:1815;4:26">
+                <p className="font-['Inter:Regular'] font-normal leading-[24px] relative shrink-0 text-[#6e6a62] text-[15px] w-[264px]" data-node-id="I95:1815;4:28">
+              <p className="font-['IBM_Plex_Mono:Medium'] leading-[1.5] relative shrink-0 text-[#14654a] text-[13px] w-full" data-node-id="164:317">
+                <p className="font-['IBM_Plex_Mono:Medium'] leading-[18px] relative shrink-0 text-[#14654a] text-[13px] tracking-[1.04px] w-[264px]" data-node-id="I95:1816;4:26">
+                <p className="font-['Inter:Regular'] font-normal leading-[24px] relative shrink-0 text-[#6e6a62] text-[15px] w-[264px]" data-node-id="I95:1816;4:28">
+              <p className="font-['IBM_Plex_Mono:Medium'] leading-[1.5] relative shrink-0 text-[#14654a] text-[13px] w-full" data-node-id="164:319">
+                <p className="font-['IBM_Plex_Mono:Medium'] leading-[18px] relative shrink-0 text-[#14654a] text-[13px] tracking-[1.04px] w-[264px]" data-node-id="I95:1817;4:26">
+                <p className="font-['Inter:Regular'] font-normal leading-[24px] relative shrink-0 text-[#6e6a62] text-[15px] w-[264px]" data-node-id="I95:1817;4:28">
+              <p className="font-['IBM_Plex_Mono:Medium'] leading-[1.5] relative shrink-0 text-[#14654a] text-[13px] w-full" data-node-id="164:321">
+        <div className="bg-[#e9e4da] content-stretch flex flex-col gap-[40px] items-start overflow-clip px-[120px] py-[96px] relative shrink-0 w-full" data-node-id="95:1818" data-name="Hallazgos">
+            <p className="font-['IBM_Plex_Mono:Medium'] leading-[18px] relative shrink-0 text-[#14654a] text-[13px] tracking-[1.04px] whitespace-nowrap" data-node-id="95:1820">
+          <div className="bg-[#dbd5c9] h-px relative shrink-0 w-[1200px]" data-node-id="95:1822" data-name="Rule" />
+              <p className="font-['Inter:Regular'] font-normal leading-[24px] relative shrink-0 text-[#3a3a3a] text-[15px] w-[368px]" data-node-id="95:1826">
+              <p className="font-['Inter:Regular'] font-normal leading-[24px] relative shrink-0 text-[#3a3a3a] text-[15px] w-[368px]" data-node-id="95:1829">
+              <p className="font-['Inter:Regular'] font-normal leading-[24px] relative shrink-0 text-[#3a3a3a] text-[15px] w-[368px]" data-node-id="95:1832">
+            <p className="font-['IBM_Plex_Mono:Medium'] leading-[18px] relative shrink-0 text-[#14654a] text-[13px] tracking-[1.04px] whitespace-nowrap" data-node-id="95:1835">
+            <p className="font-['Inter:Regular'] font-normal leading-[28px] relative shrink-0 text-[#6e6a62] text-[17px] w-[760px]" data-node-id="95:1837">
+          <div className="bg-[#dbd5c9] h-px relative shrink-0 w-[1200px]" data-node-id="95:1838" data-name="Rule" />
+              <p className="font-['IBM_Plex_Mono:Regular'] leading-[16px] relative shrink-0 text-[#6e6a62] text-[12px] tracking-[0.72px] whitespace-nowrap" data-node-id="95:1841">
+              <p className="font-['Inter:Medium'] font-medium leading-[28px] relative shrink-0 text-[#3a3a3a] text-[17px] w-[312px]" data-node-id="95:1843">
+              <p className="font-['Inter:Regular'] font-normal leading-[24px] relative shrink-0 text-[#6e6a62] text-[15px] w-[312px]" data-node-id="95:1844">
+            <p className="font-['Inter:Semi_Bold'] font-semibold leading-[30px] relative shrink-0 text-[#14654a] text-[24px] tracking-[-0.12px] whitespace-nowrap" data-node-id="95:1845">
+              <p className="font-['IBM_Plex_Mono:Regular'] leading-[16px] relative shrink-0 text-[#6e6a62] text-[12px] tracking-[0.72px] whitespace-nowrap" data-node-id="95:1847">
+              <p className="font-['Inter:Medium'] font-medium leading-[28px] relative shrink-0 text-[#3a3a3a] text-[17px] w-[312px]" data-node-id="95:1849">
+              <p className="font-['Inter:Regular'] font-normal leading-[24px] relative shrink-0 text-[#6e6a62] text-[15px] w-[312px]" data-node-id="95:1850">
+            <p className="font-['Inter:Semi_Bold'] font-semibold leading-[30px] relative shrink-0 text-[#14654a] text-[24px] tracking-[-0.12px] whitespace-nowrap" data-node-id="95:1851">
+              <p className="font-['IBM_Plex_Mono:Regular'] leading-[16px] relative shrink-0 text-[#6e6a62] text-[12px] tracking-[0.72px] whitespace-nowrap" data-node-id="95:1853">
+              <p className="font-['Inter:Medium'] font-medium leading-[28px] relative shrink-0 text-[#3a3a3a] text-[17px] w-[312px]" data-node-id="95:1855">
+              <p className="font-['Inter:Regular'] font-normal leading-[24px] relative shrink-0 text-[#6e6a62] text-[15px] w-[312px]" data-node-id="95:1856">
+            <p className="font-['IBM_Plex_Mono:Medium'] leading-[18px] relative shrink-0 text-[#14654a] text-[13px] tracking-[1.04px] whitespace-nowrap" data-node-id="95:1859">
+          <div className="bg-[#dbd5c9] h-px relative shrink-0 w-[1200px]" data-node-id="95:1861" data-name="Rule" />
+                <p className="font-['Inter:Regular'] font-normal leading-[28px] relative shrink-0 text-[#3a3a3a] text-[17px] w-[568px]" data-node-id="95:1866">
+                <p className="font-['Inter:Regular'] font-normal leading-[28px] relative shrink-0 text-[#3a3a3a] text-[17px] w-[568px]" data-node-id="95:1869">
+                <p className="font-['Inter:Regular'] font-normal leading-[28px] relative shrink-0 text-[#3a3a3a] text-[17px] w-[568px]" data-node-id="95:1873">
+                <p className="font-['Inter:Regular'] font-normal leading-[28px] relative shrink-0 text-[#3a3a3a] text-[17px] w-[568px]" data-node-id="95:1876">
+            <p className="font-['IBM_Plex_Mono:Medium'] leading-[18px] relative shrink-0 text-[#14654a] text-[13px] tracking-[1.04px] whitespace-nowrap" data-node-id="95:1879">
+            <p className="font-['Inter:Regular'] font-normal leading-[28px] relative shrink-0 text-[#6e6a62] text-[17px] w-[760px]" data-node-id="95:1881">
+          <div className="bg-[#dbd5c9] h-px relative shrink-0 w-[1200px]" data-node-id="95:1882" data-name="Rule" />
+              <p className="font-['IBM_Plex_Mono:Regular'] leading-[16px] relative shrink-0 text-[#6e6a62] text-[12px] tracking-[0.72px] whitespace-nowrap" data-node-id="95:1885">
+                <p className="leading-[24px] relative shrink-0 text-[#14654a] text-[15px] whitespace-nowrap" data-node-id="95:1887">
+                <p className="leading-[28px] relative shrink-0 text-[#3a3a3a] text-[17px] w-[520px]" data-node-id="95:1888">
+                <p className="leading-[24px] relative shrink-0 text-[#14654a] text-[15px] whitespace-nowrap" data-node-id="95:1890">
+                <p className="leading-[28px] relative shrink-0 text-[#3a3a3a] text-[17px] w-[520px]" data-node-id="95:1891">
+                <p className="leading-[24px] relative shrink-0 text-[#14654a] text-[15px] whitespace-nowrap" data-node-id="95:1893">
+                <p className="leading-[28px] relative shrink-0 text-[#3a3a3a] text-[17px] w-[520px]" data-node-id="95:1894">
+                <p className="leading-[24px] relative shrink-0 text-[#14654a] text-[15px] whitespace-nowrap" data-node-id="95:1896">
+                <p className="leading-[28px] relative shrink-0 text-[#3a3a3a] text-[17px] w-[520px]" data-node-id="95:1897">
+              <p className="font-['IBM_Plex_Mono:Regular'] leading-[16px] relative shrink-0 text-[#6e6a62] text-[12px] tracking-[0.72px] whitespace-nowrap" data-node-id="95:1899">
+
+--- stderr ---
+
+
+Use `read` on the stdout/stderr paths above for the full output.
