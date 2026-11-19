@@ -292,7 +292,7 @@ export const projects: CaseStudy[] = [
     objectives: [
       ["META", "Definir una prioridad común y defendible para asignar el presupuesto correctivo."],
       ["BASELINE", "La prioridad dependía de la reunión más influyente y de tableros regionales."],
-      ["PROYECCIÓN", "Reducir 3%: hasta $840 MM MXN sobre $28,000 MM MXN actuales o $1,560 MM MXN sobre $52,000 MM MXN en dos años."],
+      ["PROYECCIÓN", "Reducir 3%: hasta $840 M sobre $28,000 M MXN actuales"],
       ["MEDICIÓN", "Comparar gasto prioritizado, gasto ejecutado y calidad de las fuentes por tienda."],
     ],
     iterations: [
@@ -345,7 +345,7 @@ export const projects: CaseStudy[] = [
     ],
     impactStates: [
       ["OBJETIVO", "Una priorización consistente para decidir dónde invertir."],
-      ["PROYECCIÓN", "Hasta −3%: $840 MM MXN sobre $28,000 MM MXN o $1,560 MM MXN sobre $52,000 MM MXN."],
+      ["PROYECCIÓN", "Hasta −3%: $840 M MXN sobre $28,000 M MXN."],
       ["SIGUIENTE MEDIDA", "Gasto ejecutado, desviación presupuestal y cambio de riesgo por tienda."],
     ],
     findingsTitle: "Tres hallazgos que cambiaron el diseño.",
