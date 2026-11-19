@@ -61,8 +61,11 @@ export function AboutPage() {
               </a>
             </div>
           </div>
-          <div className="portrait" aria-label="Monograma de Sergio Villanueva">
-            <span>SV</span>
+          <div className="portrait">
+            <img
+              src="/assets/portfolio/perfil%202021.png"
+              alt="Sergio Villanueva"
+            />
             <small>AGUASCALIENTES · MÉXICO</small>
           </div>
         </div>
