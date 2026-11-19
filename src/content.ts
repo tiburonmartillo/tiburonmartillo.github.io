@@ -14,6 +14,26 @@ export type Figure = {
   tag?: string;
 };
 
+export type Intro = {
+  eyebrow: string;
+  title: string;
+  body?: string;
+};
+
+export type Group = {
+  label: string;
+  marker?: string;
+  items: string[];
+};
+
+export type SectionSpec = Intro & {
+  cards?: ContentCard[];
+  groups?: Group[];
+  figure?: Figure;
+  muted?: boolean;
+  columns?: 3 | 4;
+};
+
 export type CaseStudy = {
   slug: ProjectSlug;
   number: string;
@@ -46,6 +66,14 @@ export type CaseStudy = {
     cards: ContentCard[];
     figure?: Figure;
   };
+  system?: {
+    eyebrow: string;
+    title: string;
+    body: string;
+    groups: Group[];
+  };
+  afterFindings?: SectionSpec[];
+  afterArchitecture?: SectionSpec[];
   gallery?: Array<{ src: string; alt: string }>;
   externalUrl?: string;
   contextTitle: string;
@@ -53,6 +81,7 @@ export type CaseStudy = {
   challengeCards: ContentCard[];
   methodTitle: string;
   methodBody: string;
+  methodEyebrow?: string;
   process: ContentCard[];
   findingsTitle: string;
   findings: ContentCard[];
@@ -68,8 +97,10 @@ export type CaseStudy = {
   resultMetrics: Array<[string, string]>;
   quote?: string;
   learnings: ContentCard[];
+  learningsIntro?: Intro;
   improvements: ContentCard[];
-  objectives?: Array<[string, string]>;
+  improvementsIntro?: Intro;
+  objectives?: SectionSpec;
   iterations?: ContentCard[];
   validation?: {
     participants: string;
@@ -169,6 +200,7 @@ export const projects: CaseStudy[] = [
       { title: "Decisión", body: "Comparaciones tardías: la alternativa se elegía por costumbre." },
     ],
     methodTitle: "Cuatro etapas, un solo hilo de decisión.",
+    methodEyebrow: "PROCESO",
     methodBody:
       "User-Centered Design, con investigación, arquitectura de información y evaluación heurística. Antes de dibujar una pantalla había que acordar qué se compara y en qué orden.",
     process: [
@@ -251,6 +283,33 @@ export const projects: CaseStudy[] = [
         body: "Clapp 2 define componentes y estados para evitar variantes manuales.",
       },
     ],
+    system: {
+      eyebrow: "SISTEMA Y ACCESIBILIDAD",
+      title: "Un tablero que no se degrada.",
+      body: "El producto se apoya en Clapp 2, el sistema de diseño corporativo que codiseñé en Figma. Cada vista hereda componentes, estados y criterios de contraste.",
+      groups: [
+        {
+          label: "QUÉ SE ESTANDARIZÓ",
+          marker: "—",
+          items: [
+            "Componentes de tabla, filtro y comparación con estados definidos.",
+            "Escala tipográfica y de espaciado compartida con el resto del corporativo.",
+            "Patrón de métrica: etiqueta en mono, cifra tabular y unidad explícita.",
+            "Plantillas de tablero para que un equipo nuevo no empiece de cero.",
+          ],
+        },
+        {
+          label: "ACCESIBILIDAD",
+          marker: "✓",
+          items: [
+            "Contraste mínimo AA en texto y en las series de datos.",
+            "Ninguna decisión depende solo del color: siempre hay etiqueta o forma.",
+            "Foco visible y orden de lectura probado con teclado.",
+            "Evaluación heurística de Nielsen aplicada antes de cada release.",
+          ],
+        },
+      ],
+    },
     contributionTitle: "Qué hice y con quién, sin atribuirme lo que no fue mío.",
     contributionBody:
       "El proyecto involucraba a siete áreas. Esta es la parte que me correspondió y dónde terminaba mi alcance.",
@@ -297,6 +356,16 @@ export const projects: CaseStudy[] = [
         body: "El entregable real fue la conversación y el orden de las preguntas.",
       },
     ],
+    learningsIntro: {
+      eyebrow: "APRENDIZAJES",
+      title: "Lo que me llevo.",
+      body: "El ahorro de tiempo fue el titular, pero el cambio real fue de conversación: un modelo común obliga a discutir supuestos en vez de formatos.",
+    },
+    improvementsIntro: {
+      eyebrow: "QUÉ MEJORARÍA",
+      title: "Lo que haría distinto en el próximo ciclo.",
+      body: "El modelo resolvió la comparación, pero quedaron frentes abiertos antes de escalarlo a más formatos.",
+    },
     improvements: [
       { title: "Documentar el porqué", body: "Los lineamientos sobreviven si explican la razón." },
       {
@@ -362,40 +431,90 @@ export const projects: CaseStudy[] = [
       { title: "Variedad", body: "Doce variables relevantes, medidas en unidades incompatibles." },
       { title: "Sesgo", body: "Cada región defendía su criterio con su propio tablero." },
     ],
-    methodTitle: "Doble diamante y Design Thinking: de la intuición al índice.",
+    methodTitle: "Doble diamante y design thinking: de la intuición al índice.",
     methodBody:
-      "Abrí el problema con quienes decidían el gasto y lo cerré en un modelo explicable. Cada fase dejó una decisión documentada.",
+      "Abrí el problema con quienes decidían el gasto y lo cerré en un modelo explicable. Cada fase dejó una decisión documentada, no solo una pantalla.",
     process: [
       {
         eyebrow: "01 · DESCUBRIR",
         title: "¿Por qué se disputa la prioridad?",
-        body: "Entrevistas con Real Estate, Operaciones y Finanzas.",
+        body: "Entrevistas con Real Estate, Operaciones y Finanzas; 3,265 tiendas y doce variables en unidades incompatibles.",
         methods: "Entrevistas con las tres áreas",
       },
       {
         eyebrow: "02 · DEFINIR",
         title: "¿Qué hace defendible una prioridad?",
-        body: "Un índice con pesos visibles, umbrales y una definición compartida de riesgo.",
+        body: "Un índice compuesto con pesos visibles, umbrales acordados y una definición compartida de riesgo.",
         methods: "Índice con pesos visibles · Umbrales de riesgo",
       },
       {
         eyebrow: "03 · IDEAR",
         title: "¿Cómo se explica el modelo?",
-        body: "Panorama, mapa, ranking y comparación con la composición visible.",
+        body: "Cuatro vistas —panorama, mapa, ranking y comparación— con la composición del índice siempre a la vista.",
         methods: "Panorama · Mapa · Ranking · Comparación",
       },
+    ],
+    afterFindings: [
       {
-        eyebrow: "04 · PROBAR",
-        title: "¿Resiste la conversación?",
-        body: "Revisión con el comité y ajuste de jerarquía y flujo de asignación.",
-        methods: "Revisión con el comité · Ajuste de jerarquía",
+        eyebrow: "02 · DEFINIR",
+        title: "Convertir doce variables en una prioridad defendible.",
+        body: "El objetivo no era rankear tiendas: era hacer explícito el criterio con el que se rankean.",
+        cards: [
+          {
+            eyebrow: "01",
+            title: "Un índice transparente",
+            body: "Que cualquier región pudiera ver cómo se compone su prioridad, no solo el resultado.",
+          },
+          {
+            eyebrow: "02",
+            title: "Comparar, no solo listar",
+            body: "Permitir leer dos tiendas lado a lado con las mismas variables y la misma unidad.",
+          },
+          {
+            eyebrow: "03",
+            title: "Sostener la decisión",
+            body: "Trazabilidad de qué cambió entre un ciclo y el siguiente.",
+          },
+          {
+            eyebrow: "04",
+            title: "Reducir el gasto",
+            body: "Orientar el presupuesto a las tiendas con mayor retorno esperado.",
+          },
+        ],
       },
     ],
-    objectives: [
-      ["META", "Definir una prioridad común y defendible para asignar el presupuesto correctivo."],
-      ["BASELINE", "La prioridad dependía de la reunión más influyente y de tableros regionales."],
-      ["PROYECCIÓN", "Reducir 3%: hasta $840 M sobre $28,000 M MXN actuales"],
-      ["MEDICIÓN", "Comparar gasto prioritizado, gasto ejecutado y calidad de las fuentes por tienda."],
+    afterArchitecture: [
+      {
+        eyebrow: "04 · PROTOTIPAR",
+        title: "Del dato crudo a un modelo de decisión.",
+        body: "Trabajé con Real Estate y Operaciones: requerimientos analíticos, arquitectura de las vistas, prototipo y validación con las regiones.",
+        cards: [
+          {
+            eyebrow: "01",
+            title: "Modelado",
+            body: "Traduje doce variables, medidas en unidades distintas, a una lectura comparable entre regiones.",
+            methods: "Doce variables · Escala comparable",
+          },
+          {
+            eyebrow: "02",
+            title: "Arquitectura",
+            body: "Definí la secuencia de lectura: panorama, mapa de riesgo, ranking y comparación de tienda.",
+            methods: "Secuencia de lectura · Jerarquía de información",
+          },
+          {
+            eyebrow: "03",
+            title: "Prototipado",
+            body: "Prototipo en Figma con datos de ejemplo; tres rondas de revisión con líderes regionales.",
+            methods: "Prototipo en Figma · Revisión con líderes",
+          },
+          {
+            eyebrow: "04",
+            title: "Validación",
+            body: "Pruebas de lectura del tablero: ¿la prioridad es entendible sin explicación del analista?",
+            methods: "Pruebas de lectura con usuarios",
+          },
+        ],
+      },
     ],
     iterations: [
       {
@@ -509,6 +628,33 @@ export const projects: CaseStudy[] = [
         body: "Misma unidad y mismo periodo para las dos tiendas.",
       },
     ],
+    system: {
+      eyebrow: "SISTEMA Y ACCESIBILIDAD",
+      title: "Un modelo de decisión, no un tablero aislado.",
+      body: "La solución se construyó sobre Clapp 2 y se documentó como plantilla para que el siguiente ciclo de capital no reiniciara el criterio.",
+      groups: [
+        {
+          label: "LO QUE QUEDÓ INSTALADO",
+          marker: "—",
+          items: [
+            "Traducción del índice de Ciencia de Datos a una lectura comprensible.",
+            "Plantilla de tablero con panorama, mapa, ranking y comparación.",
+            "Regla de visualización: color con etiqueta y posición siempre.",
+            "Documentación del criterio para auditoría y siguientes ciclos.",
+          ],
+        },
+        {
+          label: "ACCESIBILIDAD",
+          marker: "✓",
+          items: [
+            "Niveles de riesgo con forma además de color.",
+            "Contraste AA en series y etiquetas.",
+            "Lectura completa sin depender del tooltip.",
+            "Pruebas con líderes regionales, no solo con el equipo central.",
+          ],
+        },
+      ],
+    },
     contributionTitle: "Qué hice y con quién, sobre un modelo real.",
     contributionBody:
       "Ciencia de Datos construyó el scoring. Mi trabajo fue convertirlo en una experiencia que se pudiera leer, discutir y usar.",
@@ -551,6 +697,16 @@ export const projects: CaseStudy[] = [
         body: "Mostrar prioridad sin asignar presupuesto deja la decisión a medias.",
       },
     ],
+    learningsIntro: {
+      eyebrow: "APRENDIZAJES",
+      title: "Lo que aprendí sobre diseñar con datos.",
+      body: "Un tablero de priorización es un argumento: si no puedes explicar cómo se forma el número, el número no se usa.",
+    },
+    improvementsIntro: {
+      eyebrow: "QUÉ MEJORARÍA",
+      title: "Lo que haría distinto en el siguiente ciclo.",
+      body: "El modelo funcionó, pero quedaron frentes abiertos que atacaría antes de escalar.",
+    },
     improvements: [
       {
         title: "Cerrar el flujo de presupuesto",
@@ -596,12 +752,6 @@ export const projects: CaseStudy[] = [
         src: "/assets/portfolio/doble-diamante.png",
         alt: "Doble diamante: Comprender, Observar, Definir, Idear, Prototipar, Evaluar e Implementar",
       },
-      architecture: [
-        {
-          src: "/assets/portfolio/mapeo-ingenieria.png",
-          alt: "Tubería de datos: ingesta de PDF, modelo relacional y capa pública en Supabase",
-        },
-      ],
     },
     gallery: [
       {
@@ -625,7 +775,7 @@ export const projects: CaseStudy[] = [
     challengeCards: [
       {
         title: "Fragmentación",
-        body: "+500 boletines y +380 gacetas en PDFs, sin API ni identificadores comunes.",
+        body: "502 boletines y 1,347 proyectos en PDFs, sin API ni identificadores comunes.",
       },
       { title: "Lenguaje técnico", body: "El vocabulario legal bloquea el seguimiento ciudadano." },
       {
@@ -635,7 +785,7 @@ export const projects: CaseStudy[] = [
     ],
     methodTitle: "Doble diamante: dos preguntas, cuatro movimientos.",
     methodBody:
-      "Primero abrí el problema —qué dice el expediente y qué falta—; después lo cerré en un producto verificable.",
+      "Primero abrí el problema —qué dice el expediente y qué falta—; después lo cerré en un producto verificable. Cada fase dejó un artefacto que todavía vive en el sitio.",
     process: [
       {
         eyebrow: "01 · DESCUBRIR",
@@ -646,20 +796,158 @@ export const projects: CaseStudy[] = [
       {
         eyebrow: "02 · DEFINIR",
         title: "¿Qué falta para actuar?",
-        body: "Definí cuatro objetivos y una ficha común.",
+        body: "El 87% ya tiene resolutivo; el problema es la legibilidad. Definí cuatro objetivos y una ficha común.",
         methods: "Objetivos · Ficha común",
       },
       {
         eyebrow: "03 · IDEAR",
-        title: "¿Cómo se compara y verifica?",
-        body: "Cuatro capas de información y una identidad editorial.",
+        title: "¿Cómo se compara y se verifica?",
+        body: "Cuatro capas de información y una identidad editorial que hace del dato un acto público.",
         methods: "Cuatro capas · Identidad editorial",
       },
+    ],
+    afterFindings: [
       {
-        eyebrow: "04 · PROBAR",
-        title: "¿Aguanta el uso real?",
-        body: "Construí el monitor y lo probé con expedientes reales.",
-        methods: "Monitor · Expedientes reales",
+        eyebrow: "02 · DEFINIR",
+        title: "Convertir el expediente en una herramienta ciudadana.",
+        body: "El objetivo no era publicar más datos: era hacer que cualquier persona pudiera usar el dato para defender su territorio.",
+        cards: [
+          {
+            eyebrow: "01",
+            title: "Leer el expediente",
+            body: "Traducir boletines y gacetas a una ficha común: fecha, proyecto, municipio, giro y resolutivo.",
+          },
+          {
+            eyebrow: "02",
+            title: "Ver el patrón",
+            body: "Mostrar la concentración de proyectos por municipio, giro y tipo de estudio.",
+          },
+          {
+            eyebrow: "03",
+            title: "Registrar el territorio",
+            body: "Abrir un mapa donde la ciudadanía documente árboles, alertas y zonas de riesgo.",
+          },
+          {
+            eyebrow: "04",
+            title: "Sostener la identidad",
+            body: "Crear una voz editorial que haga del dato un acto público, no un tablero corporativo.",
+          },
+        ],
+      },
+    ],
+    afterArchitecture: [
+      {
+        eyebrow: "INGENIERÍA DE DATOS",
+        title: "Del PDF al dato consultable.",
+        body: "Diseñé el producto y también la tubería: extracción, normalización, modelo relacional en Postgres y una capa pública que no depende de hojas de cálculo.",
+        cards: [
+          {
+            eyebrow: "01 · INGESTA",
+            title: "PDFs y JSON de origen",
+            body: "Scripts de extracción para 502 boletines de la SSMAA y 1,347 proyectos de la SEMARNAT; deduplicación por expediente y folio.",
+          },
+          {
+            eyebrow: "02 · MODELO",
+            title: "Crudo, curado y ciudadano",
+            body: "Tablas separadas por confianza: boletines_json, gacetas_json, projects, gazettes, green_areas, events y participation_submissions.",
+          },
+          {
+            eyebrow: "03 · SUPABASE",
+            title: "Postgres, Auth y RLS",
+            body: "Supabase como backend: RLS por tabla, Auth con enlace mágico y RPC de moderación (grant/revoke y listado de usuarios).",
+          },
+          {
+            eyebrow: "04 · ANALÍTICA",
+            title: "Consultas que responden",
+            body: "Vistas y agregados para cobertura, concentración por municipio y giro, y series de gacetas 2003–2026.",
+          },
+        ],
+        figure: {
+          src: "/assets/portfolio/mapeo-ingenieria.png",
+          alt: "Tubería de datos: ingesta de PDF, modelo relacional y capa pública en Supabase",
+          caption: "MAPEO VERDE · TUBERÍA DE DATOS",
+          tag: "CAPTURAS DEL SITIO PÚBLICO · DATOS ABIERTOS · CC-BY-SA 4.0",
+        },
+      },
+      {
+        eyebrow: "04 · PROTOTIPAR",
+        title: "Del documento aislado al monitor público.",
+        body: "Con el modelo de datos listo, definí la arquitectura, la identidad y los componentes del monitor; después lo probé con expedientes reales.",
+        cards: [
+          {
+            eyebrow: "01",
+            title: "Extracción",
+            body: "Reuní 502 boletines de la SSMAA y 1,347 proyectos de la SEMARNAT publicados entre 2003 y 2026.",
+            methods: "Boletines SSMAA · Gacetas SEMARNAT",
+          },
+          {
+            eyebrow: "02",
+            title: "Normalización",
+            body: "Unifiqué expediente, fecha, municipio, giro, tipo de estudio y resolutivo en un solo modelo.",
+            methods: "Modelo unificado · Campos comunes",
+          },
+          {
+            eyebrow: "03",
+            title: "Arquitectura",
+            body: "Cuatro rutas: Agenda, Monitor ambiental, Participación y Manifiesto, con el dato siempre a un clic.",
+            methods: "Cuatro rutas · Navegación por dato",
+          },
+          {
+            eyebrow: "04",
+            title: "Diseño e identidad",
+            body: "Sistema brutalista en negro y lima, tipografía condensada y componentes de filtro, KPI, calendario y mapa.",
+            methods: "Sistema brutalista · Componentes de filtro y KPI",
+          },
+        ],
+      },
+      {
+        eyebrow: "OPERACIÓN Y GOBIERNO",
+        title: "Operar el dato también es diseñarlo.",
+        body: "Un tablero sin mantenimiento se vuelve decorado. Documenté el modelo, los permisos y la vigencia de cada fuente.",
+        groups: [
+          {
+            label: "ADMINISTRACIÓN DE BASE DE DATOS",
+            marker: "—",
+            items: [
+              "Migraciones versionadas y un entorno de staging antes de tocar producción.",
+              "Respaldos y restauración probada; retención definida para los envíos ciudadanos.",
+              "Índices por municipio, fecha y expediente para que los filtros no castiguen.",
+              "Consultas RPC acotadas: la service key nunca llega al navegador.",
+            ],
+          },
+          {
+            label: "GOBIERNO Y CALIDAD",
+            marker: "✓",
+            items: [
+              "Procedencia visible: fuente, fecha de corte y licencia CC-BY-SA 4.0 junto a cada cifra.",
+              "Reglas de validación y estados «Falta dato» en lugar de ceros silenciosos.",
+              "Moderación con roles: la ciudadanía propone, el equipo aprueba.",
+              "Criterios de actualización documentados para boletines y gacetas.",
+            ],
+          },
+        ],
+      },
+      {
+        eyebrow: "DECISIONES DE INGENIERÍA",
+        title: "Cuatro decisiones que sostienen el dato.",
+        cards: [
+          {
+            title: "Postgres como única fuente de verdad",
+            body: "Los PDFs se normalizan una vez y todas las vistas leen la misma tabla; no hay cifras paralelas en el frontend.",
+          },
+          {
+            title: "RLS antes que endpoints",
+            body: "Los permisos viven en la base y no en el cliente; la lectura pública se limita a vistas y columnas necesarias.",
+          },
+          {
+            title: "Edge Functions solo con secreto",
+            body: "Webhooks y tareas programadas fuera del navegador; la consulta ciudadana va directo a Postgres con RLS.",
+          },
+          {
+            title: "Gobierno visible en la interfaz",
+            body: "Fuente, fecha de corte y licencia acompañan a la cifra: sin eso, el dato no es citable.",
+          },
+        ],
       },
     ],
     findingsTitle: "Tres hallazgos que cambiaron el producto.",
@@ -720,6 +1008,33 @@ export const projects: CaseStudy[] = [
         body: "Mapa, agenda y manifiesto convierten consulta en participación.",
       },
     ],
+    system: {
+      eyebrow: "SISTEMA Y ACCESIBILIDAD",
+      title: "Un lenguaje visual para el dato público.",
+      body: "La plataforma se construyó con un sistema propio de tokens y componentes reutilizables entre boletines, gacetas y participación.",
+      groups: [
+        {
+          label: "LO QUE QUEDÓ INSTALADO",
+          marker: "—",
+          items: [
+            "11 tokens de color para la identidad: ink, paper, lime, yellow, lavender y coral.",
+            "Componentes de filtro, KPI, calendario, tabla y ficha de expediente.",
+            "Plantilla de monitor reutilizable para nuevas fuentes de datos abiertos.",
+            "Documentación de fuentes, licencia y fecha de actualización.",
+          ],
+        },
+        {
+          label: "ACCESIBILIDAD",
+          marker: "✓",
+          items: [
+            "Contraste alto y escala tipográfica pensada para lectura en pantalla.",
+            "Etiquetas monoespaciadas que no dependen solo del color.",
+            "Estados vacíos que explican qué falta y cómo buscarlo.",
+            "Cifras con periodo, fuente y unidad siempre visibles.",
+          ],
+        },
+      ],
+    },
     contributionTitle: "Qué hice: de PDF planos a una base consultable.",
     contributionBody:
       "Convertí archivo plano en una base de datos consultable y diseñé la experiencia que la vuelve legible.",
@@ -741,11 +1056,11 @@ export const projects: CaseStudy[] = [
         body: "Los documentos originales son de SSMAA y SEMARNAT.",
       },
     ],
-    resultTitle: "+500 boletines, una causa común.",
+    resultTitle: "502 boletines, una causa común.",
     resultMetrics: [
-      ["+500", "BOLETINES SSMAA"],
-      ["+380", "GACETAS SEMARNAT"],
-      ["2", "FUENTES ABIERTAS"],
+      ["502", "BOLETINES SSMAA"],
+      ["1,347", "PROYECTOS AMBIENTALES"],
+      ["87%", "CON RESOLUTIVO"],
       ["1", "SITIO PÚBLICO"],
     ],
     quote: "“El dato ambiental no sirve si solo lo entiende quien lo produjo.”",
@@ -763,6 +1078,16 @@ export const projects: CaseStudy[] = [
         body: "Un boletín municipal puede importar más si ocurre frente a tu casa.",
       },
     ],
+    learningsIntro: {
+      eyebrow: "APRENDIZAJES",
+      title: "Lo que aprendí al diseñar con datos abiertos.",
+      body: "Un monitor ambiental es un argumento público: si la fuente no se puede verificar, la cifra pierde su fuerza.",
+    },
+    improvementsIntro: {
+      eyebrow: "QUÉ MEJORARÍA",
+      title: "Lo que haría distinto en la siguiente iteración.",
+      body: "Con más tiempo y presupuesto, estos son los frentes que atacaría primero.",
+    },
     improvements: [
       {
         title: "Automatizar las gacetas",
@@ -821,14 +1146,42 @@ export const projects: CaseStudy[] = [
         body: "Los equipos requerían claridad sobre criterio y siguiente paso.",
       },
     ],
+    problem: {
+      eyebrow: "PROBLEMA Y OBJETIVOS",
+      title: "Un proceso complejo y lento para aprobar créditos.",
+      body: "El objetivo fue rediseñar el journey de aprobación para ofrecer una experiencia más directa, comprensible y escalable.",
+      cards: [
+        {
+          eyebrow: "01",
+          title: "Reducir el tiempo",
+          body: "Reducir fricción operativa en el análisis y la aprobación.",
+        },
+        {
+          eyebrow: "02",
+          title: "Estandarizar",
+          body: "Reorganizar el flujo para hacerlo más claro y consistente.",
+        },
+        {
+          eyebrow: "03",
+          title: "Digitalizar el journey",
+          body: "Traducir el proceso operativo a una experiencia digital.",
+        },
+        {
+          eyebrow: "04",
+          title: "Modernizar sobre legados",
+          body: "Alinear el flujo con sistemas legados y arquitecturas Low-Code.",
+        },
+      ],
+    },
     methodTitle: "Cuatro momentos en el rediseño del flujo.",
+    methodEyebrow: "PROCESO",
     methodBody:
-      "Trabajé sobre el proceso operativo, el journey y las reglas de decisión antes de traducirlas a una experiencia digital.",
+      "Trabajé sobre el proceso operativo, el journey de aprobación y las reglas de decisión antes de traducirlas a una experiencia digital.",
     process: [
       {
         eyebrow: "01",
         title: "Descubrimiento",
-        body: "Mapa del proceso y sus puntos de fricción.",
+        body: "Mapa del proceso operativo y sus puntos de fricción.",
         methods: "Mapa del proceso · Puntos de fricción",
       },
       {
@@ -840,13 +1193,13 @@ export const projects: CaseStudy[] = [
       {
         eyebrow: "03",
         title: "Prototipado",
-        body: "Experiencia diseñada y validada en Figma.",
+        body: "Experiencia de aprobación diseñada y validada en Figma.",
         methods: "Prototipo en Figma · Validación",
       },
       {
         eyebrow: "04",
         title: "Diseño",
-        body: "Alineación con sistemas legados y Low-Code.",
+        body: "Alineación con la modernización de sistemas legados y Low-Code.",
         methods: "Sistemas legados · Low-Code",
       },
     ],
@@ -898,6 +1251,32 @@ export const projects: CaseStudy[] = [
         body: "Alineación continua entre proceso, usuario y tecnología.",
       },
     ],
+    system: {
+      eyebrow: "SISTEMA Y ACCESIBILIDAD",
+      title: "Una experiencia simple dentro de sistemas complejos.",
+      body: "Apliqué principios de UX/UI y arquitectura de información para traducir el proceso operativo a una interfaz accionable.",
+      groups: [
+        {
+          label: "QUÉ SE ESTANDARIZÓ",
+          items: [
+            "User-Centered Design y arquitectura de información.",
+            "Diseño de flujos y reorganización de tareas.",
+            "Alineación con sistemas legados y arquitecturas Low-Code.",
+            "Pruebas de usabilidad y evaluación del journey.",
+          ],
+        },
+        {
+          label: "ACCESIBILIDAD",
+          marker: "✓",
+          items: [
+            "Contraste mínimo AA en texto y en las series de datos.",
+            "Ninguna decisión depende solo del color: siempre hay etiqueta o forma.",
+            "Foco visible y orden de lectura probado con teclado.",
+            "Evaluación heurística de Nielsen aplicada antes de cada release.",
+          ],
+        },
+      ],
+    },
     contributionTitle: "El diseño del sistema pesó más que la implementación.",
     contributionBody:
       "Mi trabajo fue definir el flujo, las reglas y los lineamientos; desarrollo ejecutó la arquitectura.",
@@ -937,6 +1316,16 @@ export const projects: CaseStudy[] = [
         body: "La métrica fue el tiempo total: de una semana a 15 minutos.",
       },
     ],
+    learningsIntro: {
+      eyebrow: "APRENDIZAJES",
+      title: "Lo que me llevo.",
+      body: "La operación humana se volvió más consistente cuando sus criterios dejaron de estar implícitos y pasaron a formar parte de una secuencia visible.",
+    },
+    improvementsIntro: {
+      eyebrow: "QUÉ MEJORARÍA",
+      title: "Lo que haría distinto en el próximo ciclo.",
+      body: "Validar con pruebas de usabilidad el impacto real del journey y las tareas que siguen generando fricción.",
+    },
     improvements: [
       { title: "Medir adopción", body: "Medir abandono, correcciones y tiempo por etapa." },
       { title: "Escalar el patrón digital", body: "Reutilizar el journey en otros flujos." },

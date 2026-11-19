@@ -1,5 +1,5 @@
 import { CardGrid, Eyebrow, Metrics, SectionIntro } from "../components/Editorial";
-import type { CaseStudy, Figure } from "../content";
+import type { CaseStudy, Figure, Group, SectionSpec } from "../content";
 import { ProjectVisual } from "./HomePage";
 
 function SectionFigures({ figures }: { figures?: Figure[] }) {
@@ -18,6 +18,41 @@ function SectionFigures({ figures }: { figures?: Figure[] }) {
         </figure>
       ))}
     </div>
+  );
+}
+
+function GroupGrid({ groups }: { groups: Group[] }) {
+  return (
+    <div className="system-grid">
+      {groups.map((group) => (
+        <article className="system-group reveal" key={group.label}>
+          <Eyebrow>{group.label}</Eyebrow>
+          <ul>
+            {group.items.map((item, index) => (
+              <li key={item}>
+                <span aria-hidden="true">
+                  {group.marker ?? String(index + 1).padStart(2, "0")}
+                </span>
+                <p>{item}</p>
+              </li>
+            ))}
+          </ul>
+        </article>
+      ))}
+    </div>
+  );
+}
+
+function SpecSection({ spec }: { spec: SectionSpec }) {
+  return (
+    <section className={spec.muted ? "section section-muted" : "section page-container"}>
+      <div className={spec.muted ? "page-container" : undefined}>
+        <SectionIntro eyebrow={spec.eyebrow} title={spec.title} body={spec.body} />
+        {spec.cards && <CardGrid cards={spec.cards} columns={spec.columns} />}
+        {spec.groups && <GroupGrid groups={spec.groups} />}
+        <SectionFigures figures={spec.figure ? [spec.figure] : undefined} />
+      </div>
+    </section>
   );
 }
 
@@ -102,7 +137,7 @@ export function CaseStudyPage({ project }: { project: CaseStudy }) {
         )}
         <section className="section page-container">
           <SectionIntro
-            eyebrow="METODOLOGÍA"
+            eyebrow={project.methodEyebrow ?? "METODOLOGÍA"}
             title={project.methodTitle}
             body={project.methodBody}
           />
@@ -116,23 +151,6 @@ export function CaseStudyPage({ project }: { project: CaseStudy }) {
           )}
           <CardGrid cards={project.process} />
         </section>
-        {project.objectives && (
-          <section className="section page-container">
-            <SectionIntro
-              eyebrow="OBJETIVOS Y MEDICIÓN"
-              title="De un problema compartido a una meta verificable."
-              body="Una meta útil separa el resultado que se espera del resultado que ya fue observado."
-            />
-            <div className="objective-grid">
-              {project.objectives.map(([label, value]) => (
-                <article className="objective-card reveal" key={label}>
-                  <Eyebrow>{label}</Eyebrow>
-                  <p>{value}</p>
-                </article>
-              ))}
-            </div>
-          </section>
-        )}
         <section className="section section-muted">
           <div className="page-container">
             <SectionIntro eyebrow="DESCUBRIMIENTO" title={project.findingsTitle} />
@@ -140,6 +158,24 @@ export function CaseStudyPage({ project }: { project: CaseStudy }) {
             <SectionFigures figures={project.sectionFigures?.findings} />
           </div>
         </section>
+        {project.afterFindings?.map((spec) => (
+          <SpecSection key={spec.title} spec={spec} />
+        ))}
+        <section className="section page-container">
+          <SectionIntro
+            eyebrow="ARQUITECTURA DE INFORMACIÓN"
+            title={project.architectureTitle}
+            body={project.architectureBody}
+          />
+          <CardGrid
+            cards={project.architecture}
+            columns={project.architecture.length === 3 ? 3 : 4}
+          />
+          <SectionFigures figures={project.sectionFigures?.architecture} />
+        </section>
+        {project.afterArchitecture?.map((spec) => (
+          <SpecSection key={spec.title} spec={spec} />
+        ))}
         {project.validation && (
           <section className="section page-container">
             <SectionIntro
@@ -194,18 +230,6 @@ export function CaseStudyPage({ project }: { project: CaseStudy }) {
           </section>
         )}
         <section className="section page-container">
-          <SectionIntro
-            eyebrow="ARQUITECTURA DE INFORMACIÓN"
-            title={project.architectureTitle}
-            body={project.architectureBody}
-          />
-          <CardGrid
-            cards={project.architecture}
-            columns={project.architecture.length === 3 ? 3 : 4}
-          />
-          <SectionFigures figures={project.sectionFigures?.architecture} />
-        </section>
-        <section className="section page-container">
           <SectionIntro eyebrow="DECISIONES DE DISEÑO" title={project.decisionsTitle} wide />
           <CardGrid cards={project.decisions} />
           <SectionFigures figures={project.sectionFigures?.decisions} />
@@ -220,6 +244,18 @@ export function CaseStudyPage({ project }: { project: CaseStudy }) {
               />
               <CardGrid cards={project.dataQuality} columns={3} />
               <SectionFigures figures={project.sectionFigures?.data} />
+            </div>
+          </section>
+        )}
+        {project.system && (
+          <section className="section section-muted">
+            <div className="page-container">
+              <SectionIntro
+                eyebrow={project.system.eyebrow}
+                title={project.system.title}
+                body={project.system.body}
+              />
+              <GroupGrid groups={project.system.groups} />
             </div>
           </section>
         )}
@@ -251,17 +287,23 @@ export function CaseStudyPage({ project }: { project: CaseStudy }) {
         </section>
         <section className="section page-container">
           <SectionIntro
-            eyebrow="APRENDIZAJES"
-            title="Lo que me llevo."
-            body="El resultado importa, pero también lo que cambia la siguiente forma de trabajar."
+            eyebrow={project.learningsIntro?.eyebrow ?? "APRENDIZAJES"}
+            title={project.learningsIntro?.title ?? "Lo que me llevo."}
+            body={
+              project.learningsIntro?.body ??
+              "El resultado importa, pero también lo que cambia la siguiente forma de trabajar."
+            }
           />
           <CardGrid cards={project.learnings} columns={3} />
         </section>
         <section className="section page-container">
           <SectionIntro
-            eyebrow="QUÉ MEJORARÍA"
-            title="Lo que haría distinto en el próximo ciclo."
-            body="Los frentes que atacaría antes de escalar la solución."
+            eyebrow={project.improvementsIntro?.eyebrow ?? "QUÉ MEJORARÍA"}
+            title={project.improvementsIntro?.title ?? "Lo que haría distinto en el próximo ciclo."}
+            body={
+              project.improvementsIntro?.body ??
+              "Los frentes que atacaría antes de escalar la solución."
+            }
           />
           <CardGrid cards={project.improvements} columns={3} />
         </section>

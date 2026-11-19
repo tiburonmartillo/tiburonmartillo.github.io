@@ -1197,6 +1197,41 @@
     margin-top: 0.75rem;
   }
 
+  .system-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(2rem, 5vw, 4.5rem);
+    margin-top: 2.5rem;
+  }
+
+  .system-group ul {
+    margin-top: 1rem;
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .system-group li {
+    display: grid;
+    grid-template-columns: 2rem minmax(0, 1fr);
+    gap: 0.5rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--color-line);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: var(--color-ink-muted);
+  }
+
+  .system-group li span {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    line-height: 1.6;
+    color: var(--color-accent);
+  }
+
+  .system-group li p {
+    margin: 0;
+  }
+
   .context-copy {
     max-width: 42.5rem;
     margin: -1.5rem 0 3rem;
@@ -1505,6 +1540,11 @@
 
   .case-gallery {
     grid-template-columns: 1fr;
+  }
+
+  .system-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
 
   .result-band .metrics {
