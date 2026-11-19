@@ -238,7 +238,7 @@ export const projects: CaseStudy[] = [
     title: "Capital Allocation",
     subtitle: "Priorizar mantenimiento en 3,265 tiendas",
     summary:
-      "Diseñé la experiencia de un tablero multivariable para decidir dónde invertir el gasto de mantenimiento correctivo entre 3,265 tiendas, con una reducción proyectada de 3% sobre un gasto anual base de $28 mil millones de pesos, que podría alcanzar $52 mil millones en dos años.",
+      "Diseñé la experiencia de un tablero multivariable para decidir dónde invertir el gasto de mantenimiento correctivo entre 3,265 tiendas, con una reducción proyectada de 3% sobre un gasto anual base de $28,000 MM MXN, que podría alcanzar $52,000 MM MXN en dos años.",
     product: "Tablero multivariable de priorización para Real Estate y Operaciones",
     facts: [
       ["ROL", "Data Product Designer · UX"],
@@ -254,7 +254,7 @@ export const projects: CaseStudy[] = [
     context: [
       "Real Estate necesitaba decidir cada año dónde invertir el mantenimiento correctivo. Doce variables en unidades incompatibles hacían imposible comparar necesidades con un criterio consistente.",
       "Sin un índice común, la prioridad la definía quien tenía la reunión más fuerte, no la evidencia.",
-      "El gasto anual de mantenimiento correctivo se estimaba en $28 mil millones de pesos y podía crecer a $52 mil millones en dos años.",
+      "El gasto anual de mantenimiento correctivo se estimaba en $28,000 MM MXN y podía crecer a $52,000 MM MXN en dos años.",
     ],
     challengeCards: [
       {
@@ -292,7 +292,7 @@ export const projects: CaseStudy[] = [
     objectives: [
       ["META", "Definir una prioridad común y defendible para asignar el presupuesto correctivo."],
       ["BASELINE", "La prioridad dependía de la reunión más influyente y de tableros regionales."],
-      ["PROYECCIÓN", "Reducir 3%: hasta $840 millones sobre $28 mil millones actuales o $1,560 millones sobre $52 mil millones en dos años."],
+      ["PROYECCIÓN", "Reducir 3%: hasta $840 MM MXN sobre $28,000 MM MXN actuales o $1,560 MM MXN sobre $52,000 MM MXN en dos años."],
       ["MEDICIÓN", "Comparar gasto prioritizado, gasto ejecutado y calidad de las fuentes por tienda."],
     ],
     iterations: [
@@ -345,7 +345,7 @@ export const projects: CaseStudy[] = [
     ],
     impactStates: [
       ["OBJETIVO", "Una priorización consistente para decidir dónde invertir."],
-      ["PROYECCIÓN", "Hasta −3%: $840 millones sobre $28 mil millones o $1,560 millones sobre $52 mil millones."],
+      ["PROYECCIÓN", "Hasta −3%: $840 MM MXN sobre $28,000 MM MXN o $1,560 MM MXN sobre $52,000 MM MXN."],
       ["SIGUIENTE MEDIDA", "Gasto ejecutado, desviación presupuestal y cambio de riesgo por tienda."],
     ],
     findingsTitle: "Tres hallazgos que cambiaron el diseño.",
@@ -431,8 +431,8 @@ export const projects: CaseStudy[] = [
     resultTitle: "3,265 tiendas, un criterio.",
     resultMetrics: [
       ["−3%", "REDUCCIÓN PROYECTADA DEL GASTO"],
-      ["$840M", "ESCENARIO SOBRE $28 MIL MILLONES"],
-      ["$1,560M", "ESCENARIO SOBRE $52 MIL MILLONES"],
+      ["$840 MM", "ESCENARIO SOBRE $28,000 MM MXN"],
+      ["$1,560 MM", "ESCENARIO SOBRE $52,000 MM MXN"],
       ["128", "TIENDAS EN RIESGO ALTO"],
     ],
     learnings: [

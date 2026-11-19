@@ -9,7 +9,7 @@ const experience = [
     bullets: [
       "Diseñé productos analíticos para Finanzas, Operaciones y Real Estate en México y Centroamérica, integrando información de CRM, ServiceNow, Tririga y fuentes externas.",
       "Codiseñé en Figma el sistema corporativo Clapp 2 —hoy Living Design— y establecí lineamientos de Gobierno UX y evaluación heurística.",
-      "Reduje de 26 a 5 horas la elaboración de proyectos de inversión y diseñé un modelo de priorización para 3,265 tiendas, con una reducción proyectada de 3% sobre un gasto anual base de $28 mil millones de pesos.",
+      "Reduje de 26 a 5 horas la elaboración de proyectos de inversión y diseñé un modelo de priorización para 3,265 tiendas, con una reducción proyectada de 3% sobre un gasto anual base de $28,000 MM MXN.",
     ],
   },
   {
