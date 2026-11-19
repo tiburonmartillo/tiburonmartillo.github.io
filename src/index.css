@@ -526,6 +526,85 @@
     color: var(--color-ink-muted);
   }
 
+  .objective-grid,
+  .iteration-grid,
+  .impact-states {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .objective-card,
+  .iteration-card,
+  .impact-states article {
+    min-height: 10.5rem;
+    padding: 1.5rem;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-card);
+    background: var(--color-surface-card);
+  }
+
+  .objective-card > p,
+  .iteration-card > p,
+  .impact-states article > p {
+    margin-top: 1rem;
+    font-size: 0.9375rem;
+    line-height: 1.65;
+  }
+
+  .iteration-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .iteration-card h3 {
+    margin-top: 0.75rem;
+    font-family: var(--font-sans-semibold);
+    font-size: 1.125rem;
+  }
+
+  .validation-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .validation-summary,
+  .validation-list {
+    padding: 1.5rem;
+    border-top: 1px solid var(--color-line);
+  }
+
+  .validation-summary .eyebrow,
+  .validation-list .eyebrow {
+    margin-top: 0.5rem;
+  }
+
+  .validation-summary p,
+  .validation-list li {
+    margin-top: 0.75rem;
+    font-size: 0.9375rem;
+    line-height: 1.65;
+  }
+
+  .validation-list ul {
+    margin: 0;
+    padding-left: 1.1rem;
+  }
+
+  .impact-states {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: 3rem;
+  }
+
+  .impact-states article {
+    border-color: color-mix(in srgb, var(--color-inverse-text) 18%, transparent);
+    background: transparent;
+  }
+
+  .impact-states article .eyebrow {
+    color: var(--color-accent-soft);
+  }
+
   .tool-list {
     max-width: 50rem;
   }
@@ -1254,6 +1333,19 @@
   .card-grid-three {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .objective-grid,
+  .iteration-grid,
+  .validation-grid,
+  .impact-states {
+    grid-template-columns: 1fr;
+  }
+
+  .objective-card,
+  .iteration-card,
+  .impact-states article {
+    min-height: auto;
   }
 
   .tool-row {

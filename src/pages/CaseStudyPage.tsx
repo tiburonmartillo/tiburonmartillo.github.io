@@ -82,12 +82,82 @@ export function CaseStudyPage({ project }: { project: CaseStudy }) {
           )}
           <CardGrid cards={project.process} />
         </section>
+        {project.objectives && (
+          <section className="section page-container">
+            <SectionIntro
+              eyebrow="OBJETIVOS Y MEDICIÓN"
+              title="De un problema compartido a una meta verificable."
+              body="Una meta útil separa el resultado que se espera del resultado que ya fue observado."
+            />
+            <div className="objective-grid">
+              {project.objectives.map(([label, value]) => (
+                <article className="objective-card reveal" key={label}>
+                  <Eyebrow>{label}</Eyebrow>
+                  <p>{value}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+        )}
         <section className="section section-muted">
           <div className="page-container">
             <SectionIntro eyebrow="DESCUBRIMIENTO" title={project.findingsTitle} />
             <CardGrid cards={project.findings} columns={3} />
           </div>
         </section>
+        {project.validation && (
+          <section className="section page-container">
+            <SectionIntro
+              eyebrow="VALIDACIÓN"
+              title="Probar si el modelo se puede explicar y defender."
+              body="La validación se centró en comprensión, justificación y utilidad para tomar una decisión."
+            />
+            <div className="validation-grid">
+              <article className="validation-summary reveal">
+                <Eyebrow>PARTICIPANTES</Eyebrow>
+                <p>{project.validation.participants}</p>
+                <Eyebrow>TAREA</Eyebrow>
+                <p>{project.validation.task}</p>
+              </article>
+              <article className="validation-list reveal">
+                <Eyebrow>HALLAZGOS</Eyebrow>
+                <ul>
+                  {project.validation.findings.map((finding) => (
+                    <li key={finding}>{finding}</li>
+                  ))}
+                </ul>
+              </article>
+              <article className="validation-list reveal">
+                <Eyebrow>CAMBIOS DESPUÉS DE VALIDAR</Eyebrow>
+                <ul>
+                  {project.validation.changes.map((change) => (
+                    <li key={change}>{change}</li>
+                  ))}
+                </ul>
+              </article>
+            </div>
+          </section>
+        )}
+        {project.iterations && (
+          <section className="section section-muted">
+            <div className="page-container">
+              <SectionIntro
+                eyebrow="ITERACIONES"
+                title="Del ranking opaco a una explicación comparable."
+                body="Tres estados representativos muestran cómo cambió la solución después de probarla."
+              />
+              <div className="iteration-grid">
+                {project.iterations.map((iteration) => (
+                  <article className="iteration-card reveal" key={iteration.title}>
+                    <Eyebrow>{iteration.eyebrow}</Eyebrow>
+                    <h3>{iteration.title}</h3>
+                    <p>{iteration.body}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
         <section className="section page-container">
           <SectionIntro
             eyebrow="ARQUITECTURA DE INFORMACIÓN"
@@ -103,6 +173,18 @@ export function CaseStudyPage({ project }: { project: CaseStudy }) {
           <SectionIntro eyebrow="DECISIONES DE DISEÑO" title={project.decisionsTitle} wide />
           <CardGrid cards={project.decisions} />
         </section>
+        {project.dataQuality && (
+          <section className="section section-muted">
+            <div className="page-container">
+              <SectionIntro
+                eyebrow="CONFIABILIDAD DEL DATO"
+                title="El puntaje solo es defendible si la base también lo es."
+                body="Estos límites separan la experiencia diseñada de los datos y controles necesarios para escalar."
+              />
+              <CardGrid cards={project.dataQuality} columns={3} />
+            </div>
+          </section>
+        )}
         <section className="section page-container">
           <SectionIntro
             eyebrow="MI CONTRIBUCIÓN"
@@ -116,6 +198,16 @@ export function CaseStudyPage({ project }: { project: CaseStudy }) {
             <Eyebrow>LOGROS</Eyebrow>
             <h2>{project.resultTitle}</h2>
             <Metrics items={project.resultMetrics} inverse />
+            {project.impactStates && (
+              <div className="impact-states">
+                {project.impactStates.map(([label, value]) => (
+                  <article key={label}>
+                    <Eyebrow>{label}</Eyebrow>
+                    <p>{value}</p>
+                  </article>
+                ))}
+              </div>
+            )}
             {project.quote && <blockquote>{project.quote}</blockquote>}
           </div>
         </section>

@@ -43,6 +43,16 @@ export type CaseStudy = {
   quote?: string;
   learnings: ContentCard[];
   improvements: ContentCard[];
+  objectives?: Array<[string, string]>;
+  iterations?: ContentCard[];
+  validation?: {
+    participants: string;
+    task: string;
+    findings: string[];
+    changes: string[];
+  };
+  dataQuality?: ContentCard[];
+  impactStates?: Array<[string, string]>;
 };
 
 export const contact = {
@@ -228,7 +238,7 @@ export const projects: CaseStudy[] = [
     title: "Capital Allocation",
     subtitle: "Priorizar mantenimiento en 3,265 tiendas",
     summary:
-      "Diseñé la experiencia de un tablero multivariable para decidir dónde invertir el gasto de mantenimiento correctivo entre 3,265 tiendas, con una reducción proyectada de 3% en el gasto corporativo total.",
+      "Diseñé la experiencia de un tablero multivariable para decidir dónde invertir el gasto de mantenimiento correctivo entre 3,265 tiendas, con una reducción proyectada de 3% sobre un gasto anual base de $28 mil millones de pesos, que podría alcanzar $52 mil millones en dos años.",
     product: "Tablero multivariable de priorización para Real Estate y Operaciones",
     facts: [
       ["ROL", "Data Product Designer · UX"],
@@ -238,12 +248,13 @@ export const projects: CaseStudy[] = [
     ],
     metrics: [
       ["3,265", "TIENDAS EN EL MODELO DE DECISIÓN"],
-      ["−3%", "REDUCCIÓN PROYECTADA DEL GASTO CORRECTIVO"],
+      ["−3%", "REDUCCIÓN PROYECTADA SOBRE LA BASE DE GASTO"],
     ],
     contextTitle: "Demasiadas variables para una sola decisión de gasto.",
     context: [
       "Real Estate necesitaba decidir cada año dónde invertir el mantenimiento correctivo. Doce variables en unidades incompatibles hacían imposible comparar necesidades con un criterio consistente.",
       "Sin un índice común, la prioridad la definía quien tenía la reunión más fuerte, no la evidencia.",
+      "El gasto anual de mantenimiento correctivo se estimaba en $28 mil millones de pesos y podía crecer a $52 mil millones en dos años.",
     ],
     challengeCards: [
       {
@@ -277,6 +288,65 @@ export const projects: CaseStudy[] = [
         title: "¿Resiste la conversación?",
         body: "Revisión con el comité y ajuste de jerarquía y flujo de asignación.",
       },
+    ],
+    objectives: [
+      ["META", "Definir una prioridad común y defendible para asignar el presupuesto correctivo."],
+      ["BASELINE", "La prioridad dependía de la reunión más influyente y de tableros regionales."],
+      ["PROYECCIÓN", "Reducir 3%: hasta $840 millones sobre $28 mil millones actuales o $1,560 millones sobre $52 mil millones en dos años."],
+      ["MEDICIÓN", "Comparar gasto prioritizado, gasto ejecutado y calidad de las fuentes por tienda."],
+    ],
+    iterations: [
+      {
+        eyebrow: "01 · VERSIÓN INICIAL",
+        title: "Ranking sin contexto suficiente",
+        body: "Priorizaba tiendas, pero no explicaba qué composición generaba el puntaje ni permitía comprobarlo.",
+      },
+      {
+        eyebrow: "02 · ITERACIÓN",
+        title: "Jerarquía panorama-mapa-ranking",
+        body: "Se añadió contexto geográfico y una composición visible para pasar de la lista a la explicación.",
+      },
+      {
+        eyebrow: "03 · VALIDACIÓN",
+        title: "Ranking y comparación homogénea",
+        body: "El prototipo final permitió discutir casos lado a lado sin mezclar unidades ni periodos.",
+      },
+    ],
+    validation: {
+      participants: "Real Estate, Operaciones, Finanzas y representantes del comité de decisión.",
+      task: "Interpretar el riesgo de dos tiendas, explicar por qué una debía subir en prioridad y justificar la asignación.",
+      findings: [
+        "El ranking sin composición generaba dudas sobre el origen del puntaje.",
+        "El equipo necesitaba conservar el contexto regional sin dejar que sustituyera al índice.",
+        "La comparación era más útil cuando mantenía misma escala y periodo.",
+      ],
+      changes: [
+        "Se hizo visible la composición del índice.",
+        "Se separaron mapa, ranking y comparación.",
+        "Se añadieron etiquetas y posición además del color.",
+      ],
+    },
+    dataQuality: [
+      {
+        eyebrow: "CALIDAD",
+        title: "Datos faltantes, no ceros",
+        body: "Distinguiría ausencia de medición de una tienda con valor cero para evitar penalizaciones falsas.",
+      },
+      {
+        eyebrow: "TRAZABILIDAD",
+        title: "Confianza por fuente",
+        body: "Cada fuente debería mostrar fecha, cobertura y nivel de confiabilidad antes de entrar al índice.",
+      },
+      {
+        eyebrow: "GOBERNANZA",
+        title: "Pesos y excepciones auditables",
+        body: "Las reglas, pesos y ajustes regionales deben conservar responsable, fecha y motivo.",
+      },
+    ],
+    impactStates: [
+      ["OBJETIVO", "Una priorización consistente para decidir dónde invertir."],
+      ["PROYECCIÓN", "Hasta −3%: $840 millones sobre $28 mil millones o $1,560 millones sobre $52 mil millones."],
+      ["SIGUIENTE MEDIDA", "Gasto ejecutado, desviación presupuestal y cambio de riesgo por tienda."],
     ],
     findingsTitle: "Tres hallazgos que cambiaron el diseño.",
     findings: [
@@ -360,10 +430,10 @@ export const projects: CaseStudy[] = [
     ],
     resultTitle: "3,265 tiendas, un criterio.",
     resultMetrics: [
-      ["−3%", "GASTO CORRECTIVO PROYECTADO"],
+      ["−3%", "REDUCCIÓN PROYECTADA DEL GASTO"],
+      ["$840M", "ESCENARIO SOBRE $28 MIL MILLONES"],
+      ["$1,560M", "ESCENARIO SOBRE $52 MIL MILLONES"],
       ["128", "TIENDAS EN RIESGO ALTO"],
-      ["12", "VARIABLES EN EL ÍNDICE"],
-      ["1", "MODELO DE PRIORIZACIÓN"],
     ],
     learnings: [
       {
