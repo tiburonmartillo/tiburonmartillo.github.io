@@ -73,7 +73,15 @@ export function CaseStudyPage({ project }: { project: CaseStudy }) {
             title={project.methodTitle}
             body={project.methodBody}
           />
-          {(project.slug === "capital-allocation" || project.slug === "mapeo-verde") && (
+          {project.slug === "capital-allocation" && (
+            <figure className="method-mark method-mark-image">
+              <img
+                src="/assets/portfolio/doble-diamante.png"
+                alt="Doble diamante: Comprender, Observar, Definir, Idear, Prototipar, Evaluar e Implementar"
+              />
+            </figure>
+          )}
+          {project.slug === "mapeo-verde" && (
             <div className="method-mark" aria-hidden="true">
               <img src="/assets/portfolio/1b7e5.svg" alt="" />
               <img src="/assets/portfolio/67e7c.svg" alt="" />
