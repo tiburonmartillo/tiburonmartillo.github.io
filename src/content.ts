@@ -7,6 +7,11 @@ export type ContentCard = {
   methods?: string;
 };
 
+export type Figure = {
+  src: string;
+  alt: string;
+};
+
 export type CaseStudy = {
   slug: ProjectSlug;
   number: string;
@@ -23,6 +28,14 @@ export type CaseStudy = {
   imageAlt?: string;
   figureCaption?: string;
   figureNote?: string;
+  sectionFigures?: {
+    context?: Figure[];
+    method?: Figure;
+    findings?: Figure[];
+    architecture?: Figure[];
+    decisions?: Figure[];
+    data?: Figure[];
+  };
   gallery?: Array<{ src: string; alt: string }>;
   externalUrl?: string;
   contextTitle: string;
@@ -89,6 +102,20 @@ export const projects: CaseStudy[] = [
     figureCaption: "RECREACIÓN REPRESENTATIVA · DATOS FICTICIOS",
     figureNote:
       "Por confidencialidad no puedo mostrar la interfaz original: esta figura reconstruye capacidades documentadas del producto, con datos ficticios.",
+    image: "/assets/portfolio/rec-tablero.png",
+    imageAlt: "Vista de proyectos de inversión en evaluación en REC",
+    sectionFigures: {
+      context: [
+        {
+          src: "/assets/portfolio/rec-contexto.png",
+          alt: "Fuentes dispersas del proceso anterior: sistemas, hojas de cálculo y reportes",
+        },
+        {
+          src: "/assets/portfolio/rec-problema.png",
+          alt: "Objetivos del rediseño: reducir el ciclo de evaluación y estandarizar el modelo de proyecto",
+        },
+      ],
+    },
     contextTitle: "La decisión vivía en un flujo de 26 horas.",
     context: [
       "La información estaba distribuida entre Tririga, SAP y LAT, quince archivos de Excel y fuentes externas como INEGI y UberMedia; el equipo reconstruía el caso a mano antes de poder comparar alternativas.",
@@ -263,6 +290,21 @@ export const projects: CaseStudy[] = [
     figureCaption: "RECREACIÓN REPRESENTATIVA · CIFRAS DE EJEMPLO",
     figureNote:
       "Por confidencialidad no puedo mostrar el tablero original: esta figura reconstruye capacidades documentadas del producto. Las cifras que muestra son de ejemplo; el scoring opera sobre datos reales.",
+    image: "/assets/portfolio/capital-tablero.png",
+    imageAlt:
+      "Tablero de Capital Allocation con mapa de riesgo por tienda y prioridad de intervención",
+    sectionFigures: {
+      method: {
+        src: "/assets/portfolio/doble-diamante.png",
+        alt: "Doble diamante: Comprender, Observar, Definir, Idear, Prototipar, Evaluar e Implementar",
+      },
+      decisions: [
+        {
+          src: "/assets/portfolio/capital-sistema.png",
+          alt: "Plantilla de tablero sobre Clapp 2 con reglas de visualización accesibles",
+        },
+      ],
+    },
     contextTitle: "Demasiadas variables para una sola decisión de gasto.",
     context: [
       "Real Estate necesitaba decidir cada año dónde invertir el mantenimiento correctivo. Doce variables en unidades incompatibles hacían imposible comparar necesidades con un criterio consistente.",
@@ -503,10 +545,26 @@ export const projects: CaseStudy[] = [
     figureNote:
       "Las capturas corresponden a mapeoverde.org. Los documentos originales los publica la autoridad ambiental; la conversión a una base consultable es del autor.",
     thumbnail: "/assets/portfolio/b5c96.png",
-    image: "/assets/portfolio/85bc7.png",
-    imageAlt: "Monitor ambiental de Mapeo Verde con tabla de boletines y mapa de Aguascalientes",
+    image: "/assets/portfolio/mapeo-inicio.png",
+    imageAlt: "Inicio del sitio público de Mapeo Verde",
     externalUrl: "https://mapeoverde.org",
+    sectionFigures: {
+      method: {
+        src: "/assets/portfolio/doble-diamante.png",
+        alt: "Doble diamante: Comprender, Observar, Definir, Idear, Prototipar, Evaluar e Implementar",
+      },
+      architecture: [
+        {
+          src: "/assets/portfolio/mapeo-ingenieria.png",
+          alt: "Tubería de datos: ingesta de PDF, modelo relacional y capa pública en Supabase",
+        },
+      ],
+    },
     gallery: [
+      {
+        src: "/assets/portfolio/85bc7.png",
+        alt: "Monitor ambiental de Mapeo Verde con tabla de boletines y mapa de Aguascalientes",
+      },
       {
         src: "/assets/portfolio/56273.png",
         alt: "Listado público de gacetas ecológicas de Mapeo Verde",
@@ -695,9 +753,17 @@ export const projects: CaseStudy[] = [
       ["Low-Code", "ARQUITECTURA DE INTEGRACIÓN"],
     ],
     thumbnail: "/assets/portfolio/03a8f.png",
-    image: "/assets/portfolio/f1f59.png",
-    imageAlt: "Interfaz de COA Crowd con tabla de solicitudes de crédito",
-    figureCaption: "CAPTURA DEL PRODUCTO · DATOS DE EJEMPLO",
+    image: "/assets/portfolio/coa-tablero.png",
+    imageAlt: "Secuencia de verificación de documentos en COA Crowd",
+    figureCaption: "RECREACIÓN REPRESENTATIVA · CIFRAS DE EJEMPLO",
+    sectionFigures: {
+      context: [
+        {
+          src: "/assets/portfolio/coa-problema.png",
+          alt: "Proceso anterior de autorización de créditos con tareas y decisiones manuales",
+        },
+      ],
+    },
     contextTitle: "La autorización podía tardar hasta una semana por expediente.",
     context: [
       "El proceso requería simplificar tareas y reducir fricción operativa sin perder claridad para los equipos responsables.",

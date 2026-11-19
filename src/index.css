@@ -1172,6 +1172,25 @@
     object-fit: cover;
   }
 
+  .section-figures {
+    display: grid;
+    gap: 1.5rem;
+    margin: 2.5rem 0 0;
+  }
+
+  .section-figures figure {
+    overflow: hidden;
+    border: 1px solid var(--color-line);
+    border-radius: 0.25rem;
+    background: var(--color-surface-card);
+  }
+
+  .section-figures img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
   .context-copy {
     max-width: 42.5rem;
     margin: -1.5rem 0 3rem;

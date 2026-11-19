@@ -1,6 +1,19 @@
 import { CardGrid, Eyebrow, Metrics, SectionIntro } from "../components/Editorial";
-import type { CaseStudy } from "../content";
+import type { CaseStudy, Figure } from "../content";
 import { ProjectVisual } from "./HomePage";
+
+function SectionFigures({ figures }: { figures?: Figure[] }) {
+  if (!figures || figures.length === 0) return null;
+  return (
+    <div className="section-figures">
+      {figures.map((figure) => (
+        <figure key={figure.src}>
+          <img src={figure.src} alt={figure.alt} loading="lazy" decoding="async" />
+        </figure>
+      ))}
+    </div>
+  );
+}
 
 export function CaseStudyPage({ project }: { project: CaseStudy }) {
   return (
@@ -67,6 +80,7 @@ export function CaseStudyPage({ project }: { project: CaseStudy }) {
               <p key={text}>{text}</p>
             ))}
           </div>
+          <SectionFigures figures={project.sectionFigures?.context} />
           <CardGrid cards={project.challengeCards} columns={3} />
         </section>
         <section className="section page-container">
@@ -75,20 +89,13 @@ export function CaseStudyPage({ project }: { project: CaseStudy }) {
             title={project.methodTitle}
             body={project.methodBody}
           />
-          {project.slug === "capital-allocation" && (
+          {project.sectionFigures?.method && (
             <figure className="method-mark method-mark-image">
               <img
-                src="/assets/portfolio/doble-diamante.png"
-                alt="Doble diamante: Comprender, Observar, Definir, Idear, Prototipar, Evaluar e Implementar"
+                src={project.sectionFigures.method.src}
+                alt={project.sectionFigures.method.alt}
               />
             </figure>
-          )}
-          {project.slug === "mapeo-verde" && (
-            <div className="method-mark" aria-hidden="true">
-              <img src="/assets/portfolio/1b7e5.svg" alt="" />
-              <img src="/assets/portfolio/67e7c.svg" alt="" />
-              <img src="/assets/portfolio/a87cf.svg" alt="" />
-            </div>
           )}
           <CardGrid cards={project.process} />
         </section>
@@ -113,6 +120,7 @@ export function CaseStudyPage({ project }: { project: CaseStudy }) {
           <div className="page-container">
             <SectionIntro eyebrow="DESCUBRIMIENTO" title={project.findingsTitle} />
             <CardGrid cards={project.findings} columns={3} />
+            <SectionFigures figures={project.sectionFigures?.findings} />
           </div>
         </section>
         {project.validation && (
@@ -178,10 +186,12 @@ export function CaseStudyPage({ project }: { project: CaseStudy }) {
             cards={project.architecture}
             columns={project.architecture.length === 3 ? 3 : 4}
           />
+          <SectionFigures figures={project.sectionFigures?.architecture} />
         </section>
         <section className="section page-container">
           <SectionIntro eyebrow="DECISIONES DE DISEÑO" title={project.decisionsTitle} wide />
           <CardGrid cards={project.decisions} />
+          <SectionFigures figures={project.sectionFigures?.decisions} />
         </section>
         {project.dataQuality && (
           <section className="section section-muted">
@@ -192,6 +202,7 @@ export function CaseStudyPage({ project }: { project: CaseStudy }) {
                 body="Estos límites separan la experiencia diseñada de los datos y controles necesarios para escalar."
               />
               <CardGrid cards={project.dataQuality} columns={3} />
+              <SectionFigures figures={project.sectionFigures?.data} />
             </div>
           </section>
         )}
