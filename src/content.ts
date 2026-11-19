@@ -39,6 +39,13 @@ export type CaseStudy = {
     decisions?: Figure[];
     data?: Figure[];
   };
+  problem?: {
+    eyebrow: string;
+    title: string;
+    body?: string;
+    cards: ContentCard[];
+    figure?: Figure;
+  };
   gallery?: Array<{ src: string; alt: string }>;
   externalUrl?: string;
   contextTitle: string;
@@ -116,13 +123,40 @@ export const projects: CaseStudy[] = [
           caption: "REC · Fuentes de datos",
           tag: "RECREACIÓN REPRESENTATIVA · DATOS FICTICIOS",
         },
+      ],
+    },
+    problem: {
+      eyebrow: "PROBLEMA Y OBJETIVOS",
+      title: "Un flujo de 26 horas para una decisión de tres años.",
+      body: "El proyecto no pedía un tablero más bonito: pedía que la evaluación dejara de depender de quién armaba la hoja de cálculo.",
+      cards: [
         {
-          src: "/assets/portfolio/rec-problema.png",
-          alt: "Journey del proceso de aprobación de proyectos de inversión",
-          caption: "REC · Proceso de aprobación",
-          tag: "RECREACIÓN REPRESENTATIVA · DATOS FICTICIOS",
+          eyebrow: "01",
+          title: "Reducir el tiempo",
+          body: "Bajar el ciclo de elaboración de 26 a 5 horas por proyecto, sin perder profundidad analítica.",
+        },
+        {
+          eyebrow: "02",
+          title: "Estandarizar",
+          body: "Un modelo único de proyecto: mismas variables, mismos supuestos, misma trazabilidad.",
+        },
+        {
+          eyebrow: "03",
+          title: "Comparar antes de decidir",
+          body: "Permitir escenarios lado a lado dentro del flujo, no en hojas externas.",
+        },
+        {
+          eyebrow: "04",
+          title: "Sostener el gobierno",
+          body: "Lineamientos de UX y accesibilidad para que el producto no se degrade con cada release.",
         },
       ],
+      figure: {
+        src: "/assets/portfolio/rec-problema.png",
+        alt: "Journey del proceso de aprobación de proyectos de inversión",
+        caption: "REC · Proceso de aprobación",
+        tag: "RECREACIÓN REPRESENTATIVA · DATOS FICTICIOS",
+      },
     },
     contextTitle: "La decisión vivía en un flujo de 26 horas.",
     context: [

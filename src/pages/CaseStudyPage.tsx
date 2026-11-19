@@ -89,6 +89,17 @@ export function CaseStudyPage({ project }: { project: CaseStudy }) {
           <CardGrid cards={project.challengeCards} columns={3} />
           <SectionFigures figures={project.sectionFigures?.context} />
         </section>
+        {project.problem && (
+          <section className="section page-container">
+            <SectionIntro
+              eyebrow={project.problem.eyebrow}
+              title={project.problem.title}
+              body={project.problem.body}
+            />
+            <CardGrid cards={project.problem.cards} />
+            <SectionFigures figures={project.problem.figure ? [project.problem.figure] : undefined} />
+          </section>
+        )}
         <section className="section page-container">
           <SectionIntro
             eyebrow="METODOLOGÍA"
