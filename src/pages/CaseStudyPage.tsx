@@ -9,6 +9,12 @@ function SectionFigures({ figures }: { figures?: Figure[] }) {
       {figures.map((figure) => (
         <figure key={figure.src}>
           <img src={figure.src} alt={figure.alt} loading="lazy" decoding="async" />
+          {(figure.caption || figure.tag) && (
+            <figcaption>
+              {figure.caption}
+              {figure.tag && <span>{figure.tag}</span>}
+            </figcaption>
+          )}
         </figure>
       ))}
     </div>
@@ -51,7 +57,7 @@ export function CaseStudyPage({ project }: { project: CaseStudy }) {
             <ProjectVisual slug={project.slug} image={project.image} alt={project.imageAlt} />
           )}
           <figcaption>
-            {project.title} · Vista representativa
+            {project.figureTitle ?? `${project.title} · Vista representativa`}
             <span>
               {project.figureCaption ??
                 (project.image
@@ -80,8 +86,8 @@ export function CaseStudyPage({ project }: { project: CaseStudy }) {
               <p key={text}>{text}</p>
             ))}
           </div>
-          <SectionFigures figures={project.sectionFigures?.context} />
           <CardGrid cards={project.challengeCards} columns={3} />
+          <SectionFigures figures={project.sectionFigures?.context} />
         </section>
         <section className="section page-container">
           <SectionIntro

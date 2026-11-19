@@ -195,6 +195,7 @@
   .project-row-copy > span,
   .project-count,
   .case-figure figcaption,
+  .section-figures figcaption,
   .experience > div:first-child > span,
   .archive span,
   .footer-legal {
@@ -1179,16 +1180,21 @@
   }
 
   .section-figures figure {
-    overflow: hidden;
-    border: 1px solid var(--color-line);
-    border-radius: 0.25rem;
-    background: var(--color-surface-card);
+    background: transparent;
   }
 
   .section-figures img {
     display: block;
     width: 100%;
     height: auto;
+  }
+
+  .section-figures figcaption {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 2rem;
+    margin-top: 0.75rem;
   }
 
   .context-copy {
@@ -1488,6 +1494,11 @@
   }
 
   .case-figure figcaption {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .section-figures figcaption {
     flex-direction: column;
     gap: 0.25rem;
   }

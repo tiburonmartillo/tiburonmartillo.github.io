@@ -10,6 +10,8 @@ export type ContentCard = {
 export type Figure = {
   src: string;
   alt: string;
+  caption?: string;
+  tag?: string;
 };
 
 export type CaseStudy = {
@@ -27,6 +29,7 @@ export type CaseStudy = {
   image?: string;
   imageAlt?: string;
   figureCaption?: string;
+  figureTitle?: string;
   figureNote?: string;
   sectionFigures?: {
     context?: Figure[];
@@ -100,6 +103,7 @@ export const projects: CaseStudy[] = [
       ["168 h", "HORAS OPERATIVAS AHORRADAS POR MES"],
     ],
     figureCaption: "RECREACIÓN REPRESENTATIVA · DATOS FICTICIOS",
+    figureTitle: "REC · Vista de proyectos de inversión en evaluación",
     figureNote:
       "Por confidencialidad no puedo mostrar la interfaz original: esta figura reconstruye capacidades documentadas del producto, con datos ficticios.",
     image: "/assets/portfolio/rec-tablero.png",
@@ -108,11 +112,15 @@ export const projects: CaseStudy[] = [
       context: [
         {
           src: "/assets/portfolio/rec-contexto.png",
-          alt: "Fuentes dispersas del proceso anterior: sistemas, hojas de cálculo y reportes",
+          alt: "Tablero de fuentes de datos: pantallas de sistemas de origen y su inventario",
+          caption: "REC · Fuentes de datos",
+          tag: "RECREACIÓN REPRESENTATIVA · DATOS FICTICIOS",
         },
         {
           src: "/assets/portfolio/rec-problema.png",
-          alt: "Objetivos del rediseño: reducir el ciclo de evaluación y estandarizar el modelo de proyecto",
+          alt: "Journey del proceso de aprobación de proyectos de inversión",
+          caption: "REC · Proceso de aprobación",
+          tag: "RECREACIÓN REPRESENTATIVA · DATOS FICTICIOS",
         },
       ],
     },
@@ -288,6 +296,7 @@ export const projects: CaseStudy[] = [
       ["−3%", "REDUCCIÓN PROYECTADA SOBRE LA BASE DE GASTO"],
     ],
     figureCaption: "RECREACIÓN REPRESENTATIVA · CIFRAS DE EJEMPLO",
+    figureTitle: "Capital Allocation · Mapa de riesgo y prioridad de intervención",
     figureNote:
       "Por confidencialidad no puedo mostrar el tablero original: esta figura reconstruye capacidades documentadas del producto. Las cifras que muestra son de ejemplo; el scoring opera sobre datos reales.",
     image: "/assets/portfolio/capital-tablero.png",
@@ -756,6 +765,7 @@ export const projects: CaseStudy[] = [
     image: "/assets/portfolio/coa-tablero.png",
     imageAlt: "Secuencia de verificación de documentos en COA Crowd",
     figureCaption: "RECREACIÓN REPRESENTATIVA · CIFRAS DE EJEMPLO",
+    figureTitle: "COA Crowd · Análisis y autorización de créditos",
     sectionFigures: {
       context: [
         {
