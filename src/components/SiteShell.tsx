@@ -6,9 +6,11 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@ui-sdk/react/dialog";
-import { useState, type MouseEvent, type ReactNode } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useState, type ReactNode } from "react";
 import { contact } from "../content";
-import { getRoute, navigate, routes } from "../routes";
+import { getRoute, routes } from "../routes";
 
 function InternalLink({
   href,
@@ -21,23 +23,18 @@ function InternalLink({
   className?: string;
   onNavigate?: () => void;
 }) {
-  const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
-    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-    event.preventDefault();
-    onNavigate?.();
-    navigate(href);
-  };
   return (
-    <a href={href} className={className} onClick={handleClick}>
+    <Link href={href} className={className} onClick={onNavigate}>
       {children}
-    </a>
+    </Link>
   );
 }
 
 const navItems = routes.filter((route) => ["home", "about", "projects"].includes(route.key));
 
 export function SiteHeader() {
-  const current = getRoute();
+  const router = useRouter();
+  const current = getRoute(router.asPath.split("?")[0]);
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <header className="site-header">

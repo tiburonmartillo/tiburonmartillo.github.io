@@ -1,8 +1,9 @@
 # Portafolio de Sergio Villanueva
 
-Portafolio editorial construido con React 19, Vite, Tailwind CSS v4 y
+Portafolio editorial construido con Next.js, React 19, Tailwind CSS v4 y
 [@ui-sdk/react](https://ui-sdk.dev). Incluye presentación, perfil y cuatro casos
-de estudio.
+de estudio. Las páginas se generan como HTML estático para que el contenido sea
+legible sin ejecutar JavaScript.
 
 ## Desarrollo
 
@@ -12,8 +13,12 @@ producción:
 ```bash
 pnpm install
 pnpm typecheck
-pnpm build
+pnpm dev
 ```
+
+La build de producción usa `output: "export"` en `next.config.js`; el resultado
+estático queda en `out/`. `next-sitemap` genera `out/sitemap.xml` y
+`out/robots.txt` automáticamente después de `next build`.
 
 ## Publicación en GitHub Pages
 
@@ -26,6 +31,9 @@ push a `main`.
    GitHub Pages”.
 
 La configuración está preparada para `https://tiburonmartillo.github.io/`.
+Como es un sitio de usuario, `basePath` y `assetPrefix` quedan vacíos. Si el
+repositorio cambia a un sitio de proyecto, define `NEXT_PUBLIC_BASE_PATH` (por
+ejemplo `/mi-repositorio`) durante el build.
 
 ## CV
 

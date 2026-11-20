@@ -38,12 +38,16 @@ jobs:
         run: pnpm typecheck
       - name: Build
         run: pnpm build
+        env:
+          # Empty for the user site tiburonmartillo.github.io. Set this only if
+          # the repository later becomes a project site (/repository-name).
+          NEXT_PUBLIC_BASE_PATH: ''
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: out
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
