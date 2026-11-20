@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import type { ContentCard } from "../content";
+import type { CardLayout, ContentCard } from "../content";
 
 export function Eyebrow({ children }: { children: ReactNode }) {
   return <p className="eyebrow">{children}</p>;
@@ -25,12 +25,25 @@ export function SectionIntro({
   );
 }
 
-export function CardGrid({ cards, columns = 4 }: { cards: ContentCard[]; columns?: 3 | 4 }) {
+export function CardGrid({
+  cards,
+  columns = 4,
+  layout = "cards",
+}: {
+  cards: ContentCard[];
+  columns?: 3 | 4;
+  layout?: CardLayout;
+}) {
+  const classes = ["card-grid"];
+  if (columns === 3) classes.push("card-grid-three");
+  if (layout !== "cards") classes.push(`card-grid-${layout}`);
   return (
-    <div className={columns === 3 ? "card-grid card-grid-three" : "card-grid"}>
+    <div className={classes.join(" ")}>
       {cards.map((card, index) => (
         <article className="text-card reveal" key={`${card.title}-${index}`}>
-          <Eyebrow>{card.eyebrow ?? String(index + 1).padStart(2, "0")}</Eyebrow>
+          {layout !== "plain" && layout !== "pairs" && (
+            <Eyebrow>{card.eyebrow ?? String(index + 1).padStart(2, "0")}</Eyebrow>
+          )}
           <h3>{card.title}</h3>
           <p>{card.body}</p>
           {card.methods && <p className="card-methods">{card.methods}</p>}

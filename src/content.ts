@@ -26,12 +26,16 @@ export type Group = {
   items: string[];
 };
 
+export type CardLayout = "cards" | "plain" | "pairs" | "elevated";
+
 export type SectionSpec = Intro & {
   cards?: ContentCard[];
   groups?: Group[];
   figure?: Figure;
   muted?: boolean;
   columns?: 3 | 4;
+  layout?: CardLayout;
+  rule?: boolean;
 };
 
 export type CaseStudy = {
@@ -43,6 +47,7 @@ export type CaseStudy = {
   subtitle: string;
   summary: string;
   product: string;
+  productLabel?: string;
   facts: Array<[string, string]>;
   metrics: Array<[string, string]>;
   thumbnail?: string;
@@ -51,6 +56,15 @@ export type CaseStudy = {
   figureCaption?: string;
   figureTitle?: string;
   figureNote?: string;
+  contextPanelLabel?: string;
+  findingsLayout?: CardLayout;
+  findingsRule?: boolean;
+  findingsMuted?: boolean;
+  decisionsLayout?: CardLayout;
+  contributionsLayout?: CardLayout;
+  learningsLayout?: CardLayout;
+  improvementsLayout?: CardLayout;
+  processLayout?: CardLayout;
   sectionFigures?: {
     context?: Figure[];
     method?: Figure;
@@ -71,7 +85,9 @@ export type CaseStudy = {
     title: string;
     body: string;
     groups: Group[];
+    muted?: boolean;
   };
+  methodRule?: boolean;
   afterFindings?: SectionSpec[];
   afterArchitecture?: SectionSpec[];
   gallery?: Array<{ src: string; alt: string }>;
@@ -94,6 +110,8 @@ export type CaseStudy = {
   architectureTitle: string;
   architectureEyebrow?: string;
   architectureBody: string;
+  architectureRule?: boolean;
+  architectureLayout?: CardLayout;
   architecture: ContentCard[];
   decisionsTitle: string;
   decisionsEyebrow?: string;
@@ -104,6 +122,7 @@ export type CaseStudy = {
   resultTitle: string;
   resultMetrics: Array<[string, string]>;
   quote?: string;
+  quoteAttribution?: string;
   learnings: ContentCard[];
   learningsIntro?: Intro;
   improvements: ContentCard[];
@@ -743,26 +762,26 @@ export const projects: CaseStudy[] = [
     slug: "mapeo-verde",
     number: "06 — MAPEO VERDE",
     client: "CASO 03 · MAPEO VERDE",
-    year: "2025—2026",
+    year: "2024—2026",
     title: "Mapeo Verde",
     subtitle: "Datos abiertos para defender el territorio",
     summary:
       "Diseñé y construí una plataforma ciudadana que convierte 502 boletines ambientales y 1,347 proyectos en evidencia consultable: del PDF normalizado en Postgres a un monitor que defiende las áreas verdes de Aguascalientes.",
     product: "Plataforma ciudadana con Supabase",
+    productLabel: "PRODUCTO Y DATOS",
     facts: [
       ["ROL", "Diseño de producto · Ingeniería de datos"],
       ["EQUIPO", "Proyecto independiente"],
-      ["DURACIÓN", "2025 — 2026"],
+      ["DURACIÓN", "2024 — 2026"],
       ["ALCANCE", "Producto · Identidad · Datos"],
     ],
     metrics: [
       ["502", "BOLETINES AMBIENTALES ANALIZADOS"],
-      ["1,347", "PROYECTOS AMBIENTALES"],
+      ["1,347", "GACETAS FEDERALES DE LA SEMARNAT"],
       ["1,175", "RESOLUTIVOS · 87%"],
     ],
+    figureTitle: "Monitor ambiental, inicio y gacetas · Mapeo Verde",
     figureCaption: "CAPTURAS DEL SITIO PÚBLICO · DATOS ABIERTOS · CC-BY-SA 4.0",
-    figureNote:
-      "Las capturas corresponden a mapeoverde.org. Los documentos originales los publica la autoridad ambiental; la conversión a una base consultable es del autor.",
     thumbnail: "/assets/portfolio/mapeo-inicio.png",
     nextProject: {
       slug: "coa-crowd",
@@ -772,37 +791,48 @@ export const projects: CaseStudy[] = [
     image: "/assets/portfolio/mapeo-inicio.png",
     imageAlt: "Inicio del sitio público de Mapeo Verde",
     externalUrl: "https://mapeoverde.org",
+    contextPanelLabel: "POR QUÉ ERA DIFÍCIL",
+    findingsLayout: "plain",
+    findingsRule: true,
+    findingsMuted: false,
+    architectureLayout: "elevated",
+    architectureRule: true,
+    decisionsLayout: "pairs",
+    contributionsLayout: "plain",
+    learningsLayout: "plain",
+    improvementsLayout: "plain",
+    processLayout: "elevated",
+    methodRule: true,
     sectionFigures: {
       method: {
-        src: "/assets/portfolio/doble-diamante.png",
-        alt: "Doble diamante: Comprender, Observar, Definir, Idear, Prototipar, Evaluar e Implementar",
+        src: "/assets/portfolio/mapeo-metodologia.png",
+        alt: "Diagrama de design thinking: empatizar, definir, idear, prototipar, probar e implementar",
       },
+      architecture: [
+        {
+          src: "/assets/portfolio/85bc7.png",
+          alt: "Monitor ambiental de Mapeo Verde con tabla de boletines y mapa de Aguascalientes",
+        },
+        {
+          src: "/assets/portfolio/56273.png",
+          alt: "Listado público de gacetas ecológicas de Mapeo Verde",
+        },
+      ],
     },
-    gallery: [
-      {
-        src: "/assets/portfolio/85bc7.png",
-        alt: "Monitor ambiental de Mapeo Verde con tabla de boletines y mapa de Aguascalientes",
-      },
-      {
-        src: "/assets/portfolio/56273.png",
-        alt: "Listado público de gacetas ecológicas de Mapeo Verde",
-      },
-      {
-        src: "/assets/portfolio/ba9cc.png",
-        alt: "Portada editorial de Mapeo Verde",
-      },
-    ],
     contextTitle: "La información ambiental existe. La evidencia pública, no.",
     context: [
-      "Los boletines de la SSMAA y las gacetas de la SEMARNAT se publican como documentos aislados. Sin una capa común, es casi imposible saber qué proyecto se autorizó, dónde y con qué resolución.",
-      "Mapeo Verde pregunta cómo se ve la desigualdad ambiental cuando los datos oficiales se ponen en el mismo plano que el registro ciudadano.",
+      "Los boletines de la SSMAA y las gacetas de la SEMARNAT se publican como documentos aislados. Sin una capa de lectura común, es casi imposible saber qué proyecto se autorizó, en qué municipio y con qué resolución.",
+      "Mapeo Verde nace de una pregunta simple: ¿cómo se ve la desigualdad ambiental de Aguascalientes cuando los datos oficiales se ponen en el mismo plano que el registro ciudadano?",
     ],
     challengeCards: [
       {
         title: "Fragmentación",
-        body: "502 boletines y 1,347 proyectos en PDFs, sin API ni identificadores comunes.",
+        body: "502 boletines locales y 1,347 proyectos en gacetas federales, en PDFs, sin API ni identificadores comunes.",
       },
-      { title: "Lenguaje técnico", body: "El vocabulario legal bloquea el seguimiento ciudadano." },
+      {
+        title: "Lenguaje técnico",
+        body: "MIA, resolutivos y expedientes: el vocabulario legal bloquea el seguimiento ciudadano.",
+      },
       {
         title: "Invisibilidad",
         body: "No existía una imagen pública de las áreas verdes ni de los árboles en riesgo.",
@@ -815,7 +845,7 @@ export const projects: CaseStudy[] = [
       {
         eyebrow: "01 · DESCUBRIR",
         title: "¿Qué dice el expediente?",
-        body: "Extraje y normalicé 502 boletines y 1,347 proyectos.",
+        body: "502 boletines y 1,347 proyectos: extraje, normalicé y busqué patrones antes de diseñar una pantalla.",
         methods: "Extracción de boletines y gacetas",
       },
       {
@@ -830,12 +860,20 @@ export const projects: CaseStudy[] = [
         body: "Cuatro capas de información y una identidad editorial que hace del dato un acto público.",
         methods: "Cuatro capas · Identidad editorial",
       },
+      {
+        eyebrow: "04 · PROTOTIPAR Y PROBAR",
+        title: "¿Aguanta el uso real?",
+        body: "Construí el monitor, lo probé con expedientes reales y ajusté estados vacíos, filtros y moderación.",
+        methods: "Monitor · Pruebas con expedientes",
+      },
     ],
     afterFindings: [
       {
         eyebrow: "02 · DEFINIR",
         title: "Convertir el expediente en una herramienta ciudadana.",
         body: "El objetivo no era publicar más datos: era hacer que cualquier persona pudiera usar el dato para defender su territorio.",
+        layout: "plain",
+        rule: true,
         cards: [
           {
             eyebrow: "01",
@@ -865,6 +903,8 @@ export const projects: CaseStudy[] = [
         eyebrow: "INGENIERÍA DE DATOS",
         title: "Del PDF al dato consultable.",
         body: "Diseñé el producto y también la tubería: extracción, normalización, modelo relacional en Postgres y una capa pública que no depende de hojas de cálculo.",
+        layout: "elevated",
+        rule: true,
         cards: [
           {
             eyebrow: "01 · INGESTA",
@@ -898,6 +938,8 @@ export const projects: CaseStudy[] = [
         eyebrow: "04 · PROTOTIPAR",
         title: "Del documento aislado al monitor público.",
         body: "Con el modelo de datos listo, definí la arquitectura, la identidad y los componentes del monitor; después lo probé con expedientes reales.",
+        layout: "elevated",
+        rule: true,
         cards: [
           {
             eyebrow: "01",
@@ -929,6 +971,7 @@ export const projects: CaseStudy[] = [
         eyebrow: "OPERACIÓN Y GOBIERNO",
         title: "Operar el dato también es diseñarlo.",
         body: "Un tablero sin mantenimiento se vuelve decorado. Documenté el modelo, los permisos y la vigencia de cada fuente.",
+        rule: true,
         groups: [
           {
             label: "ADMINISTRACIÓN DE BASE DE DATOS",
@@ -955,6 +998,8 @@ export const projects: CaseStudy[] = [
       {
         eyebrow: "DECISIONES DE INGENIERÍA",
         title: "Cuatro decisiones que sostienen el dato.",
+        layout: "pairs",
+        rule: true,
         cards: [
           {
             title: "Postgres como única fuente de verdad",
@@ -976,67 +1021,71 @@ export const projects: CaseStudy[] = [
       },
     ],
     findingsTitle: "Tres hallazgos que cambiaron el producto.",
+    findingsEyebrow: "01 · DESCUBRIR",
     findings: [
       {
         title: "“El 87% ya tiene resolutivo.”",
-        body: "El problema no es la falta de acto administrativo, sino su legibilidad.",
+        body: "De 1,347 proyectos locales, 1,175 cuentan con resolución. El problema no es la falta de acto administrativo, sino su legibilidad.",
       },
       {
         title: "“El dato federal pesa más.”",
-        body: "Las gacetas concentran infraestructura y energía de alto impacto.",
+        body: "Las gacetas federales concentran infraestructura y energía de alto impacto.",
       },
       {
         title: "“La ciudadanía ya produce datos.”",
-        body: "El censo y las alertas no tenían un lugar junto al expediente oficial.",
+        body: "El censo piloto y las alertas vecinales existían, pero no tenían un lugar junto al expediente oficial.",
       },
     ],
     architectureTitle: "Cuatro capas, una sola fuente de verdad.",
-    architectureBody: "Cada nivel enlaza al expediente, la fuente y la fecha de actualización.",
+    architectureBody:
+      "El monitor no muestra cifras sueltas: cada nivel enlaza al expediente, la fuente y la fecha de actualización.",
     architecture: [
       {
         eyebrow: "01 · FUENTES",
         title: "Boletines y gacetas",
-        body: "Datos con licencia CC-BY-SA 4.0.",
+        body: "502 boletines de la SSMAA y 1,347 proyectos de la SEMARNAT en JSON, con licencia CC-BY-SA 4.0.",
       },
       {
         eyebrow: "02 · MODELO",
         title: "Un expediente común",
-        body: "Fecha, municipio, giro, estudio, proyecto y resolutivo.",
+        body: "Fecha, municipio, giro, tipo de estudio, proyecto y resolutivo.",
       },
       {
         eyebrow: "03 · MONITOR",
         title: "Filtros y trazabilidad",
-        body: "Cada KPI abre su detalle.",
+        body: "Dashboard con año, mes, municipio, giro y tipo de estudio; cada KPI abre su detalle.",
       },
       {
         eyebrow: "04 · ACCIÓN",
         title: "Mapa y agenda",
-        body: "Registro ciudadano de árboles, alertas y agenda.",
+        body: "Registro ciudadano de árboles y alertas, más una agenda ambiental abierta.",
       },
     ],
     decisionsTitle: "Cuatro decisiones que hacen público el dato.",
+    decisionsEyebrow: "05 · PROBAR Y DECIDIR",
     decisions: [
       {
         title: "Cada cifra enlaza su fuente",
-        body: "Los KPIs abren el expediente, el proyecto y el resolutivo.",
+        body: "Los KPIs no son un fin: abren el expediente, el proyecto y el resolutivo. La licencia CC-BY-SA permite reutilizar y verificar.",
       },
       {
         title: "Dos escalas, una gramática",
-        body: "Boletines y gacetas comparten filtros y jerarquía.",
+        body: "Boletines locales y gacetas federales comparten filtros, tipografía y jerarquía para poder compararse.",
       },
       {
         title: "Brutalismo legible",
-        body: "Negro y lima dan peso público; Inter mantiene la lectura.",
+        body: "Negro y lima dan peso público; la monoespaciada separa etiquetas de datos y el cuerpo se mantiene en Inter.",
       },
       {
         title: "Del tablero a la calle",
-        body: "Mapa, agenda y manifiesto convierten consulta en participación.",
+        body: "El mapa, la agenda y el manifiesto convierten la consulta en participación; el dato no termina en la pantalla.",
       },
     ],
     system: {
       eyebrow: "SISTEMA Y ACCESIBILIDAD",
       title: "Un lenguaje visual para el dato público.",
       body: "La plataforma se construyó con un sistema propio de tokens y componentes reutilizables entre boletines, gacetas y participación.",
+      muted: false,
       groups: [
         {
           label: "LO QUE QUEDÓ INSTALADO",
@@ -1062,23 +1111,27 @@ export const projects: CaseStudy[] = [
     },
     contributionTitle: "Qué hice: de PDF planos a una base consultable.",
     contributionBody:
-      "Convertí archivo plano en una base de datos consultable y diseñé la experiencia que la vuelve legible.",
+      "Los boletines y las gacetas se publican en PDF. Mi trabajo fue convertir ese archivo plano en una base de datos consultable y diseñar la experiencia que la vuelve legible.",
     contribution: [
       {
         eyebrow: "01",
         title: "Rol",
-        body: "Extracción, modelo de datos, arquitectura y sistema visual.",
+        body: "Data Product Designer · UX. Extracción, modelo de datos, arquitectura del sitio y sistema visual.",
       },
       {
         eyebrow: "02",
         title: "Alcance",
-        body: "Reuní, normalicé y estructuré boletines y gacetas.",
+        body: "Reuní, normalicé y estructuré boletines y gacetas en una base consultable; definí la arquitectura del sitio y su identidad.",
       },
-      { eyebrow: "03", title: "Construcción", body: "React, Supabase y pipelines en Python." },
+      {
+        eyebrow: "03",
+        title: "Colaboración",
+        body: "El sitio corre sobre React, Supabase y pipelines en Python, desde la extracción hasta la interfaz.",
+      },
       {
         eyebrow: "04",
         title: "Límites",
-        body: "Los documentos originales son de SSMAA y SEMARNAT.",
+        body: "Los documentos originales los publica la SSMAA y la SEMARNAT; la conversión a una base consultable y su lectura son mías.",
       },
     ],
     resultTitle: "502 boletines, una causa común.",
@@ -1089,18 +1142,19 @@ export const projects: CaseStudy[] = [
       ["1", "SITIO PÚBLICO"],
     ],
     quote: "“El dato ambiental no sirve si solo lo entiende quien lo produjo.”",
+    quoteAttribution: "— Proyecto independiente · Mapeo Verde, Aguascalientes",
     learnings: [
       {
         title: "La fuente es parte del diseño",
-        body: "Enlazar expediente y licencia vuelve citable el dato.",
+        body: "Enlazar el expediente y la licencia no es un detalle técnico: es lo que vuelve citable el dato.",
       },
       {
         title: "El vacío también comunica",
-        body: "Los estados vacíos explican qué falta y qué hacer.",
+        body: "Los estados vacíos del calendario y del mapa explican qué falta y qué hacer; no fingen que hay datos.",
       },
       {
         title: "La escala local importa",
-        body: "Un boletín municipal puede importar más si ocurre frente a tu casa.",
+        body: "Un boletín municipal puede importar más que una gaceta federal si ocurre frente a tu casa.",
       },
     ],
     learningsIntro: {
@@ -1115,13 +1169,16 @@ export const projects: CaseStudy[] = [
     },
     improvements: [
       {
-        title: "Automatizar las gacetas",
-        body: "Añadir extracción y OCR de PDFs sin capa de texto.",
+        title: "Automatizar las gacetas federales",
+        body: "Los boletines ya se leen cada semana con IA y alertas por correo; falta la extracción de gacetas de SEMARNAT y el OCR de PDFs escaneados sin capa de texto.",
       },
-      { title: "Cerrar huecos de datos", body: "Completar expedientes desde la fuente." },
+      {
+        title: "Cerrar los huecos de datos",
+        body: "Los expedientes sin fecha o sin resolutivo aparecen como «Falta dato»; faltan reglas para completarlos desde la fuente.",
+      },
       {
         title: "Medir uso, no solo visitas",
-        body: "Instrumentar búsquedas y expedientes consultados.",
+        body: "Instrumentaría búsquedas sin resultado y expedientes más consultados para priorizar mejoras con evidencia.",
       },
     ],
   },

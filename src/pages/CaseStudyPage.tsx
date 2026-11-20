@@ -3,10 +3,10 @@ import type { CaseStudy, Figure, Group, SectionSpec } from "../content";
 import { InternalLink } from "../components/SiteShell";
 import { ProjectVisual } from "./HomePage";
 
-function SectionFigures({ figures }: { figures?: Figure[] }) {
+function SectionFigures({ figures, duo }: { figures?: Figure[]; duo?: boolean }) {
   if (!figures || figures.length === 0) return null;
   return (
-    <div className="section-figures">
+    <div className={duo && figures.length > 1 ? "section-figures section-figures-duo" : "section-figures"}>
       {figures.map((figure) => (
         <figure key={figure.src}>
           <img src={figure.src} alt={figure.alt} loading="lazy" decoding="async" />
@@ -49,7 +49,10 @@ function SpecSection({ spec }: { spec: SectionSpec }) {
     <section className={spec.muted ? "section section-muted" : "section page-container"}>
       <div className={spec.muted ? "page-container" : undefined}>
         <SectionIntro eyebrow={spec.eyebrow} title={spec.title} body={spec.body} />
-        {spec.cards && <CardGrid cards={spec.cards} columns={spec.columns} />}
+        {spec.rule && <hr className="section-rule" />}
+        {spec.cards && (
+          <CardGrid cards={spec.cards} columns={spec.columns} layout={spec.layout} />
+        )}
         {spec.groups && <GroupGrid groups={spec.groups} />}
         <SectionFigures figures={spec.figure ? [spec.figure] : undefined} />
       </div>
@@ -92,7 +95,9 @@ export function CaseStudyPage({ project }: { project: CaseStudy }) {
           <h1>{project.title}</h1>
           <p className="case-subtitle">{project.subtitle}</p>
           <p className="hero-summary">{project.summary}</p>
-          <p className="product-label">PRODUCTO · {project.product}</p>
+          <p className="product-label">
+            {project.productLabel ?? "PRODUCTO"} · {project.product}
+          </p>
           <div className="facts">
             {project.facts.map(([label, value]) => (
               <div key={label}>
@@ -137,14 +142,40 @@ export function CaseStudyPage({ project }: { project: CaseStudy }) {
           </section>
         )}
         <section className="section page-container case-context">
-          <SectionIntro eyebrow="CONTEXTO" title={project.contextTitle} />
-          <div className="context-copy">
-            {project.context.map((text) => (
-              <p key={text}>{text}</p>
-            ))}
-          </div>
-          <CardGrid cards={project.challengeCards} columns={3} />
-          <SectionFigures figures={project.sectionFigures?.context} />
+          {project.contextPanelLabel ? (
+            <div className="context-split">
+              <div>
+                <SectionIntro eyebrow="CONTEXTO" title={project.contextTitle} />
+                <div className="context-copy">
+                  {project.context.map((text) => (
+                    <p key={text}>{text}</p>
+                  ))}
+                </div>
+              </div>
+              <aside className="context-panel reveal">
+                <Eyebrow>{project.contextPanelLabel}</Eyebrow>
+                <div className="context-panel-items">
+                  {project.challengeCards.map((card) => (
+                    <article key={card.title}>
+                      <h3>{card.title}</h3>
+                      <p>{card.body}</p>
+                    </article>
+                  ))}
+                </div>
+              </aside>
+            </div>
+          ) : (
+            <>
+              <SectionIntro eyebrow="CONTEXTO" title={project.contextTitle} />
+              <div className="context-copy">
+                {project.context.map((text) => (
+                  <p key={text}>{text}</p>
+                ))}
+              </div>
+              <CardGrid cards={project.challengeCards} columns={3} />
+              <SectionFigures figures={project.sectionFigures?.context} />
+            </>
+          )}
         </section>
         {project.problem && (
           <section className="section page-container">
@@ -171,15 +202,21 @@ export function CaseStudyPage({ project }: { project: CaseStudy }) {
               />
             </figure>
           )}
-          <CardGrid cards={project.process} />
+          {project.methodRule && <hr className="section-rule" />}
+          <CardGrid cards={project.process} layout={project.processLayout} />
         </section>
-        <section className="section section-muted">
-          <div className="page-container">
+        <section className={project.findingsMuted === false ? "section page-container" : "section section-muted"}>
+          <div className={project.findingsMuted === false ? undefined : "page-container"}>
             <SectionIntro
               eyebrow={project.findingsEyebrow ?? "DESCUBRIMIENTO"}
               title={project.findingsTitle}
             />
-            <CardGrid cards={project.findings} columns={3} />
+            {project.findingsRule && <hr className="section-rule" />}
+            <CardGrid
+              cards={project.findings}
+              columns={3}
+              layout={project.findingsLayout}
+            />
             <SectionFigures figures={project.sectionFigures?.findings} />
           </div>
         </section>
@@ -192,11 +229,13 @@ export function CaseStudyPage({ project }: { project: CaseStudy }) {
             title={project.architectureTitle}
             body={project.architectureBody}
           />
+          {project.architectureRule && <hr className="section-rule" />}
           <CardGrid
             cards={project.architecture}
             columns={project.architecture.length === 3 ? 3 : 4}
+            layout={project.architectureLayout}
           />
-          <SectionFigures figures={project.sectionFigures?.architecture} />
+          <SectionFigures figures={project.sectionFigures?.architecture} duo />
         </section>
         {project.afterArchitecture?.map((spec) => (
           <SpecSection key={spec.title} spec={spec} />
@@ -260,7 +299,8 @@ export function CaseStudyPage({ project }: { project: CaseStudy }) {
             title={project.decisionsTitle}
             wide
           />
-          <CardGrid cards={project.decisions} />
+          {project.decisionsLayout && <hr className="section-rule" />}
+          <CardGrid cards={project.decisions} layout={project.decisionsLayout} />
           <SectionFigures figures={project.sectionFigures?.decisions} />
         </section>
         {project.dataQuality && (
@@ -277,8 +317,8 @@ export function CaseStudyPage({ project }: { project: CaseStudy }) {
           </section>
         )}
         {project.system && (
-          <section className="section section-muted">
-            <div className="page-container">
+          <section className={project.system.muted === false ? "section page-container" : "section section-muted"}>
+            <div className={project.system.muted === false ? undefined : "page-container"}>
               <SectionIntro
                 eyebrow={project.system.eyebrow}
                 title={project.system.title}
@@ -294,7 +334,8 @@ export function CaseStudyPage({ project }: { project: CaseStudy }) {
             title={project.contributionTitle}
             body={project.contributionBody}
           />
-          <CardGrid cards={project.contribution} />
+          {project.contributionsLayout && <hr className="section-rule" />}
+          <CardGrid cards={project.contribution} layout={project.contributionsLayout} />
         </section>
         <section className="result-band">
           <div className="page-container">
@@ -311,7 +352,12 @@ export function CaseStudyPage({ project }: { project: CaseStudy }) {
                 ))}
               </div>
             )}
-            {project.quote && <blockquote>{project.quote}</blockquote>}
+            {project.quote && (
+              <blockquote>
+                {project.quote}
+                {project.quoteAttribution && <cite>{project.quoteAttribution}</cite>}
+              </blockquote>
+            )}
           </div>
         </section>
         <section className="section page-container">
@@ -323,7 +369,8 @@ export function CaseStudyPage({ project }: { project: CaseStudy }) {
               "El resultado importa, pero también lo que cambia la siguiente forma de trabajar."
             }
           />
-          <CardGrid cards={project.learnings} columns={3} />
+          {project.learningsLayout && <hr className="section-rule" />}
+          <CardGrid cards={project.learnings} columns={3} layout={project.learningsLayout} />
         </section>
         <section className="section page-container">
           <SectionIntro
@@ -334,7 +381,8 @@ export function CaseStudyPage({ project }: { project: CaseStudy }) {
               "Los frentes que atacaría antes de escalar la solución."
             }
           />
-          <CardGrid cards={project.improvements} columns={3} />
+          {project.improvementsLayout && <hr className="section-rule" />}
+          <CardGrid cards={project.improvements} columns={3} layout={project.improvementsLayout} />
         </section>
         <NextProjectCTA project={project} />
       </article>
