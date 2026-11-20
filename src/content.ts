@@ -75,6 +75,11 @@ export type CaseStudy = {
   afterFindings?: SectionSpec[];
   afterArchitecture?: SectionSpec[];
   gallery?: Array<{ src: string; alt: string }>;
+  nextProject: {
+    slug: ProjectSlug;
+    title: string;
+    subtitle: string;
+  };
   externalUrl?: string;
   contextTitle: string;
   context: string[];
@@ -125,6 +130,11 @@ export const contact = {
 export const projects: CaseStudy[] = [
   {
     slug: "rec",
+    nextProject: {
+      slug: "capital-allocation",
+      title: "Capital Allocation",
+      subtitle: "Priorizar mantenimiento en 3,265 tiendas",
+    },
     number: "04 — REC",
     client: "CASO 01 · WALMART DE MÉXICO Y CENTROAMÉRICA",
     year: "2023",
@@ -383,6 +393,11 @@ export const projects: CaseStudy[] = [
   },
   {
     slug: "capital-allocation",
+    nextProject: {
+      slug: "mapeo-verde",
+      title: "Mapeo Verde",
+      subtitle: "Datos abiertos para defender el territorio",
+    },
     number: "05 — CAPITAL ALLOCATION",
     client: "CASO 02 · WALMART DE MÉXICO Y CENTROAMÉRICA",
     year: "2024",
@@ -748,7 +763,12 @@ export const projects: CaseStudy[] = [
     figureCaption: "CAPTURAS DEL SITIO PÚBLICO · DATOS ABIERTOS · CC-BY-SA 4.0",
     figureNote:
       "Las capturas corresponden a mapeoverde.org. Los documentos originales los publica la autoridad ambiental; la conversión a una base consultable es del autor.",
-    thumbnail: "/assets/portfolio/b5c96.png",
+    thumbnail: "/assets/portfolio/mapeo-inicio.png",
+    nextProject: {
+      slug: "coa-crowd",
+      title: "COA Crowd",
+      subtitle: "Flujo digital para el análisis y la autorización de créditos",
+    },
     image: "/assets/portfolio/mapeo-inicio.png",
     imageAlt: "Inicio del sitio público de Mapeo Verde",
     externalUrl: "https://mapeoverde.org",
@@ -1125,7 +1145,12 @@ export const projects: CaseStudy[] = [
       ["1 semana → 15 min", "CICLO DE AUTORIZACIÓN"],
       ["Low-Code", "ARQUITECTURA DE INTEGRACIÓN"],
     ],
-    thumbnail: "/assets/portfolio/03a8f.png",
+    thumbnail: "/assets/portfolio/coa-tablero.png",
+    nextProject: {
+      slug: "rec",
+      title: "REC",
+      subtitle: "Evaluación de proyectos de inversión",
+    },
     image: "/assets/portfolio/coa-tablero.png",
     imageAlt: "Secuencia de verificación de documentos en COA Crowd",
     figureCaption: "RECREACIÓN REPRESENTATIVA · CIFRAS DE EJEMPLO",

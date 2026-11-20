@@ -79,6 +79,7 @@ equivalente, y cada campo se renderiza en el mismo lugar.
 | Impacto | `95:1912` | `89:1154` | `95:2302` | `129:726` | `resultTitle`, `resultMetrics`, `impactStates`, `quote` |
 | Reflexión | `95:1930` | `89:1172` | `95:2320` | `129:744` | `learnings`, `learningsIntro` |
 | Qué mejoraría | `95:1946` | `89:1188` | `95:2336` | `129:760` | `improvements`, `improvementsIntro` |
+| Siguiente proyecto | `218:311` | `218:316` | `218:321` | `218:326` | `nextProject` + `NextProjectCTA` |
 
 `SectionSpec` es el tipo genérico de sección (`eyebrow`, `title`, `body` + `cards` |
 `groups` | `figure`). Se usa para Objetivos, Ingeniería, Proceso, Operación y gobierno y

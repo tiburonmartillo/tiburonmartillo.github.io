@@ -1,5 +1,6 @@
 import { CardGrid, Eyebrow, Metrics, SectionIntro } from "../components/Editorial";
 import type { CaseStudy, Figure, Group, SectionSpec } from "../content";
+import { InternalLink } from "../components/SiteShell";
 import { ProjectVisual } from "./HomePage";
 
 function SectionFigures({ figures }: { figures?: Figure[] }) {
@@ -51,6 +52,27 @@ function SpecSection({ spec }: { spec: SectionSpec }) {
         {spec.cards && <CardGrid cards={spec.cards} columns={spec.columns} />}
         {spec.groups && <GroupGrid groups={spec.groups} />}
         <SectionFigures figures={spec.figure ? [spec.figure] : undefined} />
+      </div>
+    </section>
+  );
+}
+
+function NextProjectCTA({ project }: { project: CaseStudy }) {
+  return (
+    <section className="next-project-cta">
+      <div className="page-container next-project-cta-inner">
+        <div>
+          <Eyebrow>SIGUIENTE PROYECTO</Eyebrow>
+          <h2>
+            {project.nextProject.title} · {project.nextProject.subtitle}
+          </h2>
+        </div>
+        <InternalLink
+          href={`/proyectos/${project.nextProject.slug}/`}
+          className="next-project-link"
+        >
+          VER SIGUIENTE PROYECTO →
+        </InternalLink>
       </div>
     </section>
   );
@@ -314,6 +336,7 @@ export function CaseStudyPage({ project }: { project: CaseStudy }) {
           />
           <CardGrid cards={project.improvements} columns={3} />
         </section>
+        <NextProjectCTA project={project} />
       </article>
     </>
   );

@@ -705,6 +705,7 @@
     font-family: var(--font-sans-semibold);
     font-size: 1.25rem;
     line-height: 1.35;
+    color: var(--color-ink);
   }
 
   .project-card-copy p {
@@ -1027,6 +1028,7 @@
     font-family: var(--font-sans-semibold);
     font-size: clamp(1.5rem, 2.5vw, 2rem);
     line-height: 1.2;
+    color: var(--color-ink);
   }
 
   .project-row-copy > strong {
@@ -1233,6 +1235,38 @@
 
   .system-group li p {
     margin: 0;
+  }
+
+  .next-project-cta {
+    border-top: 1px solid var(--color-line);
+  }
+
+  .next-project-cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    min-height: 15rem;
+    padding-block: 4rem;
+  }
+
+  .next-project-cta h2 {
+    max-width: 48rem;
+    margin-top: 0.75rem;
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 3.2vw, 2.5rem);
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--color-ink);
+  }
+
+  .next-project-link {
+    flex: 0 0 auto;
+    font-family: var(--font-mono-medium);
+    font-size: 0.8125rem;
+    letter-spacing: 0.06em;
+    color: var(--color-accent);
+    white-space: nowrap;
   }
 
   .context-copy {
@@ -1548,6 +1582,13 @@
   .system-grid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
+  }
+
+  .next-project-cta-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-block: 3rem;
   }
 
   .result-band .metrics {
