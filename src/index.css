@@ -185,6 +185,7 @@
     font-family: var(--font-sans-semibold);
     font-size: 1.125rem;
     line-height: 1.5rem;
+    color: var(--color-ink);
   }
 
   .brand span,
@@ -217,6 +218,7 @@
     position: relative;
     font-size: 0.9375rem;
     line-height: 1.5rem;
+    color: var(--color-ink);
     transition: color var(--animate-duration) var(--ease-editorial);
   }
 
@@ -881,6 +883,7 @@
     padding-inline: 1.25rem;
     border: 1px solid var(--color-ink);
     border-radius: 999px;
+    color: var(--color-ink);
     font-size: 0.9375rem;
     transition:
       color var(--animate-duration) var(--ease-editorial),
@@ -893,38 +896,31 @@
   }
 
   .portrait {
-    position: relative;
     display: flex;
-    aspect-ratio: 0.85;
     flex-direction: column;
-    justify-content: flex-end;
-    overflow: hidden;
-    border: 1px solid var(--color-line);
-    border-radius: 0.25rem;
-    background: var(--color-surface-muted);
+    align-items: stretch;
     color: var(--color-ink-muted);
   }
 
   .portrait img {
     display: block;
     width: 100%;
-    height: 100%;
-    min-height: 0;
+    aspect-ratio: 0.99;
+    height: auto;
+    border: 1px solid var(--color-line);
+    border-radius: 0.25rem;
     object-fit: cover;
     object-position: center center;
   }
 
   .portrait small {
-    position: absolute;
-    z-index: 1;
     align-self: stretch;
-    margin: 0 2rem 2rem;
+    margin-top: 1rem;
     padding-top: 1rem;
-    border-top: 1px solid color-mix(in srgb, var(--color-canvas) 65%, transparent);
+    border-top: 1px solid var(--color-line);
     font-family: var(--font-mono);
     font-size: 0.75rem;
     letter-spacing: 0.06em;
-    color: var(--color-canvas);
   }
 
   .experience-list {
@@ -1496,7 +1492,7 @@
   }
 
   .portrait {
-    aspect-ratio: 1.15;
+    aspect-ratio: auto;
   }
 
   .experience {

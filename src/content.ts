@@ -84,11 +84,14 @@ export type CaseStudy = {
   methodEyebrow?: string;
   process: ContentCard[];
   findingsTitle: string;
+  findingsEyebrow?: string;
   findings: ContentCard[];
   architectureTitle: string;
+  architectureEyebrow?: string;
   architectureBody: string;
   architecture: ContentCard[];
   decisionsTitle: string;
+  decisionsEyebrow?: string;
   decisions: ContentCard[];
   contributionTitle: string;
   contributionBody: string;
@@ -570,6 +573,7 @@ export const projects: CaseStudy[] = [
       ["SIGUIENTE MEDIDA", "Gasto ejecutado, desviación presupuestal y cambio de riesgo por tienda."],
     ],
     findingsTitle: "Tres hallazgos que cambiaron el diseño.",
+    findingsEyebrow: "01 · DESCUBRIR",
     findings: [
       {
         title: "“Mi tienda es distinta.”",
@@ -585,6 +589,7 @@ export const projects: CaseStudy[] = [
       },
     ],
     architectureTitle: "Panorama, mapa, ranking y comparación.",
+    architectureEyebrow: "03 · IDEAR · ARQUITECTURA",
     architectureBody:
       "Cuatro vistas con un solo hilo: el índice compuesto se explica en cada nivel y nunca se convierte en una caja negra.",
     architecture: [

@@ -153,7 +153,10 @@ export function CaseStudyPage({ project }: { project: CaseStudy }) {
         </section>
         <section className="section section-muted">
           <div className="page-container">
-            <SectionIntro eyebrow="DESCUBRIMIENTO" title={project.findingsTitle} />
+            <SectionIntro
+              eyebrow={project.findingsEyebrow ?? "DESCUBRIMIENTO"}
+              title={project.findingsTitle}
+            />
             <CardGrid cards={project.findings} columns={3} />
             <SectionFigures figures={project.sectionFigures?.findings} />
           </div>
@@ -163,7 +166,7 @@ export function CaseStudyPage({ project }: { project: CaseStudy }) {
         ))}
         <section className="section page-container">
           <SectionIntro
-            eyebrow="ARQUITECTURA DE INFORMACIÓN"
+            eyebrow={project.architectureEyebrow ?? "ARQUITECTURA DE INFORMACIÓN"}
             title={project.architectureTitle}
             body={project.architectureBody}
           />
@@ -230,7 +233,11 @@ export function CaseStudyPage({ project }: { project: CaseStudy }) {
           </section>
         )}
         <section className="section page-container">
-          <SectionIntro eyebrow="DECISIONES DE DISEÑO" title={project.decisionsTitle} wide />
+          <SectionIntro
+            eyebrow={project.decisionsEyebrow ?? "DECISIONES DE DISEÑO"}
+            title={project.decisionsTitle}
+            wide
+          />
           <CardGrid cards={project.decisions} />
           <SectionFigures figures={project.sectionFigures?.decisions} />
         </section>
