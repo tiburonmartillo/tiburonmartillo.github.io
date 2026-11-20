@@ -62,7 +62,7 @@ export function normalizePath(pathname: string) {
   return path === "/" ? path : `${path.replace(/\/+$/, "")}/`;
 }
 
-export function getRoute(pathname = window.location.pathname) {
+export function getRoute(pathname = "/") {
   const path = normalizePath(pathname);
   return routes.find((route) => route.path === path) ?? routes[0];
 }
