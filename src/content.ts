@@ -142,7 +142,6 @@ export type CaseStudy = {
 export const contact = {
   email: "sivillanueva@proton.me",
   linkedin: "https://linkedin.com/in/tiburonmartillo",
-  linkedinLabel: "linkedin.com/in/tiburonmartillo",
   cv: "/sergio-villanueva-cv.pdf",
 };
 
@@ -170,7 +169,7 @@ export const projects: CaseStudy[] = [
     ],
     metrics: [
       ["26 h → 5 h", "TIEMPO POR PROYECTO DE INVERSIÓN"],
-      ["168 h", "HORAS OPERATIVAS AHORRADAS POR MES"],
+      ["16", "ENTREVISTAS EN DESCUBRIMIENTO"],
     ],
     figureCaption: "RECREACIÓN REPRESENTATIVA · DATOS FICTICIOS",
     figureTitle: "REC · Vista de proyectos de inversión en evaluación",
@@ -370,7 +369,7 @@ export const projects: CaseStudy[] = [
     resultTitle: "De 26 a 5 horas.",
     resultMetrics: [
       ["−81%", "TIEMPO POR PROYECTO"],
-      ["168 h", "AHORRADAS POR MES"],
+      ["21 h", "MENOS POR PROYECTO"],
       ["5 h", "CICLO PROMEDIO ACTUAL"],
       ["3 años", "HORIZONTE DE PLANEACIÓN"],
     ],
@@ -432,7 +431,8 @@ export const projects: CaseStudy[] = [
       ["ALCANCE", "Arquitectura · Prototipo · Data viz"],
     ],
     metrics: [
-      ["3,265", "TIENDAS EN EL MODELO DE DECISIÓN"],
+      ["$28,000 MM MXN", "ESCALA DEL GASTO ANUAL A DECIDIR"],
+      ["3,265", "TIENDAS EN EL MODELO DE PRIORIZACIÓN"],
       ["−3%", "REDUCCIÓN PROYECTADA SOBRE LA BASE DE GASTO"],
     ],
     figureCaption: "RECREACIÓN REPRESENTATIVA · CIFRAS DE EJEMPLO",
@@ -766,7 +766,7 @@ export const projects: CaseStudy[] = [
     title: "Mapeo Verde",
     subtitle: "Datos abiertos para defender el territorio",
     summary:
-      "Diseñé y construí una plataforma ciudadana que convierte 502 boletines ambientales y 1,347 proyectos en evidencia consultable: del PDF normalizado en Postgres a un monitor que defiende las áreas verdes de Aguascalientes.",
+      "Diseñé y construí una plataforma ciudadana que convierte 888 PDFs —502 boletines de la SSMAA y 386 gacetas de la SEMARNAT— en evidencia consultable: del PDF normalizado en Postgres a un monitor que defiende las áreas verdes de Aguascalientes.",
     product: "Plataforma ciudadana con Supabase",
     productLabel: "PRODUCTO Y DATOS",
     facts: [
@@ -776,9 +776,9 @@ export const projects: CaseStudy[] = [
       ["ALCANCE", "Producto · Identidad · Datos"],
     ],
     metrics: [
-      ["502", "BOLETINES AMBIENTALES ANALIZADOS"],
-      ["1,347", "GACETAS FEDERALES DE LA SEMARNAT"],
-      ["1,175", "RESOLUTIVOS · 87%"],
+      ["888 PDFs → 1 monitor", "502 BOLETINES SSMAA + 386 GACETAS SEMARNAT"],
+      ["1,747", "PROYECTOS · 1,347 LOCALES + 400 FEDERALES"],
+      ["14", "CONSULTAS PÚBLICAS SOLICITADAS DESDE EL MONITOR"],
     ],
     figureTitle: "Monitor ambiental, inicio y gacetas · Mapeo Verde",
     figureCaption: "CAPTURAS DEL SITIO PÚBLICO · DATOS ABIERTOS · CC-BY-SA 4.0",
@@ -827,7 +827,7 @@ export const projects: CaseStudy[] = [
     challengeCards: [
       {
         title: "Fragmentación",
-        body: "502 boletines locales y 1,347 proyectos en gacetas federales, en PDFs, sin API ni identificadores comunes.",
+        body: "888 PDFs en dos administraciones: 502 boletines locales con 1,347 proyectos y 386 gacetas federales con 400 proyectos. Sin API ni identificadores comunes.",
       },
       {
         title: "Lenguaje técnico",
@@ -845,13 +845,13 @@ export const projects: CaseStudy[] = [
       {
         eyebrow: "01 · DESCUBRIR",
         title: "¿Qué dice el expediente?",
-        body: "502 boletines y 1,347 proyectos: extraje, normalicé y busqué patrones antes de diseñar una pantalla.",
+        body: "888 PDFs entre boletines y gacetas: extraje, normalicé y busqué patrones antes de diseñar una pantalla.",
         methods: "Extracción de boletines y gacetas",
       },
       {
         eyebrow: "02 · DEFINIR",
         title: "¿Qué falta para actuar?",
-        body: "El 87% ya tiene resolutivo; el problema es la legibilidad. Definí cuatro objetivos y una ficha común.",
+        body: "El 87% de los proyectos locales ya tiene resolutivo; el problema es la legibilidad. Definí cuatro objetivos y una ficha común.",
         methods: "Objetivos · Ficha común",
       },
       {
@@ -909,7 +909,7 @@ export const projects: CaseStudy[] = [
           {
             eyebrow: "01 · INGESTA",
             title: "PDFs y JSON de origen",
-            body: "Scripts de extracción para 502 boletines de la SSMAA y 1,347 proyectos de la SEMARNAT; deduplicación por expediente y folio.",
+            body: "Scripts de extracción para 502 boletines de la SSMAA y 386 gacetas de la SEMARNAT; deduplicación por expediente y folio.",
           },
           {
             eyebrow: "02 · MODELO",
@@ -944,7 +944,7 @@ export const projects: CaseStudy[] = [
           {
             eyebrow: "01",
             title: "Extracción",
-            body: "Reuní 502 boletines de la SSMAA y 1,347 proyectos de la SEMARNAT publicados entre 2003 y 2026.",
+            body: "Reuní 502 boletines de la SSMAA y 386 gacetas de la SEMARNAT publicados entre 2003 y 2026: 1,747 proyectos en total.",
             methods: "Boletines SSMAA · Gacetas SEMARNAT",
           },
           {
@@ -1025,7 +1025,7 @@ export const projects: CaseStudy[] = [
     findings: [
       {
         title: "“El 87% ya tiene resolutivo.”",
-        body: "De 1,347 proyectos locales, 1,175 cuentan con resolución. El problema no es la falta de acto administrativo, sino su legibilidad.",
+        body: "De los 1,347 proyectos locales de la SSMAA, 1,175 cuentan con resolución. El problema no es la falta de acto administrativo, sino su legibilidad: el dato existe, pero no se puede leer ni citar.",
       },
       {
         title: "“El dato federal pesa más.”",
@@ -1043,7 +1043,7 @@ export const projects: CaseStudy[] = [
       {
         eyebrow: "01 · FUENTES",
         title: "Boletines y gacetas",
-        body: "502 boletines de la SSMAA y 1,347 proyectos de la SEMARNAT en JSON, con licencia CC-BY-SA 4.0.",
+        body: "502 boletines de la SSMAA y 386 gacetas de la SEMARNAT en JSON, con licencia CC-BY-SA 4.0.",
       },
       {
         eyebrow: "02 · MODELO",
@@ -1121,7 +1121,7 @@ export const projects: CaseStudy[] = [
       {
         eyebrow: "02",
         title: "Alcance",
-        body: "Reuní, normalicé y estructuré boletines y gacetas en una base consultable; definí la arquitectura del sitio y su identidad.",
+        body: "Reuní, normalicé y estructuré boletines y gacetas en una base consultable; definí la arquitectura del sitio, su identidad y una alerta por Telegram que avisa cuando entra un proyecto nuevo en Aguascalientes.",
       },
       {
         eyebrow: "03",
@@ -1134,11 +1134,12 @@ export const projects: CaseStudy[] = [
         body: "Los documentos originales los publica la SSMAA y la SEMARNAT; la conversión a una base consultable y su lectura son mías.",
       },
     ],
-    resultTitle: "502 boletines, una causa común.",
+    resultTitle: "888 PDFs, una causa común.",
     resultMetrics: [
       ["502", "BOLETINES SSMAA"],
-      ["1,347", "PROYECTOS AMBIENTALES"],
-      ["87%", "CON RESOLUTIVO"],
+      ["386", "GACETAS SEMARNAT"],
+      ["1,747", "PROYECTOS · 1,347 LOCALES + 400 FEDERALES"],
+      ["14", "CONSULTAS PÚBLICAS DESDE QUE EL MONITOR AVISA"],
       ["1", "SITIO PÚBLICO"],
     ],
     quote: "“El dato ambiental no sirve si solo lo entiende quien lo produjo.”",
@@ -1169,8 +1170,8 @@ export const projects: CaseStudy[] = [
     },
     improvements: [
       {
-        title: "Automatizar las gacetas federales",
-        body: "Los boletines ya se leen cada semana con IA y alertas por correo; falta la extracción de gacetas de SEMARNAT y el OCR de PDFs escaneados sin capa de texto.",
+        title: "Cerrar la brecha del PDF escaneado",
+        body: "La ingesta ya corre sola para boletines y gacetas, y avisa por Telegram cuando se ingresa un proyecto en Aguascalientes. Falta el OCR de los PDFs escaneados sin capa de texto, que hoy quedan fuera del monitor.",
       },
       {
         title: "Cerrar los huecos de datos",

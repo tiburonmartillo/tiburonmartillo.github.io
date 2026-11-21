@@ -53,11 +53,19 @@ export function AboutPage() {
               experiencia combina Power BI, arquitectura de información, visualización y frontend.
             </p>
             <div className="hero-actions">
-              <a href={contact.cv} download className="button-outline">
-                Descargar CV
+              <a
+                href={contact.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="button-outline"
+              >
+                LinkedIn ↗
               </a>
               <a href={`mailto:${contact.email}`} className="eyebrow">
                 {contact.email}
+              </a>
+              <a href={contact.cv} download className="eyebrow">
+                Descargar CV ↓
               </a>
             </div>
           </div>

@@ -26,7 +26,7 @@ export function SEO({
       <meta property="og:url" content={url} />
       <meta property="og:image" content={imageUrl} />
       <meta property="og:image:alt" content="Portafolio de Sergio Villanueva" />
-      <meta property="og:locale" content="es_ES" />
+      <meta property="og:locale" content="es_MX" />
       <meta property="og:site_name" content="Sergio Villanueva" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />

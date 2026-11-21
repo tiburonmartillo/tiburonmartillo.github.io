@@ -14,7 +14,8 @@ export const routes: RouteInfo[] = [
     key: "home",
     path: "/",
     title: "Sergio Villanueva · Data Product Designer",
-    description: "Diseño productos de datos para convertir información compleja en decisiones.",
+    description:
+      "Portafolio de Sergio Villanueva — 8 años diseñando productos de datos en México. Casos de Walmart, Financiera Independencia y Mapeo Verde.",
   },
   {
     key: "about",
@@ -27,27 +28,29 @@ export const routes: RouteInfo[] = [
     key: "projects",
     path: "/proyectos/",
     title: "Proyectos · Sergio Villanueva",
-    description: "Cuatro casos completos de diseño de producto, datos y visualización.",
+    description:
+      "Cuatro casos de producto con métricas reales: de una semana a 15 minutos en autorización de créditos, y un monitor ambiental ciudadano construido de cero.",
   },
   {
     key: "rec",
     path: "/proyectos/rec/",
     title: "REC · Evaluación de proyectos de inversión",
     description:
-      "Caso de estudio: reducir de 26 a 5 horas la evaluación de proyectos de inversión.",
+      "Diseño del producto de inversión que redujo de 26 a 5 horas la elaboración de proyectos para Walmart México.",
   },
   {
     key: "capital-allocation",
     path: "/proyectos/capital-allocation/",
     title: "Capital Allocation · Sergio Villanueva",
     description:
-      "Caso de estudio: priorizar mantenimiento en 3,265 tiendas con un criterio defendible.",
+      "Tablero multivariable para priorizar $28,000 MM MXN en mantenimiento correctivo entre 3,265 tiendas de Walmart México.",
   },
   {
     key: "mapeo-verde",
     path: "/proyectos/mapeo-verde/",
     title: "Mapeo Verde · Sergio Villanueva",
-    description: "Caso de estudio: datos ambientales abiertos para defender el territorio.",
+    description:
+      "Cómo convertí 888 PDFs ambientales en un monitor ciudadano con Postgres y Supabase. Proyecto independiente, en producción.",
   },
   {
     key: "coa-crowd",

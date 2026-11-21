@@ -253,6 +253,12 @@
     font-family: var(--font-mono);
   }
 
+  /* "LINKEDIN ↗" must stay on one line: the arrow is part of the label.
+     Without this the flex item shrinks and wraps the arrow at ~1056px. */
+  .header-contact a {
+    white-space: nowrap;
+  }
+
   .accent-link,
   .action-link {
     color: var(--color-accent);

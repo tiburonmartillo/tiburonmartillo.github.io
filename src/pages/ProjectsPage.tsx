@@ -11,11 +11,10 @@ export function ProjectsPage() {
           <Eyebrow>PROYECTOS</Eyebrow>
           <span className="folio">03 — ÍNDICE</span>
         </div>
-        <h1>Cuatro decisiones que cambiaron un flujo.</h1>
+        <h1>Cuatro casos donde los datos se volvieron una decisión.</h1>
         <p className="hero-summary">
-          Casos completos de diseño de producto: contexto, proceso, decisiones y resultado. Los
-          tableros corporativos están recreados con datos ficticios; Mapeo Verde y COA Crowd
-          incluyen evidencia representativa.
+          Producto, datos e ingeniería en el mismo flujo de trabajo. Los casos muestran el
+          problema, el proceso y el resultado — sin saltar pasos.
         </p>
       </section>
       <section className="project-index page-container">
@@ -47,17 +46,19 @@ export function ProjectsPage() {
       </section>
       <section className="archive page-container">
         <Eyebrow>TAMBIÉN EN EL ARCHIVO</Eyebrow>
-        <h2>Trabajo previo, sin caso publicado.</h2>
+        <h2>Trabajo adicional · Disponible bajo NDA o en entrevista.</h2>
         <div>
           <p>
             <strong>RUN</strong>
             <span>Walmart · 2023</span>
-            <span>Reporte de Business Intelligence para monitoreo comercial.</span>
+            <span>
+              Reporte de BI para monitoreo de desviaciones comerciales en tiempo real.
+            </span>
           </p>
           <p>
             <strong>Design System v2.0</strong>
             <span>Experiencias.travel · 2020</span>
-            <span>Sistema de diseño en Figma y Zeplin.</span>
+            <span>Sistema de diseño en Figma y Zeplin para una plataforma de turismo.</span>
           </p>
         </div>
       </section>

@@ -118,11 +118,16 @@ export function SiteFooter() {
         <p className="eyebrow eyebrow-inverse">HABLEMOS</p>
         <h2>¿Trabajamos juntos?</h2>
         <div className="footer-links">
+          <a
+            href={contact.linkedin}
+            target="_blank"
+            rel="noreferrer"
+            className="text-inverse-text"
+          >
+            LINKEDIN ↗
+          </a>
           <a href={`mailto:${contact.email}`} className="text-inverse-text">
             {contact.email}
-          </a>
-          <a href={contact.linkedin} target="_blank" rel="noreferrer" className="text-inverse-text">
-            {contact.linkedinLabel} ↗
           </a>
           <a href={contact.cv} download className="eyebrow footer-download">
             DESCARGAR CV ↓

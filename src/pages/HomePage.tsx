@@ -53,7 +53,7 @@ export function HomePage() {
         </div>
         <h1>
           Diseño productos de datos
-          <em> para convertir información compleja en decisiones.</em>
+          <em> para que la información compleja se vuelva una decisión.</em>
         </h1>
         <p className="hero-summary">
           Soy Data Product Designer. Diseño experiencias digitales y analíticas que conectan
@@ -64,7 +64,7 @@ export function HomePage() {
           items={[
             ["8+", "AÑOS EN PRODUCTO DE DATOS"],
             ["4", "CASOS END-TO-END"],
-            ["168 h", "AHORRADAS POR MES"],
+            ["$28,000 MM", "MXN EN GASTO DE MANTENIMIENTO"],
             ["3,265", "TIENDAS ANALIZADAS"],
           ]}
         />
