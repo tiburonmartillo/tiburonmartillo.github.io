@@ -68,14 +68,21 @@
   --color-ink-muted: #6e6a62;
   --color-line: #dbd5c9;
   --color-accent: #14654a;
-  --color-accent-soft: #8fbfa6;
+  --color-accent-tint: #8fbfa6;
+  --color-accent-soft: #d9e7df;
   --color-inverse: #101010;
   --color-inverse-text: #f4f1ec;
   --color-product-blue: #0053e2;
   --color-product-navy: #001e60;
   --color-product-pale: #eef3fd;
   --color-product-yellow: #ffc220;
+  --color-product-sky: #a9c7f5;
+  --color-product-gray: #8a8f98;
+  --color-product-sand: #efd9a8;
   --color-product-lime: #98ff4d;
+  --color-notice-dot: #b07c12;
+  --color-notice-ink: #6b5b2e;
+  --color-notice-bg: #fff6e5;
   --font-sans: "Inter:Regular", Inter, sans-serif;
   --font-sans-medium: "Inter:Medium", Inter, sans-serif;
   --font-sans-semibold: "Inter:Semi Bold", Inter, sans-serif;
@@ -322,7 +329,7 @@
     background: transparent;
     font-family: var(--font-mono);
     font-size: 0.75rem;
-    color: var(--color-accent-soft);
+    color: var(--color-accent-tint);
   }
 
   .mobile-nav {
@@ -352,7 +359,7 @@
   .mobile-nav-link:focus-visible,
   .mobile-nav-link.is-current {
     padding-left: 0.5rem;
-    color: var(--color-accent-soft);
+    color: var(--color-accent-tint);
   }
 
   .mobile-nav-link strong {
@@ -368,7 +375,7 @@
   .mobile-nav-link span {
     font-family: var(--font-mono);
     font-size: 0.75rem;
-    color: var(--color-accent-soft);
+    color: var(--color-accent-tint);
     text-decoration: none;
   }
 
@@ -377,12 +384,12 @@
     flex-direction: column;
     gap: 1rem;
     margin-top: 3rem;
-    color: var(--color-accent-soft);
+    color: var(--color-accent-tint);
   }
 
   .menu-contact a {
     width: fit-content;
-    color: var(--color-accent-soft);
+    color: var(--color-accent-tint);
     text-decoration: none;
   }
 
@@ -648,7 +655,7 @@
   }
 
   .impact-states article .eyebrow {
-    color: var(--color-accent-soft);
+    color: var(--color-accent-tint);
   }
 
   .tool-list {
@@ -845,7 +852,7 @@
 
   .eyebrow-inverse,
   .result-band .eyebrow {
-    color: var(--color-accent-soft);
+    color: var(--color-accent-tint);
   }
 
   .site-footer h2,
@@ -871,12 +878,12 @@
   }
 
   .footer-links a:hover {
-    color: var(--color-accent-soft);
+    color: var(--color-accent-tint);
   }
 
   .footer-download {
     margin-left: auto;
-    color: var(--color-accent-soft);
+    color: var(--color-accent-tint);
   }
 
   .footer-legal {
@@ -1419,7 +1426,7 @@
     font-family: var(--font-display-italic);
     font-size: clamp(2rem, 3.5vw, 2.5rem);
     line-height: 1.1;
-    color: color-mix(in srgb, var(--color-inverse-text) 85%, var(--color-accent-soft));
+    color: color-mix(in srgb, var(--color-inverse-text) 85%, var(--color-accent-tint));
   }
 
   .result-band blockquote cite {
