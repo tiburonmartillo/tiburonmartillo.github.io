@@ -2,6 +2,17 @@
 
 React + Vite + Tailwind CSS project running inside Figma Make.
 
+## Fuentes del proyecto
+
+Antes de editar, identifica qué estás tocando:
+
+- `DESIGN.md` — sistema visual **Prism**: tokens, tipografía, componentes y reglas de uso. Lectura obligatoria antes de cualquier cambio de UI.
+- `plans/guia-contenido-portafolio.md` — voz, tono y reglas de copy por sección (metadatos, H1, aperturas, métricas, CTAs). Lectura obligatoria antes de reescribir texto.
+- `docs/figma-sync.md` — contrato de sincronización con el archivo Figma y sus node IDs.
+- `plans/portafolio-sergio-villanueva.md` — plan original del portafolio; contexto histórico, no normativo.
+
+Cuando copy y diseño se cruzan (cifras, CTAs, leyendas de figura), ambas fuentes aplican.
+
 ## UI SDK
 
 Before using UI SDK, follow its installed skill when available and read

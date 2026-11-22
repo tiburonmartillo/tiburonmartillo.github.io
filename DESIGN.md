@@ -334,3 +334,13 @@ Diferencias pendientes de resolver, no silenciar:
 2. ~~`notice-dot`, `notice-ink`, `product-sky`, `product-sand`, `product-gray` existen en Figma y no en el código.~~ Resuelto: añadidos a `src/index.css` junto con `notice-bg`.
 3. El código tiene `product-lime` (`#98FF4D`) e `inverse` (`#101010`), que no aparecen en el frame; se conservan porque el sitio los usa.
 4. `gray-3` (`#A5A5A5`) existe en Figma y se omite en el código: sin uso documentado.
+
+## Contenido y voz
+
+Este documento cubre solo lo visual. La norma de copy vive en `plans/guia-contenido-portafolio.md` y no se duplica aquí; estos son los puntos donde el contenido impone una decisión de diseño:
+
+- **Cifras.** Siempre en `metric-md` o `label-mono` con `tabular-nums`, con unidad y periodo visibles en la misma pieza. Si la métrica es proyectada, la nota va en el mismo bloque, no en un pie lejano.
+- **Máximo dos CTAs por página**, y LinkedIn antes que el correo. El CTA de cierre de un caso no puede ser el correo.
+- **Toda figura no real lleva `capturetag`** («recreación representativa · datos ficticios») en la leyenda, dentro de la propia imagen o inmediatamente debajo.
+- **Listas en oraciones completas**: el bullet no se usa para encadenar sintagmas, así que el interlineado de `body-*` debe aguantar dos o tres líneas sin apretarse.
+- **Metadatos** en `es_MX`; el copy de `meta-description` incluye la métrica principal del caso y no repite el H1.
