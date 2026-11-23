@@ -1,6 +1,6 @@
 # figma-make-app
 
-React + Vite + Tailwind CSS project running inside Figma Make.
+Portafolio de Sergio Villanueva. Next.js 16 (Pages Router) con export estático a GitHub Pages, React 19 y Tailwind CSS v4.
 
 ## Fuentes del proyecto
 
@@ -21,37 +21,40 @@ Before using UI SDK, follow its installed skill when available and read
 
 ## Development Server
 
-A Vite development server is **already running** on `$PORT` (default 8443). You don't need to start it manually.
+El preview de Figma Make ya expone el servidor de desarrollo; no hace falta levantarlo a mano.
 
-- Preview URL: The user can access the running app through the preview panel
-- Hot reload: Changes to source files are reflected immediately
+- `pnpm dev` — `next dev`; Figma Make publica la URL en el panel de preview (puerto `$PORT`, por defecto 8443).
+- `pnpm build` — `next build` con `output: 'export'`: escribe HTML estático en `out/` y, en `postbuild`, genera el sitemap con `next-sitemap`.
+- `pnpm typecheck` — `tsc --noEmit`. Ejecútalo antes de dar un cambio por terminado.
 
 ## Project Structure
 
 This is the canonical project structure. Start with task-relevant files below. Only follow imports or inspect other files when required, when a documented path is missing, or when the repository contradicts this guide.
 
-- `src/main.tsx` - React entrypoint; imports `src/index.css` and mounts `src/App.tsx` into the `#root` element
-- `src/App.tsx` - Primary application component and the usual starting point for UI work
-- `src/index.css` - Global CSS entrypoint and Tailwind CSS v4 import
-- `index.html` - Vite HTML shell containing the `#root` element and loading `src/main.tsx`
-- `package.json` - Project dependencies and the Vite build, development, preview, and formatting scripts
-- `vite.config.ts` - Vite configuration with React, Tailwind CSS v4, and Figma Make plugins plus the `@` alias for `src`
-- `.mise.toml` - Toolchain versions for Node.js and pnpm
+- `pages/` — rutas del Pages Router: `index.tsx`, `acerca-de-mi.tsx`, `proyectos/index.tsx` y `proyectos/[slug].tsx` (estático con `getStaticPaths`/`getStaticProps`). Cada ruta resuelve datos y renderiza `SiteShell` con la vista correspondiente.
+- `pages/_app.tsx` — importa `src/index.css` y monta la página. `pages/_document.tsx` — shell HTML.
+- `src/pages/` — componentes de vista: `HomePage`, `ProjectsPage`, `AboutPage`, `CaseStudyPage`.
+- `src/components/SiteShell.tsx` — header, menú móvil y footer compartidos.
+- `src/components/Editorial.tsx` — primitivas editoriales (secciones, rejillas de tarjetas, figuras).
+- `components/SEO.tsx` — metadatos por página con `next/head` (`og:locale` en `es_MX`).
+- `src/content.ts` — modelo y copy de los cuatro casos: fuente única del texto.
+- `src/routes.ts` — tabla de rutas (path, título, descripción) compartida por páginas y shell.
+- `src/index.css` — Tailwind v4, `@font-face` y los tokens de Prism en `@theme`.
+- `next.config.js` — `output: 'export'`, `trailingSlash`, `basePath` opcional. `next-sitemap.config.cjs` — sitemap. `.figma/make/` — configuración de Make (site, deploy, dev).
+- `.mise.toml` — versiones de Node.js y pnpm.
 
 ## Dependencies
 
-- Runtime: React 19 and React DOM 19
-- Styling: Tailwind CSS v4 with the `@tailwindcss/vite` plugin
-- Build tooling: Vite 8, TypeScript 5.7, and `@vitejs/plugin-react`
-- Formatting: oxfmt
+- Runtime: Next.js 16 (Pages Router) y React 19.
+- Styling: Tailwind CSS v4 mediante `@tailwindcss/postcss` (no hay `tailwind.config.*`).
+- Build: `next build` con export estático a `out/`, más `next-sitemap`.
+- Formatting: oxfmt.
 
 ## Styling
 
-This project uses **Tailwind CSS v4** through the `@tailwindcss/vite` plugin configured in `vite.config.ts`. `src/index.css` imports Tailwind with `@import 'tailwindcss';`. Use Tailwind utility classes directly in JSX and put global CSS or Tailwind v4 theme customization in `src/index.css`. This scaffold does not need a Tailwind config file or PostCSS config.
+This project uses **Tailwind CSS v4** through PostCSS. `src/index.css` imports Tailwind with `@import "tailwindcss";` and declara los tokens de `DESIGN.md` en `@theme`. Usa las utilidades de Tailwind directamente en JSX y no escribas hex, familias ni tamaños crudos: si falta un valor, se añade al sistema en `src/index.css` y en `DESIGN.md` a la vez.
 
-`src/main.tsx` imports `src/index.css`, so global font wiring belongs in `src/index.css`. Keep CSS `@import` statements first, then add any `@font-face` rules and font-family defaults there.
-
-Tailwind emits utility classes in `@layer utilities`, and CSS outside any cascade layer overrides every layer regardless of specificity. Put global element styles, such as resets and defaults for `body`, headings, `button`, or `input`, inside `@layer base { ... }` so utility classes on those elements still apply. Tailwind's Preflight already applies `box-sizing: border-box`, removes default margins, and sets `font: inherit` on form controls, so do not repeat those rules.
+Keep CSS `@import` statements first, then `@font-face` rules and font-family defaults. Tailwind emits utility classes in `@layer utilities`, and CSS outside any cascade layer overrides every layer regardless of specificity. Put global element styles, such as resets and defaults for `body`, headings, `button`, or `input`, inside `@layer base { ... }` so utility classes on those elements still apply. Tailwind's Preflight already applies `box-sizing: border-box`, removes default margins, and sets `font: inherit` on form controls, so do not repeat those rules.
 
 <!-- BEGIN:nextjs-agent-rules -->
 
